@@ -82,6 +82,13 @@ class Neo4jGraphStore:
             items = [_entity_from_node(row["e"]) for row in rows]
         return [item for item in items if _matches(item, filters or [])][:limit]
 
+    def entity(self, dataset_id: str, entity_id: str) -> dict[str, Any]:
+        with self.driver.session() as session:
+            row = session.run("MATCH (e:Entity {key: $key}) RETURN e", key=_key(dataset_id, entity_id)).single()
+        if not row:
+            raise KeyError("entity not found")
+        return _entity_from_node(row["e"])
+
     def evidence_for(self, dataset_id: str, entity_id: str) -> list[dict[str, Any]]:
         query = "MATCH (entity:Entity {key: $entity})-[:SOURCE]->(r:Relation)<-[:SUPPORTS]-(e:Evidence) RETURN DISTINCT e"
         with self.driver.session() as session:

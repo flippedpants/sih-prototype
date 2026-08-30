@@ -5,7 +5,8 @@ import os
 from collections.abc import Generator
 from typing import Any
 
-from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi import Depends, FastAPI, HTTPException, Request, status
+import networkx as nx
 
 from .models import DatasetRegistration, DatasetSchemaInput, EvidenceInput, QueryIntent, RecordsIngestionRequest, RelationInput
 from .store import MemoryGraphStore
@@ -72,6 +73,26 @@ def create_app() -> FastAPI:
                 if not intent.entity_id:
                     raise ValueError("entity_id is required for get_evidence")
                 results = store.evidence_for(intent.dataset_id, intent.entity_id)
+            elif intent.intent == "neighbors":
+                if not intent.entity_id:
+                    raise ValueError("entity_id is required for neighbors")
+                graph = store.graph(intent.dataset_id)
+                if intent.entity_id not in graph:
+                    raise KeyError("entity not found")
+                neighbor_ids = sorted(set(graph.successors(intent.entity_id)) | set(graph.predecessors(intent.entity_id)))
+                results = [store.entity(intent.dataset_id, entity_id) for entity_id in neighbor_ids[: intent.limit]]
+            elif intent.intent == "connection_path":
+                if not intent.source_id or not intent.target_id:
+                    raise ValueError("source_id and target_id are required for connection_path")
+                graph = store.graph(intent.dataset_id).to_undirected()
+                results = nx.shortest_path(graph, intent.source_id, intent.target_id)
+            elif intent.intent == "rank_influencers":
+                graph = store.graph(intent.dataset_id)
+                scores = nx.degree_centrality(graph)
+                results = [{"id": node_id, "score": score} for node_id, score in sorted(scores.items(), key=lambda item: (-item[1], item[0]))[: intent.limit]]
+            elif intent.intent == "list_communities":
+                graph = nx.Graph(store.graph(intent.dataset_id))
+                results = [sorted(community) for community in nx.community.greedy_modularity_communities(graph)]
             else:
                 results = []
             return {"intent": intent.intent, "dataset_id": intent.dataset_id, "results": results}
@@ -82,8 +103,8 @@ def create_app() -> FastAPI:
     return application
 
 
-def get_graph_service() -> Generator[MemoryGraphStore, None, None]:
-    yield app.state.graph_service
+def get_graph_service(request: Request) -> Generator[Any, None, None]:
+    yield request.app.state.graph_service
 
 
 def _public_schema(schema: dict[str, Any]) -> dict[str, Any]:
