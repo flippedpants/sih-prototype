@@ -11,7 +11,7 @@ from openpyxl import load_workbook
 from rapidfuzz.fuzz import ratio
 
 from .models import Entity, IngestionResult, Relationship, RowValidationError, SourceMapping
-from .validation import parse_timestamp, parse_weight, require_value, validate_structure
+from .validation import parse_timestamp, parse_weight, require_value, resolve_mapping_columns, validate_structure
 
 
 class SourceIngestionEngine:
@@ -20,6 +20,7 @@ class SourceIngestionEngine:
     def ingest_bytes(self, file_name: str, content: bytes, mapping_data: SourceMapping | dict[str, Any]) -> IngestionResult:
         mapping = mapping_data if isinstance(mapping_data, SourceMapping) else SourceMapping.model_validate(mapping_data)
         headers, rows = _read_table(file_name, content)
+        mapping = resolve_mapping_columns(headers, mapping, file_name)
         validate_structure(headers, rows, mapping)
         result = IngestionResult()
         entities: dict[str, Entity] = {}

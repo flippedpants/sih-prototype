@@ -3,21 +3,52 @@
   "row_maps_to": "edge",
   "entities": [
     {
-      "column": "caller_phone",
-      "entity_type": "PHONE"
+      "column_aliases": [
+        "caller_phone",
+        "caller",
+        "calling_number"
+      ],
+      "entity_type": "PHONE",
+      "role": "source"
     },
     {
-      "column": "receiver_phone",
-      "entity_type": "PHONE"
+      "column_aliases": [
+        "receiver_phone",
+        "callee",
+        "called_number"
+      ],
+      "entity_type": "PHONE",
+      "role": "target"
     }
   ],
   "relationship": {
     "type": "CALLED",
-    "source_column": "caller_phone",
-    "target_column": "receiver_phone",
-    "weight_columns": [
-      "duration_seconds"
+    "source_column_aliases": [
+      "caller_phone",
+      "caller",
+      "calling_number"
     ],
-    "timestamp_column": "call_timestamp"
+    "target_column_aliases": [
+      "receiver_phone",
+      "callee",
+      "called_number"
+    ],
+    "weight_columns": {
+      "duration": {
+        "aliases": [
+          "duration_seconds",
+          "duration"
+        ],
+        "required": false
+      }
+    },
+    "timestamp_column": {
+      "aliases": [
+        "call_timestamp",
+        "call_time",
+        "timestamp"
+      ],
+      "required": false
+    }
   }
 }

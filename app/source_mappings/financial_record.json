@@ -3,21 +3,62 @@
   "row_maps_to": "edge",
   "entities": [
     {
-      "column": "source_account",
-      "entity_type": "ACCOUNT"
+      "column_aliases": [
+        "sender_account",
+        "sender_acc",
+        "from_account",
+        "debit_account",
+        "source_account"
+      ],
+      "entity_type": "ACCOUNT",
+      "role": "source"
     },
     {
-      "column": "destination_account",
-      "entity_type": "ACCOUNT"
+      "column_aliases": [
+        "receiver_account",
+        "receiver_acc",
+        "to_account",
+        "credit_account",
+        "destination_account"
+      ],
+      "entity_type": "ACCOUNT",
+      "role": "target"
     }
   ],
   "relationship": {
     "type": "TRANSFERRED_TO",
-    "source_column": "source_account",
-    "target_column": "destination_account",
-    "weight_columns": [
-      "amount"
+    "source_column_aliases": [
+      "sender_account",
+      "sender_acc",
+      "from_account",
+      "debit_account",
+      "source_account"
     ],
-    "timestamp_column": "transaction_timestamp"
+    "target_column_aliases": [
+      "receiver_account",
+      "receiver_acc",
+      "to_account",
+      "credit_account",
+      "destination_account"
+    ],
+    "weight_columns": {
+      "amount": {
+        "aliases": [
+          "amount_inr",
+          "amount",
+          "txn_amount"
+        ],
+        "required": false
+      }
+    },
+    "timestamp_column": {
+      "aliases": [
+        "timestamp",
+        "date",
+        "txn_date",
+        "transaction_timestamp"
+      ],
+      "required": false
+    }
   }
 }

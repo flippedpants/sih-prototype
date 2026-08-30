@@ -11,3 +11,4 @@ venv/
 # generated synthetic datasets (regenerate with synthetic_dataset/generator)
 synthetic_dataset/output/
 synthetic_dataset/validation_dataset/
+

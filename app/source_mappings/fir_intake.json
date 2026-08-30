@@ -4,33 +4,69 @@
   "entities": [
     {
       "entity_type": "PERSON",
-      "id_column": "person_id",
-      "canonical_name_column": "person_name",
-      "aliases_column": "person_aliases"
-    },
-    {
-      "entity_type": "LOCATION",
-      "id_column": "location_id",
-      "attribute_columns": [
-        "district"
+      "id_column_aliases": [
+        "person_id",
+        "suspect_id"
+      ],
+      "canonical_name_aliases": [
+        "person_name",
+        "name"
+      ],
+      "aliases_column_aliases": [
+        "person_aliases",
+        "aliases"
       ]
     },
     {
+      "entity_type": "LOCATION",
+      "id_column_aliases": [
+        "location_id",
+        "place_id"
+      ],
+      "attribute_column_aliases": {
+        "district": [
+          "district",
+          "area"
+        ]
+      }
+    },
+    {
       "entity_type": "VEHICLE",
-      "id_column": "vehicle_registration"
+      "id_column_aliases": [
+        "vehicle_registration",
+        "vehicle_no"
+      ]
     }
   ],
   "relationships": [
     {
       "type": "NAMED_IN_FIR",
-      "source_column": "person_id",
-      "target_column": "location_id",
-      "timestamp_column": "fir_timestamp"
+      "source_column_aliases": [
+        "person_id",
+        "suspect_id"
+      ],
+      "target_column_aliases": [
+        "location_id",
+        "place_id"
+      ],
+      "timestamp_column": {
+        "aliases": [
+          "fir_timestamp",
+          "fir_date"
+        ],
+        "required": false
+      }
     },
     {
       "type": "OWNS",
-      "source_column": "person_id",
-      "target_column": "vehicle_registration"
+      "source_column_aliases": [
+        "person_id",
+        "suspect_id"
+      ],
+      "target_column_aliases": [
+        "vehicle_registration",
+        "vehicle_no"
+      ]
     }
   ]
 }

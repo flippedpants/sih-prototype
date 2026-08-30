@@ -1,7 +1,7 @@
 """Structural and per-row validation for config-driven source ingestion."""
 from __future__ import annotations
 
-from dataclasses import dataclass
+import logging
 from datetime import datetime
 from typing import Mapping
 
@@ -10,6 +10,56 @@ from .models import SourceMapping
 
 class StructuralValidationError(ValueError):
     """A file cannot be parsed because its structure does not match its mapping."""
+
+
+class MappingError(StructuralValidationError):
+    pass
+
+
+def normalize_header(value: str) -> str:
+    return value.strip().lower()
+
+
+def resolve_column(df_columns: list[str], aliases: list[str], field_name: str, required: bool = True) -> str | None:
+    normalized = {normalize_header(column): column for column in df_columns}
+    for alias in aliases:
+        if normalize_header(alias) in normalized:
+            return normalized[normalize_header(alias)]
+    if required:
+        raise MappingError(f"{field_name}: tried aliases {aliases}; file headers: {df_columns}")
+    return None
+
+
+def resolve_mapping_columns(headers: list[str], mapping: SourceMapping, file_name: str) -> SourceMapping:
+    """Resolve only configured aliases; never infer column meaning."""
+    resolved = mapping.model_copy(deep=True)
+    failures: list[str] = []
+    def pick(aliases, name, required=True):
+        try: return resolve_column(headers, aliases, name, required)
+        except MappingError as error: failures.append(str(error)); return None
+    raw_blocks = resolved.entities if resolved.row_maps_to != "entity" else [resolved]
+    for index, block in enumerate(raw_blocks):
+        if resolved.row_maps_to == "edge":
+            aliases = block.column_aliases or ([block.column] if block.column else [])
+            block.column = pick(aliases, f"entity[{index}].id") or ""
+            continue
+        aliases = block.id_column_aliases or ([block.id_column] if block.id_column else [])
+        block.id_column = pick(aliases, f"entity[{index}].id") or ""
+        block.canonical_name_column = pick(block.canonical_name_aliases or ([block.canonical_name_column] if block.canonical_name_column else []), f"entity[{index}].canonical_name", bool(block.canonical_name_aliases or block.canonical_name_column))
+        block.aliases_column = pick(block.aliases_column_aliases or ([block.aliases_column] if block.aliases_column else []), f"entity[{index}].aliases", False)
+        block.attribute_columns = [column for name, aliases in block.attribute_column_aliases.items() if (column := pick(aliases, f"entity[{index}].attribute.{name}", False))]
+    for index, block in enumerate(resolved.relationship_blocks()):
+        block.source_column = pick(block.source_column_aliases or ([block.source_column] if block.source_column else []), f"relationship[{index}].source") or ""
+        block.target_column = pick(block.target_column_aliases or ([block.target_column] if block.target_column else []), f"relationship[{index}].target") or ""
+        weights = block.weight_columns if isinstance(block.weight_columns, dict) else {name: [name] for name in block.weight_columns}
+        block.weight_columns = [column for name, spec in weights.items() if (column := pick(spec.get("aliases", []) if isinstance(spec, dict) else spec, f"relationship[{index}].weight.{name}", bool(spec.get("required", False)) if isinstance(spec, dict) else True))]
+        spec = block.timestamp_column
+        block.timestamp_column = pick(spec.get("aliases", []) if isinstance(spec, dict) else ([spec] if isinstance(spec, str) else []), f"relationship[{index}].timestamp", bool(spec.get("required", False)) if isinstance(spec, dict) else bool(spec))
+    if failures:
+        message = f"column resolution failed for source_type={mapping.source_type}, file={file_name}: " + " | ".join(failures)
+        logging.getLogger(__name__).error(message)
+        raise MappingError(message)
+    return resolved
 
 
 def required_columns(mapping: SourceMapping) -> set[str]:

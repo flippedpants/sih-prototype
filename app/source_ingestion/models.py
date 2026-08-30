@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field, model_validator
 
@@ -11,8 +11,10 @@ RELATIONSHIP_TYPES = frozenset({"CALLED", "TRANSFERRED_TO", "OWNS", "ASSOCIATED_
 
 
 class EdgeEntityReference(BaseModel):
-    column: str = Field(min_length=1)
+    column: str | None = None
+    column_aliases: list[str] = Field(default_factory=list)
     entity_type: str
+    role: str | None = None
 
     @model_validator(mode="after")
     def controlled_type(self) -> "EdgeEntityReference":
@@ -23,10 +25,14 @@ class EdgeEntityReference(BaseModel):
 
 class EntityBlock(BaseModel):
     entity_type: str
-    id_column: str = Field(min_length=1)
+    id_column: str = ""
+    id_column_aliases: list[str] = Field(default_factory=list)
     canonical_name_column: str | None = None
+    canonical_name_aliases: list[str] = Field(default_factory=list)
     attribute_columns: list[str] = Field(default_factory=list)
+    attribute_column_aliases: dict[str, list[str]] = Field(default_factory=dict)
     aliases_column: str | None = None
+    aliases_column_aliases: list[str] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def controlled_type(self) -> "EntityBlock":
@@ -37,10 +43,12 @@ class EntityBlock(BaseModel):
 
 class RelationshipBlock(BaseModel):
     type: str
-    source_column: str = Field(min_length=1)
-    target_column: str = Field(min_length=1)
-    weight_columns: list[str] = Field(default_factory=list)
-    timestamp_column: str | None = None
+    source_column: str | None = None
+    target_column: str | None = None
+    source_column_aliases: list[str] = Field(default_factory=list)
+    target_column_aliases: list[str] = Field(default_factory=list)
+    weight_columns: Any = Field(default_factory=list)
+    timestamp_column: Any = None
 
     @model_validator(mode="after")
     def controlled_type(self) -> "RelationshipBlock":
@@ -54,9 +62,13 @@ class SourceMapping(BaseModel):
     row_maps_to: Literal["entity", "edge", "mixed"]
     entity_type: str | None = None
     id_column: str | None = None
+    id_column_aliases: list[str] = Field(default_factory=list)
     attribute_columns: list[str] = Field(default_factory=list)
+    attribute_column_aliases: dict[str, list[str]] = Field(default_factory=dict)
     aliases_column: str | None = None
+    aliases_column_aliases: list[str] = Field(default_factory=list)
     canonical_name_column: str | None = None
+    canonical_name_aliases: list[str] = Field(default_factory=list)
     entities: list[EdgeEntityReference | EntityBlock] = Field(default_factory=list)
     relationship: RelationshipBlock | None = None
     relationships: list[RelationshipBlock] = Field(default_factory=list)
@@ -65,7 +77,7 @@ class SourceMapping(BaseModel):
     @model_validator(mode="after")
     def shape_is_valid(self) -> "SourceMapping":
         if self.row_maps_to == "entity":
-            if not self.entity_type or not self.id_column:
+            if not self.entity_type or not (self.id_column or self.id_column_aliases):
                 raise ValueError("entity mappings require entity_type and id_column")
             if self.entity_type not in ENTITY_TYPES:
                 raise ValueError(f"unsupported entity_type: {self.entity_type}")
@@ -83,7 +95,7 @@ class SourceMapping(BaseModel):
 
     def entity_blocks(self) -> list[EntityBlock]:
         if self.row_maps_to == "entity":
-            return [EntityBlock(entity_type=self.entity_type or "", id_column=self.id_column or "", canonical_name_column=self.canonical_name_column, attribute_columns=self.attribute_columns, aliases_column=self.aliases_column)]
+            return [EntityBlock(entity_type=self.entity_type or "", id_column=self.id_column or "", id_column_aliases=self.id_column_aliases, canonical_name_column=self.canonical_name_column, canonical_name_aliases=self.canonical_name_aliases, attribute_columns=self.attribute_columns, attribute_column_aliases=self.attribute_column_aliases, aliases_column=self.aliases_column, aliases_column_aliases=self.aliases_column_aliases)]
         if self.row_maps_to == "mixed":
             return [item for item in self.entities if isinstance(item, EntityBlock)]
         return [EntityBlock(entity_type=item.entity_type, id_column=item.column) for item in self.entities if isinstance(item, EdgeEntityReference)]
