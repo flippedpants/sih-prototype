@@ -16,6 +16,9 @@ from .models import (
     RelationInput,
 )
 from .csv_ingestion import parse_csv_uploads
+from .source_ingestion.engine import SourceIngestionEngine
+from .source_ingestion.loader import load_mapping
+from .source_ingestion.validation import StructuralValidationError
 from .neo4j_store import Neo4jGraphStore
 
 
@@ -70,6 +73,36 @@ def create_app(graph_store: Any | None = None) -> FastAPI:
         except KeyError as error:
             raise HTTPException(status_code=404, detail="dataset not found") from error
         except (TypeError, ValueError, json.JSONDecodeError) as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
+
+    @application.post("/api/datasets/{dataset_id}/ingestions/sources/{source_type}")
+    async def ingest_structured_source(
+        dataset_id: str,
+        source_type: str,
+        file: UploadFile = File(...),
+        store: Any = Depends(get_graph_service),
+    ) -> dict[str, Any]:
+        try:
+            mapping = load_mapping(source_type)
+            result = SourceIngestionEngine().ingest_bytes(file.filename or "upload.csv", await file.read(), mapping)
+            data = store.get_dataset(dataset_id)
+            _validate_source_batch(data.schema, result.entities, result.relationships)
+            written = {"entities": 0, "relationships": 0}
+            if result.entities or result.relationships:
+                written = store.ingest_source_batch(dataset_id, result.entities, result.relationships)
+            return {
+                "source_type": source_type,
+                "processed_file": file.filename or "upload.csv",
+                "created_entities": written["entities"],
+                "created_relationships": written["relationships"],
+                "validation_errors": [item.model_dump() for item in result.validation_errors],
+            }
+        except KeyError as error:
+            detail = "dataset not found" if str(error).strip("'\"") == dataset_id else str(error).strip("'\"")
+            raise HTTPException(status_code=404, detail=detail) from error
+        except StructuralValidationError as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
+        except ValueError as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
 
     @application.post("/api/query")
@@ -152,6 +185,17 @@ def _validate_entity_types(schema: DatasetSchemaInput, entities: list[Any]) -> N
     unknown = sorted({item.entity_type for item in entities} - allowed)
     if unknown:
         raise ValueError(f"unknown entity types: {', '.join(unknown)}")
+
+def _validate_source_batch(schema: DatasetSchemaInput, entities: list[Any], relationships: list[Any]) -> None:
+    allowed_entities = {item.name for item in schema.entity_types}
+    unknown_entities = sorted({item.type for item in entities} - allowed_entities)
+    if unknown_entities:
+        raise ValueError(f"source mapping entity types are absent from the dataset schema: {', '.join(unknown_entities)}")
+    allowed_relationships = {item.name for item in schema.relation_types}
+    unknown_relationships = sorted({item.type for item in relationships} - allowed_relationships)
+    if unknown_relationships:
+        raise ValueError(f"source mapping relationship types are absent from the dataset schema: {', '.join(unknown_relationships)}")
+
 
 def _validate_intent(schema: DatasetSchemaInput, intent: QueryIntent) -> None:
     types = {item.name: item for item in schema.entity_types}

@@ -1,0 +1,23 @@
+{
+  "source_type": "financial_record",
+  "row_maps_to": "edge",
+  "entities": [
+    {
+      "column": "source_account",
+      "entity_type": "ACCOUNT"
+    },
+    {
+      "column": "destination_account",
+      "entity_type": "ACCOUNT"
+    }
+  ],
+  "relationship": {
+    "type": "TRANSFERRED_TO",
+    "source_column": "source_account",
+    "target_column": "destination_account",
+    "weight_columns": [
+      "amount"
+    ],
+    "timestamp_column": "transaction_timestamp"
+  }
+}

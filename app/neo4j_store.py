@@ -5,6 +5,7 @@ database migrations. Only stable generic IDs are constrained at bootstrap.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 from copy import deepcopy
 from typing import Any
@@ -12,6 +13,7 @@ from typing import Any
 from neo4j import GraphDatabase
 
 from .models import DatasetSchemaInput, EntityInput, EvidenceInput, RelationInput
+from .source_ingestion.models import Entity as SourceEntity, Relationship as SourceRelationship
 from dataclasses import dataclass
 
 @dataclass
@@ -77,6 +79,82 @@ class Neo4jGraphStore:
                 tx.run("MATCH (d:Dataset {id: $id}) SET d.version = d.version + 1", id=dataset_id)
             session.execute_write(write)
         return {"entities": len(entities), "evidence": len(evidence), "relations": len(relations), "graph_version": self.get_dataset(dataset_id).version}
+
+    def ingest_source_batch(
+        self,
+        dataset_id: str,
+        entities: list[SourceEntity],
+        relationships: list[SourceRelationship],
+        batch_size: int = 1_000,
+    ) -> dict[str, int]:
+        """Persist normalized source objects using bounded UNWIND batches."""
+        entity_rows = [
+            {
+                "key": _key(dataset_id, entity.id),
+                "id": entity.id,
+                "dataset_id": dataset_id,
+                "entity_type": entity.type,
+                "display_name": entity.canonical_name,
+                "identifiers_json": json.dumps({"natural_key": entity.id.split(":", 1)[1]}, sort_keys=True),
+                "attributes_json": json.dumps(entity.attributes, sort_keys=True),
+                "filter_values": [f"display_name\u001f{json.dumps(entity.canonical_name)}"] if entity.canonical_name else [],
+                "aliases": entity.aliases,
+                "source_docs": entity.source_docs,
+            }
+            for entity in entities
+        ]
+        relation_rows = [
+            {
+                "key": _source_relationship_key(dataset_id, relationship),
+                "id": _source_relationship_key(dataset_id, relationship),
+                "dataset_id": dataset_id,
+                "source": _key(dataset_id, relationship.source_id),
+                "target": _key(dataset_id, relationship.target_id),
+                "relation_type": relationship.type,
+                "weight": relationship.weight,
+                "timestamp": relationship.timestamp.isoformat() if relationship.timestamp else None,
+                "source_doc": relationship.source_doc,
+            }
+            for relationship in relationships
+        ]
+        entity_query = """
+        UNWIND $rows AS row
+        MERGE (entity:Entity {key: row.key})
+        ON CREATE SET entity.id = row.id, entity.dataset_id = row.dataset_id,
+            entity.entity_type = row.entity_type, entity.display_name = row.display_name,
+            entity.identifiers_json = row.identifiers_json, entity.attributes_json = row.attributes_json,
+            entity.filter_values = row.filter_values, entity.aliases = row.aliases,
+            entity.source_docs = row.source_docs
+        ON MATCH SET entity.display_name = coalesce(entity.display_name, row.display_name),
+            entity.attributes_json = row.attributes_json,
+            entity.aliases = reduce(values = coalesce(entity.aliases, []), item IN row.aliases |
+                CASE WHEN item IN values THEN values ELSE values + item END),
+            entity.source_docs = reduce(values = coalesce(entity.source_docs, []), item IN row.source_docs |
+                CASE WHEN item IN values THEN values ELSE values + item END)
+        """
+        relation_query = """
+        UNWIND $rows AS row
+        MATCH (source:Entity {key: row.source}), (target:Entity {key: row.target})
+        MERGE (relation:Relation {key: row.key})
+        ON CREATE SET relation.id = row.id, relation.dataset_id = row.dataset_id,
+            relation.relation_type = row.relation_type, relation.weight = row.weight,
+            relation.timestamp = row.timestamp, relation.source_docs = [row.source_doc],
+            relation.attributes_json = '{}', relation.derived = false
+        ON MATCH SET relation.weight = row.weight,
+            relation.source_docs = CASE WHEN row.source_doc IN coalesce(relation.source_docs, [])
+                THEN relation.source_docs ELSE coalesce(relation.source_docs, []) + row.source_doc END
+        MERGE (source)-[:SOURCE]->(relation)
+        MERGE (relation)-[:TARGET]->(target)
+        """
+        with self.driver.session() as session:
+            def write(tx: Any) -> None:
+                for rows in _chunks(entity_rows, batch_size):
+                    tx.run(entity_query, rows=rows).consume()
+                for rows in _chunks(relation_rows, batch_size):
+                    tx.run(relation_query, rows=rows).consume()
+                tx.run("MATCH (d:Dataset {id: $id}) SET d.version = d.version + 1", id=dataset_id).consume()
+            session.execute_write(write)
+        return {"entities": len(entities), "relationships": len(relationships), "graph_version": self.get_dataset(dataset_id).version}
 
     def search(self, dataset_id: str, entity_type: str | None = None, filters: list[Any] | None = None, limit: int = 25) -> list[dict[str, Any]]:
         # Fields are registry-validated by the API; filtering JSON is deliberately
@@ -209,3 +287,12 @@ def _matches(entity: dict[str, Any], filters: list[Any]) -> bool:
         if item.operator == "in" and actual not in item.value:
             return False
     return True
+
+
+def _source_relationship_key(dataset_id: str, relationship: SourceRelationship) -> str:
+    identity = "|".join((dataset_id, relationship.type, relationship.source_id, relationship.target_id, relationship.timestamp.isoformat() if relationship.timestamp else ""))
+    return f"{dataset_id}:source:{hashlib.sha256(identity.encode()).hexdigest()}"
+
+
+def _chunks(items: list[dict[str, Any]], size: int) -> list[list[dict[str, Any]]]:
+    return [items[index:index + size] for index in range(0, len(items), size)]

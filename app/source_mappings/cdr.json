@@ -1,0 +1,23 @@
+{
+  "source_type": "cdr",
+  "row_maps_to": "edge",
+  "entities": [
+    {
+      "column": "caller_phone",
+      "entity_type": "PHONE"
+    },
+    {
+      "column": "receiver_phone",
+      "entity_type": "PHONE"
+    }
+  ],
+  "relationship": {
+    "type": "CALLED",
+    "source_column": "caller_phone",
+    "target_column": "receiver_phone",
+    "weight_columns": [
+      "duration_seconds"
+    ],
+    "timestamp_column": "call_timestamp"
+  }
+}

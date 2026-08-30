@@ -1,0 +1,36 @@
+{
+  "source_type": "fir_intake",
+  "row_maps_to": "mixed",
+  "entities": [
+    {
+      "entity_type": "PERSON",
+      "id_column": "person_id",
+      "canonical_name_column": "person_name",
+      "aliases_column": "person_aliases"
+    },
+    {
+      "entity_type": "LOCATION",
+      "id_column": "location_id",
+      "attribute_columns": [
+        "district"
+      ]
+    },
+    {
+      "entity_type": "VEHICLE",
+      "id_column": "vehicle_registration"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "NAMED_IN_FIR",
+      "source_column": "person_id",
+      "target_column": "location_id",
+      "timestamp_column": "fir_timestamp"
+    },
+    {
+      "type": "OWNS",
+      "source_column": "person_id",
+      "target_column": "vehicle_registration"
+    }
+  ]
+}

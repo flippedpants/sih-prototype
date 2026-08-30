@@ -1,0 +1,12 @@
+{
+  "source_type": "suspect_roster",
+  "row_maps_to": "entity",
+  "entity_type": "PERSON",
+  "id_column": "suspect_id",
+  "canonical_name_column": "suspect_name",
+  "aliases_column": "known_aliases",
+  "attribute_columns": [
+    "address",
+    "risk_level"
+  ]
+}
