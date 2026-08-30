@@ -9,11 +9,15 @@ import json
 from copy import deepcopy
 from typing import Any
 
-import networkx as nx
 from neo4j import GraphDatabase
 
 from .models import DatasetSchemaInput, EntityInput, EvidenceInput, RelationInput
-from .store import DatasetData
+from dataclasses import dataclass
+
+@dataclass
+class DatasetData:
+    schema: DatasetSchemaInput
+    version: int = 0
 
 
 class Neo4jGraphStore:
@@ -63,7 +67,7 @@ class Neo4jGraphStore:
         with self.driver.session() as session:
             def write(tx: Any) -> None:
                 for entity in entities:
-                    tx.run("MERGE (e:Entity {key: $key}) SET e += $props", key=_key(dataset_id, entity.id), props={"id": entity.id, "dataset_id": dataset_id, "entity_type": entity.entity_type, "display_name": entity.display_name, "identifiers_json": json.dumps(entity.identifiers, sort_keys=True), "attributes_json": json.dumps(entity.attributes, sort_keys=True)})
+                    tx.run("MERGE (e:Entity {key: $key}) SET e += $props", key=_key(dataset_id, entity.id), props={"id": entity.id, "dataset_id": dataset_id, "entity_type": entity.entity_type, "display_name": entity.display_name, "identifiers_json": json.dumps(entity.identifiers, sort_keys=True), "attributes_json": json.dumps(entity.attributes, sort_keys=True), "filter_values": _filter_values(entity)})
                 for item in evidence:
                     tx.run("MERGE (e:Evidence {key: $key}) SET e += $props", key=_key(dataset_id, item.id), props={"id": item.id, "dataset_id": dataset_id, "source_record_id": item.source_record_id, "source_kind": item.source_kind, "confidence": item.confidence, "occurred_at": item.occurred_at.isoformat() if item.occurred_at else None, "attributes_json": json.dumps(item.attributes, sort_keys=True), "raw_payload_ref": item.raw_payload_ref})
                 for relation in relations:
@@ -94,17 +98,85 @@ class Neo4jGraphStore:
         with self.driver.session() as session:
             return [_evidence_from_node(row["e"]) for row in session.run(query, entity=_key(dataset_id, entity_id))]
 
-    def graph(self, dataset_id: str) -> nx.MultiDiGraph:
-        graph = nx.MultiDiGraph()
+    def evidence_exists(self, dataset_id: str, evidence_id: str) -> bool:
         with self.driver.session() as session:
-            for row in session.run("MATCH (e:Entity {dataset_id: $id}) RETURN e", id=dataset_id):
-                entity = _entity_from_node(row["e"])
-                graph.add_node(entity["id"], **entity)
-            query = "MATCH (source:Entity {dataset_id: $id})-[:SOURCE]->(r:Relation)-[:TARGET]->(target:Entity {dataset_id: $id}) RETURN source.id AS source, target.id AS target, r"
-            for row in session.run(query, id=dataset_id):
-                relation = dict(row["r"])
-                graph.add_edge(row["source"], row["target"], key=relation["id"], **relation)
-        return graph
+            return session.run("MATCH (:Evidence {key: $key}) RETURN count(*) AS count", key=_key(dataset_id, evidence_id)).single()["count"] > 0
+
+    def entity_types(self, dataset_id: str, entity_ids: list[str]) -> dict[str, str]:
+        if not entity_ids:
+            return {}
+        with self.driver.session() as session:
+            rows = session.run("MATCH (e:Entity {dataset_id: $dataset_id}) WHERE e.id IN $ids RETURN e.id AS id, e.entity_type AS type", dataset_id=dataset_id, ids=entity_ids)
+            return {row["id"]: row["type"] for row in rows}
+
+    def query(self, intent: Any) -> list[Any]:
+        if intent.intent == "find_entity":
+            return self._find_entities(intent)
+        if intent.intent == "get_evidence":
+            if not intent.entity_id:
+                raise ValueError("entity_id is required for get_evidence")
+            return self.evidence_for(intent.dataset_id, intent.entity_id)
+        if intent.intent == "neighbors":
+            if not intent.entity_id:
+                raise ValueError("entity_id is required for neighbors")
+            query = "MATCH (entity:Entity {key: $key})-[:SOURCE|TARGET]-(r:Relation)-[:SOURCE|TARGET]-(neighbor:Entity {dataset_id: $dataset_id}) WHERE neighbor <> entity RETURN DISTINCT neighbor ORDER BY neighbor.id LIMIT $limit"
+            with self.driver.session() as session:
+                return [_entity_from_node(row["neighbor"]) for row in session.run(query, key=_key(intent.dataset_id, intent.entity_id), dataset_id=intent.dataset_id, limit=intent.limit)]
+        if intent.intent == "connection_path":
+            if not intent.source_id or not intent.target_id:
+                raise ValueError("source_id and target_id are required for connection_path")
+            query = "MATCH (source:Entity {key: $source}), (target:Entity {key: $target}) MATCH path = shortestPath((source)-[:SOURCE|TARGET*..20]-(target)) RETURN [node IN nodes(path) WHERE node:Entity | node.id] AS ids"
+            with self.driver.session() as session:
+                row = session.run(query, source=_key(intent.dataset_id, intent.source_id), target=_key(intent.dataset_id, intent.target_id)).single()
+            if not row:
+                raise KeyError("connection path not found")
+            return row["ids"]
+        if intent.intent == "rank_influencers":
+            query = "MATCH (entity:Entity {dataset_id: $dataset_id}) OPTIONAL MATCH (entity)-[:SOURCE|TARGET]-(:Relation) WITH entity, count(*) AS score RETURN entity.id AS id, toFloat(score) AS score ORDER BY score DESC, id ASC LIMIT $limit"
+            with self.driver.session() as session:
+                return [dict(row) for row in session.run(query, dataset_id=intent.dataset_id, limit=intent.limit)]
+        if intent.intent == "list_communities":
+            return self._communities(intent.dataset_id, intent.limit)
+        raise ValueError("unsupported query intent")
+
+    def _find_entities(self, intent: Any) -> list[dict[str, Any]]:
+        clauses, parameters = [], {"dataset_id": intent.dataset_id, "entity_type": intent.entity_type, "limit": intent.limit}
+        for index, filter_item in enumerate(intent.filters):
+            key = f"filter_{index}"
+            prefix = f"{filter_item.field}\u001f"
+            if filter_item.operator == "eq":
+                clauses.append(f"${key} IN entity.filter_values")
+                parameters[key] = prefix + json.dumps(filter_item.value, sort_keys=True)
+            elif filter_item.operator == "contains":
+                clauses.append(f"any(value IN entity.filter_values WHERE value STARTS WITH ${key} AND toLower(value) CONTAINS toLower(${key}_value))")
+                parameters[key], parameters[f"{key}_value"] = prefix, str(filter_item.value)
+            else:
+                clauses.append(f"any(value IN ${key} WHERE value IN entity.filter_values)")
+                parameters[key] = [prefix + json.dumps(value, sort_keys=True) for value in filter_item.value]
+        where = " AND ".join(clauses) if clauses else "true"
+        query = f"MATCH (entity:Entity {{dataset_id: $dataset_id}}) WHERE ($entity_type IS NULL OR entity.entity_type = $entity_type) AND {where} RETURN entity ORDER BY entity.id LIMIT $limit"
+        with self.driver.session() as session:
+            return [_entity_from_node(row["entity"]) for row in session.run(query, **parameters)]
+
+    def _communities(self, dataset_id: str, limit: int) -> list[list[str]]:
+        name = f"community_{dataset_id.replace('-', '_')}"
+        node_query = "MATCH (entity:Entity {dataset_id: $dataset_id}) RETURN id(entity) AS id"
+        relation_query = "MATCH (source:Entity {dataset_id: $dataset_id})-[:SOURCE]->(:Relation)-[:TARGET]->(target:Entity {dataset_id: $dataset_id}) RETURN id(source) AS source, id(target) AS target"
+        with self.driver.session() as session:
+            session.run("CALL gds.graph.project.cypher($name, $nodes, $relations, {parameters: {dataset_id: $dataset_id}})", name=name, nodes=node_query, relations=relation_query, dataset_id=dataset_id).consume()
+            try:
+                rows = session.run("CALL gds.louvain.stream($name) YIELD nodeId, communityId MATCH (entity:Entity) WHERE id(entity) = nodeId RETURN communityId, entity.id AS id ORDER BY communityId, id", name=name)
+                groups: dict[int, list[str]] = {}
+                for row in rows:
+                    groups.setdefault(row["communityId"], []).append(row["id"])
+                return list(groups.values())[:limit]
+            finally:
+                session.run("CALL gds.graph.drop($name, false)", name=name).consume()
+
+
+def _filter_values(entity: EntityInput) -> list[str]:
+    values = entity.attributes | entity.identifiers | ({"display_name": entity.display_name} if entity.display_name is not None else {})
+    return [f"{field}\u001f{json.dumps(value, sort_keys=True)}" for field, value in values.items()]
 
 
 def _key(dataset_id: str, identifier: str) -> str:

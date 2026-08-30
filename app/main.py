@@ -6,26 +6,28 @@ from collections.abc import Generator
 from typing import Any
 
 from fastapi import Depends, FastAPI, HTTPException, Request, status
-import networkx as nx
 
-from .models import DatasetRegistration, DatasetSchemaInput, EvidenceInput, QueryIntent, RecordsIngestionRequest, RelationInput
-from .store import MemoryGraphStore
+from .models import (
+    DatasetRegistration,
+    DatasetSchemaInput,
+    EvidenceInput,
+    QueryIntent,
+    RecordsIngestionRequest,
+    RelationInput,
+)
 from .neo4j_store import Neo4jGraphStore
 
 
-def create_app() -> FastAPI:
+def create_app(graph_store: Any | None = None) -> FastAPI:
     application = FastAPI(title="Graph Intelligence API", version="0.1.0")
-    if os.getenv("GRAPH_STORE", "memory").lower() == "neo4j":
-        application.state.graph_service = Neo4jGraphStore(os.environ["NEO4J_URI"], os.environ["NEO4J_USER"], os.environ["NEO4J_PASSWORD"])
-    else:
-        application.state.graph_service = MemoryGraphStore()
+    application.state.graph_service = graph_store or Neo4jGraphStore(os.getenv("NEO4J_URI", "bolt://localhost:7687"), os.getenv("NEO4J_USER", "neo4j"), os.getenv("NEO4J_PASSWORD", "change-me-now"))
 
     @application.get("/health")
     def health() -> dict[str, str]:
-        return {"status": "ok", "store": os.getenv("GRAPH_STORE", "memory")}
+        return {"status": "ok", "store": "neo4j"}
 
     @application.post("/api/datasets", status_code=status.HTTP_201_CREATED)
-    def register_dataset(request: DatasetRegistration, store: MemoryGraphStore = Depends(get_graph_service)) -> dict[str, Any]:
+    def register_dataset(request: DatasetRegistration, store: Any = Depends(get_graph_service)) -> dict[str, Any]:
         try:
             schema = DatasetSchemaInput(dataset_id=request.dataset_id, **request.dataset_schema)
             registered = store.register_dataset(schema)
@@ -34,24 +36,24 @@ def create_app() -> FastAPI:
             raise HTTPException(status_code=422, detail=str(error)) from error
 
     @application.get("/api/datasets/{dataset_id}")
-    def get_dataset(dataset_id: str, store: MemoryGraphStore = Depends(get_graph_service)) -> dict[str, Any]:
+    def get_dataset(dataset_id: str, store: Any = Depends(get_graph_service)) -> dict[str, Any]:
         try:
             return {"dataset_id": dataset_id, "schema": _public_schema(store.schema_dict(store.get_dataset(dataset_id)))}
         except KeyError as error:
             raise HTTPException(status_code=404, detail="dataset not found") from error
 
     @application.post("/api/datasets/{dataset_id}/ingestions")
-    def ingest_records(dataset_id: str, request: RecordsIngestionRequest, store: MemoryGraphStore = Depends(get_graph_service)) -> dict[str, int]:
+    def ingest_records(dataset_id: str, request: RecordsIngestionRequest, store: Any = Depends(get_graph_service)) -> dict[str, int]:
         created = {"created_entities": 0, "created_evidence": 0, "created_relations": 0, "skipped_records": 0}
         try:
             data = store.get_dataset(dataset_id)
             for record in request.records:
                 evidence_id = f"{dataset_id}:{record.record_id}"
-                if evidence_id in data.evidence:
+                if store.evidence_exists(dataset_id, evidence_id):
                     created["skipped_records"] += 1
                     continue
                 relations = [RelationInput(id=f"{dataset_id}:{record.record_id}:{index}", relation_type=item.relation_type, source_id=item.source_ref, target_id=item.target_ref, weight=item.weight, attributes=item.attributes, evidence_ids=[evidence_id]) for index, item in enumerate(record.relations)]
-                _validate_relation_endpoints(data.schema, record.entities, relations, data.entities)
+                _validate_relation_endpoints(data.schema, record.entities, relations, store.entity_types(dataset_id, [item.source_id for item in relations] + [item.target_id for item in relations]))
                 result = store.ingest(dataset_id, record.entities, [EvidenceInput(id=evidence_id, source_record_id=record.record_id, **record.evidence)], relations)
                 created["created_entities"] += result["entities"]
                 created["created_evidence"] += result["evidence"]
@@ -63,38 +65,11 @@ def create_app() -> FastAPI:
             raise HTTPException(status_code=422, detail=str(error)) from error
 
     @application.post("/api/query")
-    def query_graph(intent: QueryIntent, store: MemoryGraphStore = Depends(get_graph_service)) -> dict[str, Any]:
+    def query_graph(intent: QueryIntent, store: Any = Depends(get_graph_service)) -> dict[str, Any]:
         try:
             data = store.get_dataset(intent.dataset_id)
             _validate_intent(data.schema, intent)
-            if intent.intent == "find_entity":
-                results: Any = store.search(intent.dataset_id, intent.entity_type, intent.filters, intent.limit)
-            elif intent.intent == "get_evidence":
-                if not intent.entity_id:
-                    raise ValueError("entity_id is required for get_evidence")
-                results = store.evidence_for(intent.dataset_id, intent.entity_id)
-            elif intent.intent == "neighbors":
-                if not intent.entity_id:
-                    raise ValueError("entity_id is required for neighbors")
-                graph = store.graph(intent.dataset_id)
-                if intent.entity_id not in graph:
-                    raise KeyError("entity not found")
-                neighbor_ids = sorted(set(graph.successors(intent.entity_id)) | set(graph.predecessors(intent.entity_id)))
-                results = [store.entity(intent.dataset_id, entity_id) for entity_id in neighbor_ids[: intent.limit]]
-            elif intent.intent == "connection_path":
-                if not intent.source_id or not intent.target_id:
-                    raise ValueError("source_id and target_id are required for connection_path")
-                graph = store.graph(intent.dataset_id).to_undirected()
-                results = nx.shortest_path(graph, intent.source_id, intent.target_id)
-            elif intent.intent == "rank_influencers":
-                graph = store.graph(intent.dataset_id)
-                scores = nx.degree_centrality(graph)
-                results = [{"id": node_id, "score": score} for node_id, score in sorted(scores.items(), key=lambda item: (-item[1], item[0]))[: intent.limit]]
-            elif intent.intent == "list_communities":
-                graph = nx.Graph(store.graph(intent.dataset_id))
-                results = [sorted(community) for community in nx.community.greedy_modularity_communities(graph)]
-            else:
-                results = []
+            results = store.query(intent)
             return {"intent": intent.intent, "dataset_id": intent.dataset_id, "results": results}
         except KeyError as error:
             raise HTTPException(status_code=404, detail="dataset or entity not found") from error
@@ -111,8 +86,8 @@ def _public_schema(schema: dict[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in schema.items() if key not in {"dataset_id", "graph_version"}}
 
 
-def _validate_relation_endpoints(schema: DatasetSchemaInput, incoming: list[Any], relations: list[RelationInput], existing: dict[str, dict[str, Any]]) -> None:
-    entity_types = {item.id: item.entity_type for item in incoming} | {key: value["entity_type"] for key, value in existing.items()}
+def _validate_relation_endpoints(schema: DatasetSchemaInput, incoming: list[Any], relations: list[RelationInput], existing: dict[str, str]) -> None:
+    entity_types = {item.id: item.entity_type for item in incoming} | existing
     relation_types = {item.name: item for item in schema.relation_types}
     for relation in relations:
         config = relation_types.get(relation.relation_type)
@@ -139,4 +114,3 @@ def _validate_intent(schema: DatasetSchemaInput, intent: QueryIntent) -> None:
         raise ValueError("filter field is not queryable for this entity type")
 
 
-app = create_app()
