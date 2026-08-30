@@ -84,8 +84,10 @@ class IngestRequest(BaseModel):
 
 
 class DatasetRegistration(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+
     dataset_id: str = Field(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9_-]+$")
-    schema: dict[str, Any]
+    dataset_schema: dict[str, Any] = Field(alias="schema")
 
 
 class SourceRelationInput(BaseModel):

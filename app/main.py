@@ -26,7 +26,7 @@ def create_app() -> FastAPI:
     @application.post("/api/datasets", status_code=status.HTTP_201_CREATED)
     def register_dataset(request: DatasetRegistration, store: MemoryGraphStore = Depends(get_graph_service)) -> dict[str, Any]:
         try:
-            schema = DatasetSchemaInput(dataset_id=request.dataset_id, **request.schema)
+            schema = DatasetSchemaInput(dataset_id=request.dataset_id, **request.dataset_schema)
             registered = store.register_dataset(schema)
             return {"dataset_id": request.dataset_id, "schema": _public_schema(registered)}
         except ValueError as error:
