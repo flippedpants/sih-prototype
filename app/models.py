@@ -109,6 +109,48 @@ class RecordsIngestionRequest(BaseModel):
     records: list[SourceRecordInput] = Field(min_length=1)
 
 
+class CsvEntityMapping(BaseModel):
+    id_column: str = Field(min_length=1)
+    entity_type: str = Field(min_length=1)
+    display_name_column: str | None = None
+    identifiers: dict[str, str] = Field(default_factory=dict)
+    attributes: dict[str, str] = Field(default_factory=dict)
+
+
+class CsvRelationMapping(BaseModel):
+    relation_type: str = Field(min_length=1)
+    source_id_column: str = Field(min_length=1)
+    target_id_column: str = Field(min_length=1)
+    weight_column: str | None = None
+    attributes: dict[str, str] = Field(default_factory=dict)
+
+
+class CsvEvidenceMapping(BaseModel):
+    source_kind: str = Field(default="csv", min_length=1)
+    confidence_column: str | None = None
+    occurred_at_column: str | None = None
+    attributes: dict[str, str] = Field(default_factory=dict)
+
+
+class CsvFileMapping(BaseModel):
+    file_name: str = Field(min_length=1)
+    record_id_column: str = Field(min_length=1)
+    entities: list[CsvEntityMapping] = Field(min_length=1)
+    relations: list[CsvRelationMapping] = Field(default_factory=list)
+    evidence: CsvEvidenceMapping = Field(default_factory=CsvEvidenceMapping)
+
+
+class CsvIngestionMapping(BaseModel):
+    files: list[CsvFileMapping] = Field(min_length=1)
+
+    @field_validator("files")
+    @classmethod
+    def unique_file_names(cls, values: list[CsvFileMapping]) -> list[CsvFileMapping]:
+        if len({item.file_name for item in values}) != len(values):
+            raise ValueError("each CSV file must have exactly one mapping")
+        return values
+
+
 class IntentFilter(BaseModel):
     field: str = Field(min_length=1)
     operator: Literal["eq", "contains", "in"] = "eq"

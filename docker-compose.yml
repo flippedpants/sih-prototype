@@ -23,3 +23,11 @@ services:
       interval: 10s
       timeout: 5s
       retries: 15
+  ingestion-frontend:
+    build:
+      context: ./app/ingestion-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      api:
+        condition: service_started

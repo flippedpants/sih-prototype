@@ -4,7 +4,7 @@
 
 - `app/` contains the FastAPI backend. Keep HTTP wiring in `main.py`, request/response models in `models.py`, and Neo4j persistence and Cypher/GDS retrieval in `neo4j_store.py`.
 - `tests/` contains pytest API and integration coverage. Shared fixtures belong in `tests/fixtures.py`; shared client setup belongs in `tests/conftest.py`.
-- `docker-compose.yml` starts Neo4j with Graph Data Science (GDS); `Dockerfile` builds the API container.
+- `docker-compose.yml` starts Neo4j, the API, and the static CSV upload frontend in `app/ingestion-frontend/`; `Dockerfile` builds the API container.
 - Planning and domain context live in the repository Markdown files. Do not put runtime data, credentials, or generated artifacts under source control.
 
 ## Build, Test, and Development Commands
@@ -17,7 +17,7 @@ docker compose up -d neo4j
 docker compose up --build
 ```
 
-The tests are Neo4j integration tests and require the local Neo4j service. `docker compose up --build` starts both the database and API; the API listens on port `8000`.
+The tests are Neo4j integration tests and require the local Neo4j service. `docker compose up --build` starts the database, API (`8000`), and upload frontend (`8080`).
 
 ## Coding Style & Naming Conventions
 

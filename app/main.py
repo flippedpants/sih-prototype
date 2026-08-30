@@ -5,7 +5,7 @@ import os
 from collections.abc import Generator
 from typing import Any
 
-from fastapi import Depends, FastAPI, HTTPException, Request, status
+from fastapi import Depends, FastAPI, File, Form, HTTPException, Request, UploadFile, status
 
 from .models import (
     DatasetRegistration,
@@ -15,6 +15,7 @@ from .models import (
     RecordsIngestionRequest,
     RelationInput,
 )
+from .csv_ingestion import parse_csv_uploads
 from .neo4j_store import Neo4jGraphStore
 
 
@@ -44,24 +45,31 @@ def create_app(graph_store: Any | None = None) -> FastAPI:
 
     @application.post("/api/datasets/{dataset_id}/ingestions")
     def ingest_records(dataset_id: str, request: RecordsIngestionRequest, store: Any = Depends(get_graph_service)) -> dict[str, int]:
-        created = {"created_entities": 0, "created_evidence": 0, "created_relations": 0, "skipped_records": 0}
         try:
-            data = store.get_dataset(dataset_id)
-            for record in request.records:
-                evidence_id = f"{dataset_id}:{record.record_id}"
-                if store.evidence_exists(dataset_id, evidence_id):
-                    created["skipped_records"] += 1
-                    continue
-                relations = [RelationInput(id=f"{dataset_id}:{record.record_id}:{index}", relation_type=item.relation_type, source_id=item.source_ref, target_id=item.target_ref, weight=item.weight, attributes=item.attributes, evidence_ids=[evidence_id]) for index, item in enumerate(record.relations)]
-                _validate_relation_endpoints(data.schema, record.entities, relations, store.entity_types(dataset_id, [item.source_id for item in relations] + [item.target_id for item in relations]))
-                result = store.ingest(dataset_id, record.entities, [EvidenceInput(id=evidence_id, source_record_id=record.record_id, **record.evidence)], relations)
-                created["created_entities"] += result["entities"]
-                created["created_evidence"] += result["evidence"]
-                created["created_relations"] += result["relations"]
-            return created
+            return _ingest_source_records(dataset_id, request.records, store)
         except KeyError as error:
             raise HTTPException(status_code=404, detail="dataset not found") from error
         except (TypeError, ValueError) as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
+
+    @application.post("/api/datasets/{dataset_id}/ingestions/csv")
+    async def ingest_csv_files(
+        dataset_id: str,
+        files: list[UploadFile] = File(...),
+        mapping: str = Form(...),
+        store: Any = Depends(get_graph_service),
+    ) -> dict[str, int]:
+        try:
+            import json
+
+            records = parse_csv_uploads(
+                [(file.filename or "upload.csv", await file.read()) for file in files],
+                json.loads(mapping),
+            )
+            return _ingest_source_records(dataset_id, records, store) | {"processed_files": len(files)}
+        except KeyError as error:
+            raise HTTPException(status_code=404, detail="dataset not found") from error
+        except (TypeError, ValueError, json.JSONDecodeError) as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
 
     @application.post("/api/query")
@@ -82,6 +90,45 @@ def get_graph_service(request: Request) -> Generator[Any, None, None]:
     yield request.app.state.graph_service
 
 
+
+def _ingest_source_records(dataset_id: str, records: list[Any], store: Any) -> dict[str, int]:
+    created = {"created_entities": 0, "created_evidence": 0, "created_relations": 0, "skipped_records": 0}
+    data = store.get_dataset(dataset_id)
+    for record in records:
+        evidence_id = f"{dataset_id}:{record.record_id}"
+        if store.evidence_exists(dataset_id, evidence_id):
+            created["skipped_records"] += 1
+            continue
+        _validate_entity_types(data.schema, record.entities)
+        relations = [
+            RelationInput(
+                id=f"{dataset_id}:{record.record_id}:{index}",
+                relation_type=item.relation_type,
+                source_id=item.source_ref,
+                target_id=item.target_ref,
+                weight=item.weight,
+                attributes=item.attributes,
+                evidence_ids=[evidence_id],
+            )
+            for index, item in enumerate(record.relations)
+        ]
+        _validate_relation_endpoints(
+            data.schema,
+            record.entities,
+            relations,
+            store.entity_types(dataset_id, [item.source_id for item in relations] + [item.target_id for item in relations]),
+        )
+        result = store.ingest(
+            dataset_id,
+            record.entities,
+            [EvidenceInput(id=evidence_id, source_record_id=record.record_id, **record.evidence)],
+            relations,
+        )
+        created["created_entities"] += result["entities"]
+        created["created_evidence"] += result["evidence"]
+        created["created_relations"] += result["relations"]
+    return created
+
 def _public_schema(schema: dict[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in schema.items() if key not in {"dataset_id", "graph_version"}}
 
@@ -98,6 +145,13 @@ def _validate_relation_endpoints(schema: DatasetSchemaInput, incoming: list[Any]
         if config.target_types and entity_types.get(relation.target_id) not in config.target_types:
             raise ValueError("relation target type is not allowed by the dataset schema")
 
+
+
+def _validate_entity_types(schema: DatasetSchemaInput, entities: list[Any]) -> None:
+    allowed = {item.name for item in schema.entity_types}
+    unknown = sorted({item.entity_type for item in entities} - allowed)
+    if unknown:
+        raise ValueError(f"unknown entity types: {', '.join(unknown)}")
 
 def _validate_intent(schema: DatasetSchemaInput, intent: QueryIntent) -> None:
     types = {item.name: item for item in schema.entity_types}

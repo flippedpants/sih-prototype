@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graph CSV Ingestion</title>
+  <style>body{font:16px system-ui,sans-serif;max-width:760px;margin:3rem auto;padding:0 1rem;color:#172033}label{display:block;margin:1rem 0 .35rem}input,textarea,button{font:inherit;width:100%;box-sizing:border-box;padding:.65rem}textarea{min-height:270px;font-family:ui-monospace,monospace}button{background:#2457d6;color:#fff;border:0;border-radius:5px;cursor:pointer;margin-top:1rem}pre{padding:1rem;background:#f3f5f8;white-space:pre-wrap}</style>
+</head>
+<body>
+  <h1>CSV graph ingestion</h1>
+  <p>Upload CSV files and give each filename a flexible mapping. Matching entity IDs across files connect them in the same dataset.</p>
+  <form id="ingestion-form">
+    <label for="dataset">Dataset ID</label>
+    <input id="dataset" value="fraud-demo" required>
+    <label for="files">CSV files</label>
+    <input id="files" type="file" accept=".csv,text/csv" multiple required>
+    <label for="mapping">Mapping JSON</label>
+    <textarea id="mapping" required>{
+  "files": [
+    {
+      "file_name": "payments.csv",
+      "record_id_column": "transaction_id",
+      "entities": [
+        {"id_column": "wallet_id", "entity_type": "Wallet", "identifiers": {"wallet_number": "wallet_id"}},
+        {"id_column": "merchant_id", "entity_type": "Merchant", "attributes": {"city": "city"}}
+      ],
+      "relations": [
+        {"relation_type": "PAYS", "source_id_column": "wallet_id", "target_id_column": "merchant_id", "weight_column": "amount"}
+      ],
+      "evidence": {"source_kind": "payments_export"}
+    }
+  ]
+}</textarea>
+    <button>Ingest into Neo4j</button>
+  </form>
+  <pre id="result" aria-live="polite">Ready.</pre>
+  <script>
+    const form = document.querySelector('#ingestion-form');
+    const result = document.querySelector('#result');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = new FormData();
+      for (const file of document.querySelector('#files').files) data.append('files', file);
+      data.append('mapping', document.querySelector('#mapping').value);
+      result.textContent = 'Uploading…';
+      const response = await fetch(`/api/datasets/${encodeURIComponent(document.querySelector('#dataset').value)}/ingestions/csv`, {method: 'POST', body: data});
+      const body = await response.json();
+      result.textContent = response.ok ? `Ingestion complete:
+${JSON.stringify(body, null, 2)}` : `Ingestion failed:
+${body.detail || JSON.stringify(body)}`;
+    });
+  </script>
+</body>
+</html>
