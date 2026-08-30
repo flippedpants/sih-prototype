@@ -1,0 +1,8 @@
+{
+  "case_id": "CYB-2026-001",
+  "total_fraud_amount": 32123211.37,
+  "n_victims": 82,
+  "n_mule_chains": 82,
+  "aggregator_account_id": "ACC-000001",
+  "cashout_account_id": "ACC-000002"
+}

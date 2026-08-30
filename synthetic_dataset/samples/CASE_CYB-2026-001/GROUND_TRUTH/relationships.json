@@ -1,0 +1,4713 @@
+{
+  "PLANTED-CYB-2026-001-00000": {
+    "source": "P-000001",
+    "target": "P-000002",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_organizer_manager_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00001": {
+    "source": "P-000001",
+    "target": "P-000003",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_organizer_manager_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00002": {
+    "source": "P-000002",
+    "target": "P-000004",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_manager_agent_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00003": {
+    "source": "P-000003",
+    "target": "P-000005",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_manager_agent_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00004": {
+    "source": "P-000002",
+    "target": "P-000006",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_manager_agent_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00005": {
+    "source": "P-000004",
+    "target": "P-000007",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00006": {
+    "source": "P-000004",
+    "target": "P-000008",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00007": {
+    "source": "P-000004",
+    "target": "P-000009",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00008": {
+    "source": "P-000004",
+    "target": "P-000010",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00009": {
+    "source": "P-000004",
+    "target": "P-000011",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00010": {
+    "source": "P-000004",
+    "target": "P-000012",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00011": {
+    "source": "P-000004",
+    "target": "P-000013",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00012": {
+    "source": "P-000004",
+    "target": "P-000014",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00013": {
+    "source": "P-000004",
+    "target": "P-000015",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00014": {
+    "source": "P-000004",
+    "target": "P-000016",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00015": {
+    "source": "P-000004",
+    "target": "P-000017",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00016": {
+    "source": "P-000004",
+    "target": "P-000018",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00017": {
+    "source": "P-000004",
+    "target": "P-000019",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00018": {
+    "source": "P-000004",
+    "target": "P-000020",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00019": {
+    "source": "P-000004",
+    "target": "P-000021",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00020": {
+    "source": "P-000004",
+    "target": "P-000022",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00021": {
+    "source": "P-000004",
+    "target": "P-000023",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00022": {
+    "source": "P-000004",
+    "target": "P-000024",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00023": {
+    "source": "P-000004",
+    "target": "P-000025",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00024": {
+    "source": "P-000004",
+    "target": "P-000026",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00025": {
+    "source": "P-000004",
+    "target": "P-000027",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00026": {
+    "source": "P-000004",
+    "target": "P-000028",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00027": {
+    "source": "P-000004",
+    "target": "P-000029",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00028": {
+    "source": "P-000004",
+    "target": "P-000030",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00029": {
+    "source": "P-000004",
+    "target": "P-000031",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00030": {
+    "source": "P-000004",
+    "target": "P-000032",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00031": {
+    "source": "P-000004",
+    "target": "P-000033",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00032": {
+    "source": "P-000004",
+    "target": "P-000034",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00033": {
+    "source": "P-000005",
+    "target": "P-000035",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00034": {
+    "source": "P-000005",
+    "target": "P-000036",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00035": {
+    "source": "P-000005",
+    "target": "P-000037",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00036": {
+    "source": "P-000005",
+    "target": "P-000038",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00037": {
+    "source": "P-000005",
+    "target": "P-000039",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00038": {
+    "source": "P-000005",
+    "target": "P-000040",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00039": {
+    "source": "P-000005",
+    "target": "P-000041",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00040": {
+    "source": "P-000005",
+    "target": "P-000042",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00041": {
+    "source": "P-000005",
+    "target": "P-000043",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00042": {
+    "source": "P-000005",
+    "target": "P-000044",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00043": {
+    "source": "P-000005",
+    "target": "P-000045",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00044": {
+    "source": "P-000005",
+    "target": "P-000046",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00045": {
+    "source": "P-000005",
+    "target": "P-000047",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00046": {
+    "source": "P-000005",
+    "target": "P-000048",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00047": {
+    "source": "P-000005",
+    "target": "P-000049",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00048": {
+    "source": "P-000005",
+    "target": "P-000050",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00049": {
+    "source": "P-000005",
+    "target": "P-000051",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00050": {
+    "source": "P-000005",
+    "target": "P-000052",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00051": {
+    "source": "P-000005",
+    "target": "P-000053",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00052": {
+    "source": "P-000005",
+    "target": "P-000054",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00053": {
+    "source": "P-000005",
+    "target": "P-000055",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00054": {
+    "source": "P-000005",
+    "target": "P-000056",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00055": {
+    "source": "P-000005",
+    "target": "P-000057",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00056": {
+    "source": "P-000005",
+    "target": "P-000058",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00057": {
+    "source": "P-000005",
+    "target": "P-000059",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00058": {
+    "source": "P-000005",
+    "target": "P-000060",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00059": {
+    "source": "P-000005",
+    "target": "P-000061",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00060": {
+    "source": "P-000005",
+    "target": "P-000062",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00061": {
+    "source": "P-000005",
+    "target": "P-000063",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00062": {
+    "source": "P-000005",
+    "target": "P-000064",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00063": {
+    "source": "P-000006",
+    "target": "P-000065",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00064": {
+    "source": "P-000006",
+    "target": "P-000066",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00065": {
+    "source": "P-000006",
+    "target": "P-000067",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00066": {
+    "source": "P-000006",
+    "target": "P-000068",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00067": {
+    "source": "P-000006",
+    "target": "P-000069",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00068": {
+    "source": "P-000006",
+    "target": "P-000070",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00069": {
+    "source": "P-000006",
+    "target": "P-000071",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00070": {
+    "source": "P-000006",
+    "target": "P-000072",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00071": {
+    "source": "P-000006",
+    "target": "P-000073",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00072": {
+    "source": "P-000006",
+    "target": "P-000074",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00073": {
+    "source": "P-000006",
+    "target": "P-000075",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00074": {
+    "source": "P-000006",
+    "target": "P-000076",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00075": {
+    "source": "P-000006",
+    "target": "P-000077",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00076": {
+    "source": "P-000006",
+    "target": "P-000078",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00077": {
+    "source": "P-000006",
+    "target": "P-000079",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00078": {
+    "source": "P-000006",
+    "target": "P-000080",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00079": {
+    "source": "P-000006",
+    "target": "P-000081",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00080": {
+    "source": "P-000006",
+    "target": "P-000082",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00081": {
+    "source": "P-000006",
+    "target": "P-000083",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00082": {
+    "source": "P-000006",
+    "target": "P-000084",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00083": {
+    "source": "P-000006",
+    "target": "P-000085",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00084": {
+    "source": "P-000006",
+    "target": "P-000086",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00085": {
+    "source": "P-000006",
+    "target": "P-000087",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00086": {
+    "source": "P-000006",
+    "target": "P-000088",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_agent_victim_link",
+    "planted_by_topology": "D1"
+  },
+  "PLANTED-CYB-2026-001-00087": {
+    "source": "ACC-000003",
+    "target": "ACC-000004",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00088": {
+    "source": "P-000091",
+    "target": "P-000092",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00089": {
+    "source": "ACC-000004",
+    "target": "ACC-000005",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00090": {
+    "source": "P-000091",
+    "target": "P-000093",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00091": {
+    "source": "ACC-000005",
+    "target": "ACC-000006",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00092": {
+    "source": "P-000091",
+    "target": "P-000094",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00093": {
+    "source": "ACC-000006",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00094": {
+    "source": "ACC-000007",
+    "target": "ACC-000008",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00095": {
+    "source": "P-000091",
+    "target": "P-000095",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00096": {
+    "source": "ACC-000008",
+    "target": "ACC-000009",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00097": {
+    "source": "P-000091",
+    "target": "P-000096",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00098": {
+    "source": "ACC-000009",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00099": {
+    "source": "ACC-000010",
+    "target": "ACC-000011",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00100": {
+    "source": "P-000091",
+    "target": "P-000097",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00101": {
+    "source": "ACC-000011",
+    "target": "ACC-000012",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00102": {
+    "source": "P-000091",
+    "target": "P-000098",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00103": {
+    "source": "ACC-000012",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00104": {
+    "source": "ACC-000013",
+    "target": "ACC-000014",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00105": {
+    "source": "P-000091",
+    "target": "P-000099",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00106": {
+    "source": "ACC-000014",
+    "target": "ACC-000015",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00107": {
+    "source": "P-000091",
+    "target": "P-000100",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00108": {
+    "source": "ACC-000015",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00109": {
+    "source": "ACC-000016",
+    "target": "ACC-000017",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00110": {
+    "source": "P-000091",
+    "target": "P-000101",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00111": {
+    "source": "ACC-000017",
+    "target": "ACC-000018",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00112": {
+    "source": "P-000091",
+    "target": "P-000102",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00113": {
+    "source": "ACC-000018",
+    "target": "ACC-000019",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00114": {
+    "source": "P-000091",
+    "target": "P-000103",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00115": {
+    "source": "ACC-000019",
+    "target": "ACC-000020",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00116": {
+    "source": "P-000091",
+    "target": "P-000104",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00117": {
+    "source": "ACC-000020",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00118": {
+    "source": "ACC-000021",
+    "target": "ACC-000022",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00119": {
+    "source": "P-000091",
+    "target": "P-000105",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00120": {
+    "source": "ACC-000022",
+    "target": "ACC-000023",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00121": {
+    "source": "P-000091",
+    "target": "P-000106",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00122": {
+    "source": "ACC-000023",
+    "target": "ACC-000024",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00123": {
+    "source": "P-000091",
+    "target": "P-000107",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00124": {
+    "source": "ACC-000024",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00125": {
+    "source": "ACC-000025",
+    "target": "ACC-000026",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00126": {
+    "source": "P-000091",
+    "target": "P-000108",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00127": {
+    "source": "ACC-000026",
+    "target": "ACC-000027",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00128": {
+    "source": "P-000091",
+    "target": "P-000109",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00129": {
+    "source": "ACC-000027",
+    "target": "ACC-000028",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00130": {
+    "source": "P-000091",
+    "target": "P-000110",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00131": {
+    "source": "ACC-000028",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00132": {
+    "source": "ACC-000029",
+    "target": "ACC-000030",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00133": {
+    "source": "P-000091",
+    "target": "P-000111",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00134": {
+    "source": "ACC-000030",
+    "target": "ACC-000031",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00135": {
+    "source": "P-000091",
+    "target": "P-000112",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00136": {
+    "source": "ACC-000031",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00137": {
+    "source": "ACC-000032",
+    "target": "ACC-000033",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00138": {
+    "source": "P-000091",
+    "target": "P-000113",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00139": {
+    "source": "ACC-000033",
+    "target": "ACC-000034",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00140": {
+    "source": "P-000091",
+    "target": "P-000114",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00141": {
+    "source": "ACC-000034",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00142": {
+    "source": "ACC-000035",
+    "target": "ACC-000036",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00143": {
+    "source": "P-000091",
+    "target": "P-000115",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00144": {
+    "source": "ACC-000036",
+    "target": "ACC-000037",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00145": {
+    "source": "P-000091",
+    "target": "P-000116",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00146": {
+    "source": "ACC-000037",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00147": {
+    "source": "ACC-000038",
+    "target": "ACC-000039",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00148": {
+    "source": "P-000091",
+    "target": "P-000117",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00149": {
+    "source": "ACC-000039",
+    "target": "ACC-000040",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00150": {
+    "source": "P-000091",
+    "target": "P-000118",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00151": {
+    "source": "ACC-000040",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00152": {
+    "source": "ACC-000041",
+    "target": "ACC-000042",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00153": {
+    "source": "P-000091",
+    "target": "P-000119",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00154": {
+    "source": "ACC-000042",
+    "target": "ACC-000043",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00155": {
+    "source": "P-000091",
+    "target": "P-000120",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00156": {
+    "source": "ACC-000043",
+    "target": "ACC-000044",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00157": {
+    "source": "P-000091",
+    "target": "P-000121",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00158": {
+    "source": "ACC-000044",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00159": {
+    "source": "ACC-000045",
+    "target": "ACC-000046",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00160": {
+    "source": "P-000091",
+    "target": "P-000122",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00161": {
+    "source": "ACC-000046",
+    "target": "ACC-000047",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00162": {
+    "source": "P-000091",
+    "target": "P-000123",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00163": {
+    "source": "ACC-000047",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00164": {
+    "source": "ACC-000048",
+    "target": "ACC-000049",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00165": {
+    "source": "P-000091",
+    "target": "P-000124",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00166": {
+    "source": "ACC-000049",
+    "target": "ACC-000050",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00167": {
+    "source": "P-000091",
+    "target": "P-000125",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00168": {
+    "source": "ACC-000050",
+    "target": "ACC-000051",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00169": {
+    "source": "P-000091",
+    "target": "P-000126",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00170": {
+    "source": "ACC-000051",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00171": {
+    "source": "ACC-000052",
+    "target": "ACC-000053",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00172": {
+    "source": "P-000091",
+    "target": "P-000127",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00173": {
+    "source": "ACC-000053",
+    "target": "ACC-000054",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00174": {
+    "source": "P-000091",
+    "target": "P-000128",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00175": {
+    "source": "ACC-000054",
+    "target": "ACC-000055",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00176": {
+    "source": "P-000091",
+    "target": "P-000129",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00177": {
+    "source": "ACC-000055",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00178": {
+    "source": "ACC-000056",
+    "target": "ACC-000057",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00179": {
+    "source": "P-000091",
+    "target": "P-000130",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00180": {
+    "source": "ACC-000057",
+    "target": "ACC-000058",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00181": {
+    "source": "P-000091",
+    "target": "P-000131",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00182": {
+    "source": "ACC-000058",
+    "target": "ACC-000059",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00183": {
+    "source": "P-000091",
+    "target": "P-000132",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00184": {
+    "source": "ACC-000059",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00185": {
+    "source": "ACC-000060",
+    "target": "ACC-000061",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00186": {
+    "source": "P-000091",
+    "target": "P-000133",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00187": {
+    "source": "ACC-000061",
+    "target": "ACC-000062",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00188": {
+    "source": "P-000091",
+    "target": "P-000134",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00189": {
+    "source": "ACC-000062",
+    "target": "ACC-000063",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00190": {
+    "source": "P-000091",
+    "target": "P-000135",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00191": {
+    "source": "ACC-000063",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00192": {
+    "source": "ACC-000064",
+    "target": "ACC-000065",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00193": {
+    "source": "P-000091",
+    "target": "P-000136",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00194": {
+    "source": "ACC-000065",
+    "target": "ACC-000066",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00195": {
+    "source": "P-000091",
+    "target": "P-000137",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00196": {
+    "source": "ACC-000066",
+    "target": "ACC-000067",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00197": {
+    "source": "P-000091",
+    "target": "P-000138",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00198": {
+    "source": "ACC-000067",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00199": {
+    "source": "ACC-000068",
+    "target": "ACC-000069",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00200": {
+    "source": "P-000091",
+    "target": "P-000139",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00201": {
+    "source": "ACC-000069",
+    "target": "ACC-000070",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00202": {
+    "source": "P-000091",
+    "target": "P-000140",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00203": {
+    "source": "ACC-000070",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00204": {
+    "source": "ACC-000071",
+    "target": "ACC-000072",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00205": {
+    "source": "P-000091",
+    "target": "P-000141",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00206": {
+    "source": "ACC-000072",
+    "target": "ACC-000073",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00207": {
+    "source": "P-000091",
+    "target": "P-000142",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00208": {
+    "source": "ACC-000073",
+    "target": "ACC-000074",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00209": {
+    "source": "P-000091",
+    "target": "P-000143",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00210": {
+    "source": "ACC-000074",
+    "target": "ACC-000075",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00211": {
+    "source": "P-000091",
+    "target": "P-000144",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00212": {
+    "source": "ACC-000075",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00213": {
+    "source": "ACC-000076",
+    "target": "ACC-000077",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00214": {
+    "source": "P-000091",
+    "target": "P-000145",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00215": {
+    "source": "ACC-000077",
+    "target": "ACC-000078",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00216": {
+    "source": "P-000091",
+    "target": "P-000146",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00217": {
+    "source": "ACC-000078",
+    "target": "ACC-000079",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00218": {
+    "source": "P-000091",
+    "target": "P-000147",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00219": {
+    "source": "ACC-000079",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00220": {
+    "source": "ACC-000080",
+    "target": "ACC-000081",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00221": {
+    "source": "P-000091",
+    "target": "P-000148",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00222": {
+    "source": "ACC-000081",
+    "target": "ACC-000082",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00223": {
+    "source": "P-000091",
+    "target": "P-000149",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00224": {
+    "source": "ACC-000082",
+    "target": "ACC-000083",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00225": {
+    "source": "P-000091",
+    "target": "P-000150",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00226": {
+    "source": "ACC-000083",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00227": {
+    "source": "ACC-000084",
+    "target": "ACC-000085",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00228": {
+    "source": "P-000091",
+    "target": "P-000151",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00229": {
+    "source": "ACC-000085",
+    "target": "ACC-000086",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00230": {
+    "source": "P-000091",
+    "target": "P-000152",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00231": {
+    "source": "ACC-000086",
+    "target": "ACC-000087",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00232": {
+    "source": "P-000091",
+    "target": "P-000153",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00233": {
+    "source": "ACC-000087",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00234": {
+    "source": "ACC-000088",
+    "target": "ACC-000089",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00235": {
+    "source": "P-000091",
+    "target": "P-000154",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00236": {
+    "source": "ACC-000089",
+    "target": "ACC-000090",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00237": {
+    "source": "P-000091",
+    "target": "P-000155",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00238": {
+    "source": "ACC-000090",
+    "target": "ACC-000091",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00239": {
+    "source": "P-000091",
+    "target": "P-000156",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00240": {
+    "source": "ACC-000091",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00241": {
+    "source": "ACC-000092",
+    "target": "ACC-000093",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00242": {
+    "source": "P-000091",
+    "target": "P-000157",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00243": {
+    "source": "ACC-000093",
+    "target": "ACC-000094",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00244": {
+    "source": "P-000091",
+    "target": "P-000158",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00245": {
+    "source": "ACC-000094",
+    "target": "ACC-000095",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00246": {
+    "source": "P-000091",
+    "target": "P-000159",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00247": {
+    "source": "ACC-000095",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00248": {
+    "source": "ACC-000096",
+    "target": "ACC-000097",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00249": {
+    "source": "P-000091",
+    "target": "P-000160",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00250": {
+    "source": "ACC-000097",
+    "target": "ACC-000098",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00251": {
+    "source": "P-000091",
+    "target": "P-000161",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00252": {
+    "source": "ACC-000098",
+    "target": "ACC-000099",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00253": {
+    "source": "P-000091",
+    "target": "P-000162",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00254": {
+    "source": "ACC-000099",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00255": {
+    "source": "ACC-000100",
+    "target": "ACC-000101",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00256": {
+    "source": "P-000091",
+    "target": "P-000163",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00257": {
+    "source": "ACC-000101",
+    "target": "ACC-000102",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00258": {
+    "source": "P-000091",
+    "target": "P-000164",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00259": {
+    "source": "ACC-000102",
+    "target": "ACC-000103",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00260": {
+    "source": "P-000091",
+    "target": "P-000165",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00261": {
+    "source": "ACC-000103",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00262": {
+    "source": "ACC-000104",
+    "target": "ACC-000105",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00263": {
+    "source": "P-000091",
+    "target": "P-000166",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00264": {
+    "source": "ACC-000105",
+    "target": "ACC-000106",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00265": {
+    "source": "P-000091",
+    "target": "P-000167",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00266": {
+    "source": "ACC-000106",
+    "target": "ACC-000107",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00267": {
+    "source": "P-000091",
+    "target": "P-000168",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00268": {
+    "source": "ACC-000107",
+    "target": "ACC-000108",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00269": {
+    "source": "P-000091",
+    "target": "P-000169",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00270": {
+    "source": "ACC-000108",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00271": {
+    "source": "ACC-000109",
+    "target": "ACC-000110",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00272": {
+    "source": "P-000091",
+    "target": "P-000170",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00273": {
+    "source": "ACC-000110",
+    "target": "ACC-000111",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00274": {
+    "source": "P-000091",
+    "target": "P-000171",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00275": {
+    "source": "ACC-000111",
+    "target": "ACC-000112",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00276": {
+    "source": "P-000091",
+    "target": "P-000172",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00277": {
+    "source": "ACC-000112",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00278": {
+    "source": "ACC-000113",
+    "target": "ACC-000114",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00279": {
+    "source": "P-000091",
+    "target": "P-000173",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00280": {
+    "source": "ACC-000114",
+    "target": "ACC-000115",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00281": {
+    "source": "P-000091",
+    "target": "P-000174",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00282": {
+    "source": "ACC-000115",
+    "target": "ACC-000116",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00283": {
+    "source": "P-000091",
+    "target": "P-000175",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00284": {
+    "source": "ACC-000116",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00285": {
+    "source": "ACC-000117",
+    "target": "ACC-000118",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00286": {
+    "source": "P-000091",
+    "target": "P-000176",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00287": {
+    "source": "ACC-000118",
+    "target": "ACC-000119",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00288": {
+    "source": "P-000091",
+    "target": "P-000177",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00289": {
+    "source": "ACC-000119",
+    "target": "ACC-000120",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00290": {
+    "source": "P-000091",
+    "target": "P-000178",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00291": {
+    "source": "ACC-000120",
+    "target": "ACC-000121",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00292": {
+    "source": "P-000091",
+    "target": "P-000179",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00293": {
+    "source": "ACC-000121",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00294": {
+    "source": "ACC-000122",
+    "target": "ACC-000123",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00295": {
+    "source": "P-000091",
+    "target": "P-000180",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00296": {
+    "source": "ACC-000123",
+    "target": "ACC-000124",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00297": {
+    "source": "P-000091",
+    "target": "P-000181",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00298": {
+    "source": "ACC-000124",
+    "target": "ACC-000125",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00299": {
+    "source": "P-000091",
+    "target": "P-000182",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00300": {
+    "source": "ACC-000125",
+    "target": "ACC-000126",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00301": {
+    "source": "P-000091",
+    "target": "P-000183",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00302": {
+    "source": "ACC-000126",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00303": {
+    "source": "ACC-000127",
+    "target": "ACC-000128",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00304": {
+    "source": "P-000091",
+    "target": "P-000184",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00305": {
+    "source": "ACC-000128",
+    "target": "ACC-000129",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00306": {
+    "source": "P-000091",
+    "target": "P-000185",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00307": {
+    "source": "ACC-000129",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00308": {
+    "source": "ACC-000130",
+    "target": "ACC-000131",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00309": {
+    "source": "P-000091",
+    "target": "P-000186",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00310": {
+    "source": "ACC-000131",
+    "target": "ACC-000132",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00311": {
+    "source": "P-000091",
+    "target": "P-000187",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00312": {
+    "source": "ACC-000132",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00313": {
+    "source": "ACC-000133",
+    "target": "ACC-000134",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00314": {
+    "source": "P-000091",
+    "target": "P-000188",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00315": {
+    "source": "ACC-000134",
+    "target": "ACC-000135",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00316": {
+    "source": "P-000091",
+    "target": "P-000189",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00317": {
+    "source": "ACC-000135",
+    "target": "ACC-000136",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00318": {
+    "source": "P-000091",
+    "target": "P-000190",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00319": {
+    "source": "ACC-000136",
+    "target": "ACC-000137",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00320": {
+    "source": "P-000091",
+    "target": "P-000191",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00321": {
+    "source": "ACC-000137",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00322": {
+    "source": "ACC-000138",
+    "target": "ACC-000139",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00323": {
+    "source": "P-000091",
+    "target": "P-000192",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00324": {
+    "source": "ACC-000139",
+    "target": "ACC-000140",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00325": {
+    "source": "P-000091",
+    "target": "P-000193",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00326": {
+    "source": "ACC-000140",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00327": {
+    "source": "ACC-000141",
+    "target": "ACC-000142",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00328": {
+    "source": "P-000091",
+    "target": "P-000194",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00329": {
+    "source": "ACC-000142",
+    "target": "ACC-000143",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00330": {
+    "source": "P-000091",
+    "target": "P-000195",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00331": {
+    "source": "ACC-000143",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00332": {
+    "source": "ACC-000144",
+    "target": "ACC-000145",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00333": {
+    "source": "P-000091",
+    "target": "P-000196",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00334": {
+    "source": "ACC-000145",
+    "target": "ACC-000146",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00335": {
+    "source": "P-000091",
+    "target": "P-000197",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00336": {
+    "source": "ACC-000146",
+    "target": "ACC-000147",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00337": {
+    "source": "P-000091",
+    "target": "P-000198",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00338": {
+    "source": "ACC-000147",
+    "target": "ACC-000148",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00339": {
+    "source": "P-000091",
+    "target": "P-000199",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00340": {
+    "source": "ACC-000148",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00341": {
+    "source": "ACC-000149",
+    "target": "ACC-000150",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00342": {
+    "source": "P-000091",
+    "target": "P-000200",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00343": {
+    "source": "ACC-000150",
+    "target": "ACC-000151",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00344": {
+    "source": "P-000091",
+    "target": "P-000201",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00345": {
+    "source": "ACC-000151",
+    "target": "ACC-000152",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00346": {
+    "source": "P-000091",
+    "target": "P-000202",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00347": {
+    "source": "ACC-000152",
+    "target": "ACC-000153",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00348": {
+    "source": "P-000091",
+    "target": "P-000203",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00349": {
+    "source": "ACC-000153",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00350": {
+    "source": "ACC-000154",
+    "target": "ACC-000155",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00351": {
+    "source": "P-000091",
+    "target": "P-000204",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00352": {
+    "source": "ACC-000155",
+    "target": "ACC-000156",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00353": {
+    "source": "P-000091",
+    "target": "P-000205",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00354": {
+    "source": "ACC-000156",
+    "target": "ACC-000157",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00355": {
+    "source": "P-000091",
+    "target": "P-000206",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00356": {
+    "source": "ACC-000157",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00357": {
+    "source": "ACC-000158",
+    "target": "ACC-000159",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00358": {
+    "source": "P-000091",
+    "target": "P-000207",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00359": {
+    "source": "ACC-000159",
+    "target": "ACC-000160",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00360": {
+    "source": "P-000091",
+    "target": "P-000208",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00361": {
+    "source": "ACC-000160",
+    "target": "ACC-000161",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00362": {
+    "source": "P-000091",
+    "target": "P-000209",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00363": {
+    "source": "ACC-000161",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00364": {
+    "source": "ACC-000162",
+    "target": "ACC-000163",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00365": {
+    "source": "P-000091",
+    "target": "P-000210",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00366": {
+    "source": "ACC-000163",
+    "target": "ACC-000164",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00367": {
+    "source": "P-000091",
+    "target": "P-000211",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00368": {
+    "source": "ACC-000164",
+    "target": "ACC-000165",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00369": {
+    "source": "P-000091",
+    "target": "P-000212",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00370": {
+    "source": "ACC-000165",
+    "target": "ACC-000166",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00371": {
+    "source": "P-000091",
+    "target": "P-000213",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00372": {
+    "source": "ACC-000166",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00373": {
+    "source": "ACC-000167",
+    "target": "ACC-000168",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00374": {
+    "source": "P-000091",
+    "target": "P-000214",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00375": {
+    "source": "ACC-000168",
+    "target": "ACC-000169",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00376": {
+    "source": "P-000091",
+    "target": "P-000215",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00377": {
+    "source": "ACC-000169",
+    "target": "ACC-000170",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00378": {
+    "source": "P-000091",
+    "target": "P-000216",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00379": {
+    "source": "ACC-000170",
+    "target": "ACC-000171",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00380": {
+    "source": "P-000091",
+    "target": "P-000217",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00381": {
+    "source": "ACC-000171",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00382": {
+    "source": "ACC-000172",
+    "target": "ACC-000173",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00383": {
+    "source": "P-000091",
+    "target": "P-000218",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00384": {
+    "source": "ACC-000173",
+    "target": "ACC-000174",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00385": {
+    "source": "P-000091",
+    "target": "P-000219",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00386": {
+    "source": "ACC-000174",
+    "target": "ACC-000175",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00387": {
+    "source": "P-000091",
+    "target": "P-000220",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00388": {
+    "source": "ACC-000175",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00389": {
+    "source": "ACC-000176",
+    "target": "ACC-000177",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00390": {
+    "source": "P-000091",
+    "target": "P-000221",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00391": {
+    "source": "ACC-000177",
+    "target": "ACC-000178",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00392": {
+    "source": "P-000091",
+    "target": "P-000222",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00393": {
+    "source": "ACC-000178",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00394": {
+    "source": "ACC-000179",
+    "target": "ACC-000180",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00395": {
+    "source": "P-000091",
+    "target": "P-000223",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00396": {
+    "source": "ACC-000180",
+    "target": "ACC-000181",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00397": {
+    "source": "P-000091",
+    "target": "P-000224",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00398": {
+    "source": "ACC-000181",
+    "target": "ACC-000182",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00399": {
+    "source": "P-000091",
+    "target": "P-000225",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00400": {
+    "source": "ACC-000182",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00401": {
+    "source": "ACC-000183",
+    "target": "ACC-000184",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00402": {
+    "source": "P-000091",
+    "target": "P-000226",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00403": {
+    "source": "ACC-000184",
+    "target": "ACC-000185",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00404": {
+    "source": "P-000091",
+    "target": "P-000227",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00405": {
+    "source": "ACC-000185",
+    "target": "ACC-000186",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00406": {
+    "source": "P-000091",
+    "target": "P-000228",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00407": {
+    "source": "ACC-000186",
+    "target": "ACC-000187",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00408": {
+    "source": "P-000091",
+    "target": "P-000229",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00409": {
+    "source": "ACC-000187",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00410": {
+    "source": "ACC-000188",
+    "target": "ACC-000189",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00411": {
+    "source": "P-000091",
+    "target": "P-000230",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00412": {
+    "source": "ACC-000189",
+    "target": "ACC-000190",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00413": {
+    "source": "P-000091",
+    "target": "P-000231",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00414": {
+    "source": "ACC-000190",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00415": {
+    "source": "ACC-000191",
+    "target": "ACC-000192",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00416": {
+    "source": "P-000091",
+    "target": "P-000232",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00417": {
+    "source": "ACC-000192",
+    "target": "ACC-000193",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00418": {
+    "source": "P-000091",
+    "target": "P-000233",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00419": {
+    "source": "ACC-000193",
+    "target": "ACC-000194",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00420": {
+    "source": "P-000091",
+    "target": "P-000234",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00421": {
+    "source": "ACC-000194",
+    "target": "ACC-000195",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00422": {
+    "source": "P-000091",
+    "target": "P-000235",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00423": {
+    "source": "ACC-000195",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00424": {
+    "source": "ACC-000196",
+    "target": "ACC-000197",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00425": {
+    "source": "P-000091",
+    "target": "P-000236",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00426": {
+    "source": "ACC-000197",
+    "target": "ACC-000198",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00427": {
+    "source": "P-000091",
+    "target": "P-000237",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00428": {
+    "source": "ACC-000198",
+    "target": "ACC-000199",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00429": {
+    "source": "P-000091",
+    "target": "P-000238",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00430": {
+    "source": "ACC-000199",
+    "target": "ACC-000200",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00431": {
+    "source": "P-000091",
+    "target": "P-000239",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00432": {
+    "source": "ACC-000200",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00433": {
+    "source": "ACC-000201",
+    "target": "ACC-000202",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00434": {
+    "source": "P-000091",
+    "target": "P-000240",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00435": {
+    "source": "ACC-000202",
+    "target": "ACC-000203",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00436": {
+    "source": "P-000091",
+    "target": "P-000241",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00437": {
+    "source": "ACC-000203",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00438": {
+    "source": "ACC-000204",
+    "target": "ACC-000205",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00439": {
+    "source": "P-000091",
+    "target": "P-000242",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00440": {
+    "source": "ACC-000205",
+    "target": "ACC-000206",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00441": {
+    "source": "P-000091",
+    "target": "P-000243",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00442": {
+    "source": "ACC-000206",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00443": {
+    "source": "ACC-000207",
+    "target": "ACC-000208",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00444": {
+    "source": "P-000091",
+    "target": "P-000244",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00445": {
+    "source": "ACC-000208",
+    "target": "ACC-000209",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00446": {
+    "source": "P-000091",
+    "target": "P-000245",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00447": {
+    "source": "ACC-000209",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00448": {
+    "source": "ACC-000210",
+    "target": "ACC-000211",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00449": {
+    "source": "P-000091",
+    "target": "P-000246",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00450": {
+    "source": "ACC-000211",
+    "target": "ACC-000212",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00451": {
+    "source": "P-000091",
+    "target": "P-000247",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00452": {
+    "source": "ACC-000212",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00453": {
+    "source": "ACC-000213",
+    "target": "ACC-000214",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00454": {
+    "source": "P-000091",
+    "target": "P-000248",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00455": {
+    "source": "ACC-000214",
+    "target": "ACC-000215",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00456": {
+    "source": "P-000091",
+    "target": "P-000249",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00457": {
+    "source": "ACC-000215",
+    "target": "ACC-000216",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00458": {
+    "source": "P-000091",
+    "target": "P-000250",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00459": {
+    "source": "ACC-000216",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00460": {
+    "source": "ACC-000217",
+    "target": "ACC-000218",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00461": {
+    "source": "P-000091",
+    "target": "P-000251",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00462": {
+    "source": "ACC-000218",
+    "target": "ACC-000219",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00463": {
+    "source": "P-000091",
+    "target": "P-000252",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00464": {
+    "source": "ACC-000219",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00465": {
+    "source": "ACC-000220",
+    "target": "ACC-000221",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00466": {
+    "source": "P-000091",
+    "target": "P-000253",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00467": {
+    "source": "ACC-000221",
+    "target": "ACC-000222",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00468": {
+    "source": "P-000091",
+    "target": "P-000254",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00469": {
+    "source": "ACC-000222",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00470": {
+    "source": "ACC-000223",
+    "target": "ACC-000224",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00471": {
+    "source": "P-000091",
+    "target": "P-000255",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00472": {
+    "source": "ACC-000224",
+    "target": "ACC-000225",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00473": {
+    "source": "P-000091",
+    "target": "P-000256",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00474": {
+    "source": "ACC-000225",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00475": {
+    "source": "ACC-000226",
+    "target": "ACC-000227",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00476": {
+    "source": "P-000091",
+    "target": "P-000257",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00477": {
+    "source": "ACC-000227",
+    "target": "ACC-000228",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00478": {
+    "source": "P-000091",
+    "target": "P-000258",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00479": {
+    "source": "ACC-000228",
+    "target": "ACC-000229",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00480": {
+    "source": "P-000091",
+    "target": "P-000259",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00481": {
+    "source": "ACC-000229",
+    "target": "ACC-000230",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00482": {
+    "source": "P-000091",
+    "target": "P-000260",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00483": {
+    "source": "ACC-000230",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00484": {
+    "source": "ACC-000231",
+    "target": "ACC-000232",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00485": {
+    "source": "P-000091",
+    "target": "P-000261",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00486": {
+    "source": "ACC-000232",
+    "target": "ACC-000233",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00487": {
+    "source": "P-000091",
+    "target": "P-000262",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00488": {
+    "source": "ACC-000233",
+    "target": "ACC-000234",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00489": {
+    "source": "P-000091",
+    "target": "P-000263",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00490": {
+    "source": "ACC-000234",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00491": {
+    "source": "ACC-000235",
+    "target": "ACC-000236",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00492": {
+    "source": "P-000091",
+    "target": "P-000264",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00493": {
+    "source": "ACC-000236",
+    "target": "ACC-000237",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00494": {
+    "source": "P-000091",
+    "target": "P-000265",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00495": {
+    "source": "ACC-000237",
+    "target": "ACC-000238",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00496": {
+    "source": "P-000091",
+    "target": "P-000266",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00497": {
+    "source": "ACC-000238",
+    "target": "ACC-000239",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00498": {
+    "source": "P-000091",
+    "target": "P-000267",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00499": {
+    "source": "ACC-000239",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00500": {
+    "source": "ACC-000240",
+    "target": "ACC-000241",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00501": {
+    "source": "P-000091",
+    "target": "P-000268",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00502": {
+    "source": "ACC-000241",
+    "target": "ACC-000242",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00503": {
+    "source": "P-000091",
+    "target": "P-000269",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00504": {
+    "source": "ACC-000242",
+    "target": "ACC-000243",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00505": {
+    "source": "P-000091",
+    "target": "P-000270",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00506": {
+    "source": "ACC-000243",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00507": {
+    "source": "ACC-000244",
+    "target": "ACC-000245",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00508": {
+    "source": "P-000091",
+    "target": "P-000271",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00509": {
+    "source": "ACC-000245",
+    "target": "ACC-000246",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00510": {
+    "source": "P-000091",
+    "target": "P-000272",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00511": {
+    "source": "ACC-000246",
+    "target": "ACC-000247",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00512": {
+    "source": "P-000091",
+    "target": "P-000273",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00513": {
+    "source": "ACC-000247",
+    "target": "ACC-000248",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00514": {
+    "source": "P-000091",
+    "target": "P-000274",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00515": {
+    "source": "ACC-000248",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00516": {
+    "source": "ACC-000249",
+    "target": "ACC-000250",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00517": {
+    "source": "P-000091",
+    "target": "P-000275",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00518": {
+    "source": "ACC-000250",
+    "target": "ACC-000251",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00519": {
+    "source": "P-000091",
+    "target": "P-000276",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00520": {
+    "source": "ACC-000251",
+    "target": "ACC-000252",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00521": {
+    "source": "P-000091",
+    "target": "P-000277",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00522": {
+    "source": "ACC-000252",
+    "target": "ACC-000253",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00523": {
+    "source": "P-000091",
+    "target": "P-000278",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00524": {
+    "source": "ACC-000253",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00525": {
+    "source": "ACC-000254",
+    "target": "ACC-000255",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00526": {
+    "source": "P-000091",
+    "target": "P-000279",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00527": {
+    "source": "ACC-000255",
+    "target": "ACC-000256",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00528": {
+    "source": "P-000091",
+    "target": "P-000280",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00529": {
+    "source": "ACC-000256",
+    "target": "ACC-000257",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00530": {
+    "source": "P-000091",
+    "target": "P-000281",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00531": {
+    "source": "ACC-000257",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00532": {
+    "source": "ACC-000258",
+    "target": "ACC-000259",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00533": {
+    "source": "P-000091",
+    "target": "P-000282",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00534": {
+    "source": "ACC-000259",
+    "target": "ACC-000260",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00535": {
+    "source": "P-000091",
+    "target": "P-000283",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00536": {
+    "source": "ACC-000260",
+    "target": "ACC-000261",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00537": {
+    "source": "P-000091",
+    "target": "P-000284",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00538": {
+    "source": "ACC-000261",
+    "target": "ACC-000262",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00539": {
+    "source": "P-000091",
+    "target": "P-000285",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00540": {
+    "source": "ACC-000262",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00541": {
+    "source": "ACC-000263",
+    "target": "ACC-000264",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00542": {
+    "source": "P-000091",
+    "target": "P-000286",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00543": {
+    "source": "ACC-000264",
+    "target": "ACC-000265",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00544": {
+    "source": "P-000091",
+    "target": "P-000287",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00545": {
+    "source": "ACC-000265",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00546": {
+    "source": "ACC-000266",
+    "target": "ACC-000267",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00547": {
+    "source": "P-000091",
+    "target": "P-000288",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00548": {
+    "source": "ACC-000267",
+    "target": "ACC-000268",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00549": {
+    "source": "P-000091",
+    "target": "P-000289",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00550": {
+    "source": "ACC-000268",
+    "target": "ACC-000269",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00551": {
+    "source": "P-000091",
+    "target": "P-000290",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00552": {
+    "source": "ACC-000269",
+    "target": "ACC-000270",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00553": {
+    "source": "P-000091",
+    "target": "P-000291",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00554": {
+    "source": "ACC-000270",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00555": {
+    "source": "ACC-000271",
+    "target": "ACC-000272",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00556": {
+    "source": "P-000091",
+    "target": "P-000292",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00557": {
+    "source": "ACC-000272",
+    "target": "ACC-000273",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00558": {
+    "source": "P-000091",
+    "target": "P-000293",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00559": {
+    "source": "ACC-000273",
+    "target": "ACC-000274",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00560": {
+    "source": "P-000091",
+    "target": "P-000294",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00561": {
+    "source": "ACC-000274",
+    "target": "ACC-000275",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00562": {
+    "source": "P-000091",
+    "target": "P-000295",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00563": {
+    "source": "ACC-000275",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00564": {
+    "source": "ACC-000276",
+    "target": "ACC-000277",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00565": {
+    "source": "P-000091",
+    "target": "P-000296",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00566": {
+    "source": "ACC-000277",
+    "target": "ACC-000278",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00567": {
+    "source": "P-000091",
+    "target": "P-000297",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00568": {
+    "source": "ACC-000278",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00569": {
+    "source": "ACC-000279",
+    "target": "ACC-000280",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00570": {
+    "source": "P-000091",
+    "target": "P-000298",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00571": {
+    "source": "ACC-000280",
+    "target": "ACC-000281",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00572": {
+    "source": "P-000091",
+    "target": "P-000299",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00573": {
+    "source": "ACC-000281",
+    "target": "ACC-000282",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00574": {
+    "source": "P-000091",
+    "target": "P-000300",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00575": {
+    "source": "ACC-000282",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00576": {
+    "source": "ACC-000283",
+    "target": "ACC-000284",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00577": {
+    "source": "P-000091",
+    "target": "P-000301",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00578": {
+    "source": "ACC-000284",
+    "target": "ACC-000285",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00579": {
+    "source": "P-000091",
+    "target": "P-000302",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00580": {
+    "source": "ACC-000285",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00581": {
+    "source": "ACC-000286",
+    "target": "ACC-000287",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00582": {
+    "source": "P-000091",
+    "target": "P-000303",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00583": {
+    "source": "ACC-000287",
+    "target": "ACC-000288",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00584": {
+    "source": "P-000091",
+    "target": "P-000304",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00585": {
+    "source": "ACC-000288",
+    "target": "ACC-000289",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00586": {
+    "source": "P-000091",
+    "target": "P-000305",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00587": {
+    "source": "ACC-000289",
+    "target": "ACC-000290",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00588": {
+    "source": "P-000091",
+    "target": "P-000306",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00589": {
+    "source": "ACC-000290",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00590": {
+    "source": "ACC-000291",
+    "target": "ACC-000292",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00591": {
+    "source": "P-000091",
+    "target": "P-000307",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00592": {
+    "source": "ACC-000292",
+    "target": "ACC-000293",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00593": {
+    "source": "P-000091",
+    "target": "P-000308",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00594": {
+    "source": "ACC-000293",
+    "target": "ACC-000294",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00595": {
+    "source": "P-000091",
+    "target": "P-000309",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00596": {
+    "source": "ACC-000294",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00597": {
+    "source": "ACC-000295",
+    "target": "ACC-000296",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00598": {
+    "source": "P-000091",
+    "target": "P-000310",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00599": {
+    "source": "ACC-000296",
+    "target": "ACC-000297",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00600": {
+    "source": "P-000091",
+    "target": "P-000311",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00601": {
+    "source": "ACC-000297",
+    "target": "ACC-000298",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00602": {
+    "source": "P-000091",
+    "target": "P-000312",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00603": {
+    "source": "ACC-000298",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00604": {
+    "source": "ACC-000299",
+    "target": "ACC-000300",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00605": {
+    "source": "P-000091",
+    "target": "P-000313",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00606": {
+    "source": "ACC-000300",
+    "target": "ACC-000301",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00607": {
+    "source": "P-000091",
+    "target": "P-000314",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00608": {
+    "source": "ACC-000301",
+    "target": "ACC-000302",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00609": {
+    "source": "P-000091",
+    "target": "P-000315",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00610": {
+    "source": "ACC-000302",
+    "target": "ACC-000303",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00611": {
+    "source": "P-000091",
+    "target": "P-000316",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00612": {
+    "source": "ACC-000303",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00613": {
+    "source": "ACC-000304",
+    "target": "ACC-000305",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00614": {
+    "source": "P-000091",
+    "target": "P-000317",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00615": {
+    "source": "ACC-000305",
+    "target": "ACC-000306",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00616": {
+    "source": "P-000091",
+    "target": "P-000318",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00617": {
+    "source": "ACC-000306",
+    "target": "ACC-000307",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00618": {
+    "source": "P-000091",
+    "target": "P-000319",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00619": {
+    "source": "ACC-000307",
+    "target": "ACC-000308",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00620": {
+    "source": "P-000091",
+    "target": "P-000320",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00621": {
+    "source": "ACC-000308",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00622": {
+    "source": "ACC-000309",
+    "target": "ACC-000310",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00623": {
+    "source": "P-000091",
+    "target": "P-000321",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00624": {
+    "source": "ACC-000310",
+    "target": "ACC-000311",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00625": {
+    "source": "P-000091",
+    "target": "P-000322",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00626": {
+    "source": "ACC-000311",
+    "target": "ACC-000312",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00627": {
+    "source": "P-000091",
+    "target": "P-000323",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00628": {
+    "source": "ACC-000312",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00629": {
+    "source": "ACC-000313",
+    "target": "ACC-000314",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00630": {
+    "source": "P-000091",
+    "target": "P-000324",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00631": {
+    "source": "ACC-000314",
+    "target": "ACC-000315",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00632": {
+    "source": "P-000091",
+    "target": "P-000325",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00633": {
+    "source": "ACC-000315",
+    "target": "ACC-000316",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00634": {
+    "source": "P-000091",
+    "target": "P-000326",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00635": {
+    "source": "ACC-000316",
+    "target": "ACC-000317",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00636": {
+    "source": "P-000091",
+    "target": "P-000327",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00637": {
+    "source": "ACC-000317",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00638": {
+    "source": "ACC-000318",
+    "target": "ACC-000319",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00639": {
+    "source": "P-000091",
+    "target": "P-000328",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00640": {
+    "source": "ACC-000319",
+    "target": "ACC-000320",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00641": {
+    "source": "P-000091",
+    "target": "P-000329",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00642": {
+    "source": "ACC-000320",
+    "target": "ACC-000321",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00643": {
+    "source": "P-000091",
+    "target": "P-000330",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00644": {
+    "source": "ACC-000321",
+    "target": "ACC-000322",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00645": {
+    "source": "P-000091",
+    "target": "P-000331",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00646": {
+    "source": "ACC-000322",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00647": {
+    "source": "ACC-000323",
+    "target": "ACC-000324",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00648": {
+    "source": "P-000091",
+    "target": "P-000332",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00649": {
+    "source": "ACC-000324",
+    "target": "ACC-000325",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00650": {
+    "source": "P-000091",
+    "target": "P-000333",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00651": {
+    "source": "ACC-000325",
+    "target": "ACC-000326",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00652": {
+    "source": "P-000091",
+    "target": "P-000334",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00653": {
+    "source": "ACC-000326",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00654": {
+    "source": "ACC-000327",
+    "target": "ACC-000328",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00655": {
+    "source": "P-000091",
+    "target": "P-000335",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00656": {
+    "source": "ACC-000328",
+    "target": "ACC-000329",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00657": {
+    "source": "P-000091",
+    "target": "P-000336",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00658": {
+    "source": "ACC-000329",
+    "target": "ACC-000330",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_chain_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00659": {
+    "source": "P-000091",
+    "target": "P-000337",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "planted_recruiter_mule_onboarding",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00660": {
+    "source": "ACC-000330",
+    "target": "ACC-000001",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_mule_to_aggregator_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00661": {
+    "source": "ACC-000001",
+    "target": "ACC-000002",
+    "relationship_type": "TRANSACTED",
+    "hidden_ground_truth_label": "planted_aggregator_cashout_link",
+    "planted_by_topology": "D2"
+  },
+  "PLANTED-CYB-2026-001-00662": {
+    "source": "P-000002",
+    "target": "P-000338",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00663": {
+    "source": "P-000001",
+    "target": "P-000339",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00664": {
+    "source": "P-000002",
+    "target": "P-000340",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00665": {
+    "source": "P-000002",
+    "target": "P-000341",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00666": {
+    "source": "P-000003",
+    "target": "P-000342",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00667": {
+    "source": "P-000003",
+    "target": "P-000343",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00668": {
+    "source": "P-000003",
+    "target": "P-000344",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00669": {
+    "source": "P-000003",
+    "target": "P-000345",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00670": {
+    "source": "P-000001",
+    "target": "P-000346",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00671": {
+    "source": "P-000003",
+    "target": "P-000347",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  },
+  "PLANTED-CYB-2026-001-00672": {
+    "source": "P-000003",
+    "target": "P-000348",
+    "relationship_type": "CALLED",
+    "hidden_ground_truth_label": "innocent_family_or_business_contact",
+    "planted_by_topology": "D3_control"
+  }
+}

@@ -1,0 +1,8 @@
+FIR No: FIR-0082
+Police Station: Hyderabad Cyber Cell Police Station
+Date Filed: 2026-08-09
+Legal Sections: BNS Section 318 (cheating); IT Act Section 66D (cheating by personation using computer resource); BNS Section 61 (criminal conspiracy)
+UTR Number: NOT PROVIDED
+Suspected Email: NOT PROVIDED
+
+The complainant Arin Narayanan states that on 31-07-2026, an unknown person using mobile number +917301340451 contacted the complainant claiming to be from the customer support division of a telecom/banking service and requested an OTP for 'verification purposes'. The complainant, believing the call to be genuine, shared the OTP, following which Rs. 7,069 was debited from the complainant's account without authorization. The amount was traced to have been credited to an account with Bank X. The matter is reported to Hyderabad Cyber Cell Police Station for investigation.
