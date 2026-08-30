@@ -135,4 +135,3 @@ class MemoryGraphStore:
             if entity_id in (relation["source_id"], relation["target_id"]):
                 evidence_ids.update(relation["evidence_ids"])
         return [deepcopy(data.evidence[x]) for x in evidence_ids if x in data.evidence]
-
