@@ -1,0 +1,331 @@
+account_id,synthetic_account_number,bank_name,account_holder_person_id,branch,state,account_type
+ACC-000001,319829657249,National Trust Bank,P-000089,Hyderabad Branch,Telangana,current
+ACC-000002,868288909310,Bank X,P-000090,Hyderabad Branch,Telangana,savings
+ACC-000003,718818174143,National Trust Bank,P-000007,Dehradun Branch,Uttarakhand,savings
+ACC-000004,319254499207,Bank X,,Faridabad Branch,Haryana,savings
+ACC-000005,771834170471,Bharat Savings Bank,,Dibrugarh Branch,Assam,current
+ACC-000006,845298415377,Metro Cooperative Bank,P-000094,Bengaluru Urban Branch,Karnataka,savings
+ACC-000007,764265651505,Union Commercial Bank,P-000008,Haldwani Branch,Uttarakhand,savings
+ACC-000008,669156404104,National Trust Bank,,Kolkata Branch,West Bengal,current
+ACC-000009,688310679247,Bank X,,Rourkela Branch,Odisha,savings
+ACC-000010,544446347861,National Trust Bank,P-000009,Panipat Branch,Haryana,savings
+ACC-000011,762833125815,National Trust Bank,,Jodhpur Branch,Rajasthan,savings
+ACC-000012,836450749528,Bharat Savings Bank,P-000098,Jalandhar Branch,Punjab,savings
+ACC-000013,143667640206,Metro Cooperative Bank,P-000010,Panipat Branch,Haryana,savings
+ACC-000014,313228171800,National Trust Bank,,Guwahati Branch,Assam,savings
+ACC-000015,611148936439,Bank X,P-000100,Kolkata Branch,West Bengal,savings
+ACC-000016,453783830640,Bank X,P-000011,Mysuru Branch,Karnataka,savings
+ACC-000017,705656304813,Metro Cooperative Bank,P-000101,Bhubaneswar Branch,Odisha,savings
+ACC-000018,237609260309,National Trust Bank,,Salem Branch,Tamil Nadu,savings
+ACC-000019,125328704655,Metro Cooperative Bank,,Bhopal Branch,Madhya Pradesh,savings
+ACC-000020,546107358735,Union Commercial Bank,,Nainital Branch,Uttarakhand,current
+ACC-000021,636060710431,Bharat Savings Bank,P-000012,Jamtara Branch,Jharkhand,savings
+ACC-000022,091031776467,National Trust Bank,P-000105,Indore Branch,Madhya Pradesh,savings
+ACC-000023,557591836236,Bank X,,Warangal Branch,Telangana,savings
+ACC-000024,913167723267,Bharat Savings Bank,P-000107,Coimbatore Branch,Tamil Nadu,savings
+ACC-000025,144494544373,National Trust Bank,P-000013,Bhopal Branch,Madhya Pradesh,savings
+ACC-000026,388317010737,Union Commercial Bank,,Bengaluru Urban Branch,Karnataka,current
+ACC-000027,827940199530,Union Commercial Bank,,Vadodara Branch,Gujarat,savings
+ACC-000028,652941307871,Metro Cooperative Bank,,Ahmedabad Branch,Gujarat,savings
+ACC-000029,281264644604,Bharat Savings Bank,P-000014,Thiruvananthapuram Branch,Kerala,savings
+ACC-000030,630626116957,National Trust Bank,,Surat Branch,Gujarat,savings
+ACC-000031,225428211673,Union Commercial Bank,,Patna Branch,Bihar,current
+ACC-000032,750961923969,National Trust Bank,P-000015,Belagavi Branch,Karnataka,savings
+ACC-000033,233080516978,Union Commercial Bank,,Jalandhar Branch,Punjab,savings
+ACC-000034,009773797276,Bank X,,Guwahati Branch,Assam,savings
+ACC-000035,178800215810,Bharat Savings Bank,P-000016,Thiruvananthapuram Branch,Kerala,savings
+ACC-000036,742315942594,Metro Cooperative Bank,P-000115,Coimbatore Branch,Tamil Nadu,savings
+ACC-000037,503262456241,Bharat Savings Bank,,Guwahati Branch,Assam,savings
+ACC-000038,788914865465,Bharat Savings Bank,P-000017,Ernakulam Branch,Kerala,savings
+ACC-000039,449500324966,Bharat Savings Bank,,Ghaziabad Branch,Uttar Pradesh,current
+ACC-000040,541858369492,National Trust Bank,,Ghaziabad Branch,Uttar Pradesh,savings
+ACC-000041,203271124640,Bank X,P-000018,Panipat Branch,Haryana,current
+ACC-000042,200080623201,Bank X,,Guwahati Branch,Assam,savings
+ACC-000043,841407806671,Metro Cooperative Bank,,Bhubaneswar Branch,Odisha,savings
+ACC-000044,486844318024,National Trust Bank,,Siliguri Branch,West Bengal,savings
+ACC-000045,536593687780,Bank X,P-000019,Jamtara Branch,Jharkhand,current
+ACC-000046,192200119252,Bank X,,Ludhiana Branch,Punjab,savings
+ACC-000047,538161333100,Bank X,,Ghaziabad Branch,Uttar Pradesh,savings
+ACC-000048,345564054405,Union Commercial Bank,P-000020,Warangal Branch,Telangana,savings
+ACC-000049,157089319426,Bank X,P-000124,Nashik Branch,Maharashtra,savings
+ACC-000050,279584924337,National Trust Bank,P-000125,Chennai Branch,Tamil Nadu,current
+ACC-000051,166160534468,Bharat Savings Bank,P-000126,Coimbatore Branch,Tamil Nadu,savings
+ACC-000052,372899059582,Metro Cooperative Bank,P-000021,Jalandhar Branch,Punjab,savings
+ACC-000053,738344922359,Bharat Savings Bank,,Jodhpur Branch,Rajasthan,savings
+ACC-000054,136224464311,Union Commercial Bank,,Coimbatore Branch,Tamil Nadu,current
+ACC-000055,470249603699,Metro Cooperative Bank,,Jaipur Branch,Rajasthan,savings
+ACC-000056,932176541636,National Trust Bank,P-000022,Jodhpur Branch,Rajasthan,current
+ACC-000057,506710483238,Union Commercial Bank,,Guwahati Branch,Assam,current
+ACC-000058,673268195044,Metro Cooperative Bank,,Gaya Branch,Bihar,savings
+ACC-000059,134683673221,National Trust Bank,P-000132,Gaya Branch,Bihar,savings
+ACC-000060,256748275346,Union Commercial Bank,P-000023,Nagpur Branch,Maharashtra,savings
+ACC-000061,457769152460,Bank X,P-000133,Bhagalpur Branch,Bihar,current
+ACC-000062,144919232752,National Trust Bank,,Nagpur Branch,Maharashtra,savings
+ACC-000063,738171814632,Metro Cooperative Bank,,Belagavi Branch,Karnataka,savings
+ACC-000064,273728902579,Metro Cooperative Bank,P-000024,Warangal Branch,Telangana,savings
+ACC-000065,500905187720,National Trust Bank,,Belagavi Branch,Karnataka,savings
+ACC-000066,656480445765,Bharat Savings Bank,,Dibrugarh Branch,Assam,current
+ACC-000067,429106868906,Union Commercial Bank,,Bhopal Branch,Madhya Pradesh,savings
+ACC-000068,790889692913,Bank X,P-000025,Kanpur Branch,Uttar Pradesh,savings
+ACC-000069,052484426050,Metro Cooperative Bank,P-000139,Rourkela Branch,Odisha,savings
+ACC-000070,671069927681,Bank X,,Salem Branch,Tamil Nadu,savings
+ACC-000071,060011312704,Bharat Savings Bank,P-000026,Ludhiana Branch,Punjab,savings
+ACC-000072,487740000091,Metro Cooperative Bank,,Rangareddy Branch,Telangana,savings
+ACC-000073,977221526767,Union Commercial Bank,,Varanasi Branch,Uttar Pradesh,savings
+ACC-000074,029496366693,Metro Cooperative Bank,,Indore Branch,Madhya Pradesh,savings
+ACC-000075,248758188763,National Trust Bank,,Faridabad Branch,Haryana,savings
+ACC-000076,734906781851,National Trust Bank,P-000027,Rajkot Branch,Gujarat,savings
+ACC-000077,331245995682,National Trust Bank,,Guwahati Branch,Assam,current
+ACC-000078,905489010397,Bharat Savings Bank,P-000146,Mysuru Branch,Karnataka,savings
+ACC-000079,532610008577,Bank X,P-000147,Warangal Branch,Telangana,savings
+ACC-000080,145931862725,National Trust Bank,P-000028,Pune Branch,Maharashtra,savings
+ACC-000081,870125034997,Bank X,,Nagpur Branch,Maharashtra,savings
+ACC-000082,073023195271,Metro Cooperative Bank,,Ernakulam Branch,Kerala,savings
+ACC-000083,530278272466,National Trust Bank,,Coimbatore Branch,Tamil Nadu,savings
+ACC-000084,452471577128,Bank X,P-000029,Pune Branch,Maharashtra,savings
+ACC-000085,316462042078,Union Commercial Bank,,Rourkela Branch,Odisha,savings
+ACC-000086,634922283239,Bank X,P-000152,Patna Branch,Bihar,current
+ACC-000087,018608554710,Metro Cooperative Bank,,Rajkot Branch,Gujarat,savings
+ACC-000088,329502599058,Metro Cooperative Bank,P-000030,Bhagalpur Branch,Bihar,savings
+ACC-000089,904177808820,National Trust Bank,,Bhopal Branch,Madhya Pradesh,savings
+ACC-000090,340997837151,National Trust Bank,,Mumbai Branch,Maharashtra,savings
+ACC-000091,289332976206,Metro Cooperative Bank,P-000156,Chennai Branch,Tamil Nadu,savings
+ACC-000092,556356956805,Bharat Savings Bank,P-000031,Ernakulam Branch,Kerala,current
+ACC-000093,821563803266,Metro Cooperative Bank,P-000157,Mumbai Branch,Maharashtra,current
+ACC-000094,480914180630,Union Commercial Bank,,Kolkata Branch,West Bengal,savings
+ACC-000095,798271824694,Union Commercial Bank,P-000159,Guwahati Branch,Assam,savings
+ACC-000096,479936385784,Bharat Savings Bank,P-000032,Indore Branch,Madhya Pradesh,savings
+ACC-000097,605235857443,Union Commercial Bank,,Guwahati Branch,Assam,savings
+ACC-000098,751832655239,Bharat Savings Bank,,Ghaziabad Branch,Uttar Pradesh,current
+ACC-000099,261068917692,Metro Cooperative Bank,,Jamtara Branch,Jharkhand,current
+ACC-000100,677454568896,Union Commercial Bank,P-000033,Mumbai Branch,Maharashtra,savings
+ACC-000101,969315593536,Bank X,,Gurugram Branch,Haryana,savings
+ACC-000102,688667509570,Bank X,,Panipat Branch,Haryana,savings
+ACC-000103,767995812555,Bank X,,Rangareddy Branch,Telangana,savings
+ACC-000104,458628483836,National Trust Bank,P-000034,Mumbai Branch,Maharashtra,savings
+ACC-000105,048046190032,Metro Cooperative Bank,P-000166,Varanasi Branch,Uttar Pradesh,savings
+ACC-000106,122881011287,Metro Cooperative Bank,,Rajkot Branch,Gujarat,current
+ACC-000107,542041915379,Metro Cooperative Bank,P-000168,Hyderabad Branch,Telangana,savings
+ACC-000108,330292507469,Union Commercial Bank,,Kanpur Branch,Uttar Pradesh,current
+ACC-000109,693646703122,Union Commercial Bank,P-000035,Dibrugarh Branch,Assam,savings
+ACC-000110,611658363745,National Trust Bank,,Haldwani Branch,Uttarakhand,savings
+ACC-000111,482877325536,Metro Cooperative Bank,,Warangal Branch,Telangana,current
+ACC-000112,497958369832,Bank X,,Kozhikode Branch,Kerala,savings
+ACC-000113,460924061235,National Trust Bank,P-000036,Guwahati Branch,Assam,savings
+ACC-000114,342645672420,Union Commercial Bank,,Mangaluru Branch,Karnataka,current
+ACC-000115,124149306092,Metro Cooperative Bank,,Ludhiana Branch,Punjab,savings
+ACC-000116,784695014099,Bank X,,South Delhi Branch,Delhi,savings
+ACC-000117,535166934815,Metro Cooperative Bank,P-000037,Rajkot Branch,Gujarat,current
+ACC-000118,368273084282,National Trust Bank,P-000176,Kozhikode Branch,Kerala,savings
+ACC-000119,277330872542,National Trust Bank,P-000177,Surat Branch,Gujarat,savings
+ACC-000120,631405730044,National Trust Bank,,Hyderabad Branch,Telangana,savings
+ACC-000121,810077159417,Metro Cooperative Bank,,Gaya Branch,Bihar,savings
+ACC-000122,051494312006,National Trust Bank,P-000038,Jamtara Branch,Jharkhand,savings
+ACC-000123,495625535285,Union Commercial Bank,,South Delhi Branch,Delhi,savings
+ACC-000124,767249912322,Metro Cooperative Bank,,Jalandhar Branch,Punjab,current
+ACC-000125,098624108651,Metro Cooperative Bank,P-000182,Ahmedabad Branch,Gujarat,savings
+ACC-000126,593718587682,Metro Cooperative Bank,P-000183,Nashik Branch,Maharashtra,savings
+ACC-000127,059499657245,Bharat Savings Bank,P-000039,Dhanbad Branch,Jharkhand,savings
+ACC-000128,958965839764,Bank X,P-000184,Mysuru Branch,Karnataka,savings
+ACC-000129,473873891899,Bank X,P-000185,Salem Branch,Tamil Nadu,savings
+ACC-000130,288818176823,Bharat Savings Bank,P-000040,Gaya Branch,Bihar,savings
+ACC-000131,009374126193,Bharat Savings Bank,P-000186,Jaipur Branch,Rajasthan,current
+ACC-000132,358857095158,Union Commercial Bank,P-000187,Nashik Branch,Maharashtra,savings
+ACC-000133,345370971071,Bank X,P-000041,Indore Branch,Madhya Pradesh,savings
+ACC-000134,484700527870,Bank X,P-000188,Ludhiana Branch,Punjab,savings
+ACC-000135,398155834299,Bank X,,South Delhi Branch,Delhi,savings
+ACC-000136,597530379022,Union Commercial Bank,,Gaya Branch,Bihar,savings
+ACC-000137,813691543214,Union Commercial Bank,P-000191,Warangal Branch,Telangana,savings
+ACC-000138,358650557853,National Trust Bank,P-000042,Thane Branch,Maharashtra,savings
+ACC-000139,942912444985,Bank X,,Ludhiana Branch,Punjab,savings
+ACC-000140,175244802430,National Trust Bank,,Patna Branch,Bihar,savings
+ACC-000141,948133029011,Bharat Savings Bank,P-000043,Madurai Branch,Tamil Nadu,savings
+ACC-000142,355076952060,Bank X,,Nashik Branch,Maharashtra,savings
+ACC-000143,950695210232,Bharat Savings Bank,,Mumbai Branch,Maharashtra,savings
+ACC-000144,589829953947,Bank X,P-000044,Rourkela Branch,Odisha,savings
+ACC-000145,424087152361,Bank X,,Bhagalpur Branch,Bihar,savings
+ACC-000146,222805377356,Metro Cooperative Bank,P-000197,Kolkata Branch,West Bengal,savings
+ACC-000147,039666304046,National Trust Bank,,Ludhiana Branch,Punjab,savings
+ACC-000148,424415073259,Bharat Savings Bank,,Rajkot Branch,Gujarat,savings
+ACC-000149,350726240120,National Trust Bank,P-000045,Amritsar Branch,Punjab,savings
+ACC-000150,565093300289,National Trust Bank,,Jalandhar Branch,Punjab,savings
+ACC-000151,728602382881,Bharat Savings Bank,P-000201,Mangaluru Branch,Karnataka,current
+ACC-000152,420441038068,Union Commercial Bank,,Jodhpur Branch,Rajasthan,savings
+ACC-000153,466586626662,Bank X,P-000203,Bhopal Branch,Madhya Pradesh,savings
+ACC-000154,496331190068,Union Commercial Bank,P-000046,West Delhi Branch,Delhi,savings
+ACC-000155,986365168495,Bank X,,Dhanbad Branch,Jharkhand,savings
+ACC-000156,897932185838,National Trust Bank,,Jamtara Branch,Jharkhand,savings
+ACC-000157,561624615588,Union Commercial Bank,,Kanpur Branch,Uttar Pradesh,savings
+ACC-000158,471772820257,Bharat Savings Bank,P-000047,Warangal Branch,Telangana,savings
+ACC-000159,094092484543,Union Commercial Bank,,Nagpur Branch,Maharashtra,savings
+ACC-000160,076504669453,Metro Cooperative Bank,,Panipat Branch,Haryana,savings
+ACC-000161,351176686701,Bharat Savings Bank,,Bhagalpur Branch,Bihar,savings
+ACC-000162,667217672803,National Trust Bank,P-000048,Rangareddy Branch,Telangana,savings
+ACC-000163,319017139703,Union Commercial Bank,,Thiruvananthapuram Branch,Kerala,current
+ACC-000164,255380284841,Union Commercial Bank,P-000211,Cuttack Branch,Odisha,savings
+ACC-000165,366844320385,Metro Cooperative Bank,,Kanpur Branch,Uttar Pradesh,savings
+ACC-000166,508169504374,National Trust Bank,P-000213,Nainital Branch,Uttarakhand,savings
+ACC-000167,976733026102,Bank X,P-000049,Salem Branch,Tamil Nadu,savings
+ACC-000168,438223817131,Bank X,P-000214,Jodhpur Branch,Rajasthan,savings
+ACC-000169,202743958244,Union Commercial Bank,,Warangal Branch,Telangana,current
+ACC-000170,243813722656,Bank X,,Lucknow Branch,Uttar Pradesh,current
+ACC-000171,750713744998,Bank X,,Guwahati Branch,Assam,savings
+ACC-000172,394099105324,Bank X,P-000050,Pune Branch,Maharashtra,savings
+ACC-000173,187181296700,Bank X,,New Delhi Branch,Delhi,savings
+ACC-000174,252150742411,National Trust Bank,,Patna Branch,Bihar,savings
+ACC-000175,453468323883,Bank X,,New Delhi Branch,Delhi,savings
+ACC-000176,933122406698,Bank X,P-000051,Indore Branch,Madhya Pradesh,savings
+ACC-000177,031951039245,Bank X,,Jodhpur Branch,Rajasthan,savings
+ACC-000178,328225233351,Bank X,,Cuttack Branch,Odisha,savings
+ACC-000179,519130561592,Metro Cooperative Bank,P-000052,Bhagalpur Branch,Bihar,savings
+ACC-000180,792668498114,National Trust Bank,,Gurugram Branch,Haryana,savings
+ACC-000181,656613596404,Metro Cooperative Bank,,Varanasi Branch,Uttar Pradesh,savings
+ACC-000182,583156790451,Union Commercial Bank,,Gurugram Branch,Haryana,savings
+ACC-000183,831306264525,National Trust Bank,P-000053,Guwahati Branch,Assam,savings
+ACC-000184,932680021379,Union Commercial Bank,,Dhanbad Branch,Jharkhand,savings
+ACC-000185,618957445468,Bank X,,Jalandhar Branch,Punjab,savings
+ACC-000186,482970572042,National Trust Bank,,Chennai Branch,Tamil Nadu,current
+ACC-000187,068616754529,Metro Cooperative Bank,,Jaipur Branch,Rajasthan,savings
+ACC-000188,238024824094,Metro Cooperative Bank,P-000054,Thiruvananthapuram Branch,Kerala,current
+ACC-000189,614565674139,Metro Cooperative Bank,P-000230,Rajkot Branch,Gujarat,savings
+ACC-000190,614656841470,Bank X,,Dhanbad Branch,Jharkhand,current
+ACC-000191,595431819614,National Trust Bank,P-000055,Warangal Branch,Telangana,savings
+ACC-000192,566755228864,National Trust Bank,,Ludhiana Branch,Punjab,savings
+ACC-000193,639422338140,Metro Cooperative Bank,P-000233,Jodhpur Branch,Rajasthan,savings
+ACC-000194,334159150811,Union Commercial Bank,,Mysuru Branch,Karnataka,savings
+ACC-000195,900871734558,Bharat Savings Bank,P-000235,Ernakulam Branch,Kerala,savings
+ACC-000196,349803208465,Bank X,P-000056,Dibrugarh Branch,Assam,savings
+ACC-000197,058541792679,Metro Cooperative Bank,,Bhubaneswar Branch,Odisha,savings
+ACC-000198,334384090153,Metro Cooperative Bank,,Bengaluru Urban Branch,Karnataka,current
+ACC-000199,955410256071,Union Commercial Bank,,Patna Branch,Bihar,current
+ACC-000200,218948635403,Union Commercial Bank,P-000239,Gwalior Branch,Madhya Pradesh,savings
+ACC-000201,626220139860,Bank X,P-000057,Kolkata Branch,West Bengal,savings
+ACC-000202,987730335611,Bharat Savings Bank,,Mysuru Branch,Karnataka,current
+ACC-000203,072637792179,Metro Cooperative Bank,P-000241,Ernakulam Branch,Kerala,savings
+ACC-000204,306930313007,Bank X,P-000058,Belagavi Branch,Karnataka,savings
+ACC-000205,270711228298,Union Commercial Bank,P-000242,Bhubaneswar Branch,Odisha,savings
+ACC-000206,188999810894,Metro Cooperative Bank,,Nagpur Branch,Maharashtra,savings
+ACC-000207,302873136191,Bharat Savings Bank,P-000059,Vadodara Branch,Gujarat,savings
+ACC-000208,444427995301,Bank X,,Chennai Branch,Tamil Nadu,savings
+ACC-000209,310002602947,Union Commercial Bank,P-000245,Rourkela Branch,Odisha,savings
+ACC-000210,505612727954,National Trust Bank,P-000060,Jaipur Branch,Rajasthan,savings
+ACC-000211,518210565518,Bank X,,Indore Branch,Madhya Pradesh,savings
+ACC-000212,133404612979,National Trust Bank,,Rourkela Branch,Odisha,current
+ACC-000213,635401349921,Bharat Savings Bank,P-000061,Dehradun Branch,Uttarakhand,savings
+ACC-000214,128178472144,Metro Cooperative Bank,,Nagpur Branch,Maharashtra,savings
+ACC-000215,306313554903,Bank X,,Ernakulam Branch,Kerala,savings
+ACC-000216,106419930140,Union Commercial Bank,,Noida Branch,Uttar Pradesh,current
+ACC-000217,822545528132,Union Commercial Bank,P-000062,Indore Branch,Madhya Pradesh,current
+ACC-000218,740016534077,Metro Cooperative Bank,,Ludhiana Branch,Punjab,savings
+ACC-000219,670131457735,Bharat Savings Bank,,Ranchi Branch,Jharkhand,savings
+ACC-000220,399610680382,Bharat Savings Bank,P-000063,Faridabad Branch,Haryana,savings
+ACC-000221,513451177428,Bank X,,Warangal Branch,Telangana,savings
+ACC-000222,379252650523,Bank X,P-000254,Varanasi Branch,Uttar Pradesh,savings
+ACC-000223,730472345931,Metro Cooperative Bank,P-000064,Hyderabad Branch,Telangana,savings
+ACC-000224,739337347435,Bank X,,Jamtara Branch,Jharkhand,savings
+ACC-000225,294977886243,Bharat Savings Bank,,New Delhi Branch,Delhi,savings
+ACC-000226,282950236219,Metro Cooperative Bank,P-000065,Jamtara Branch,Jharkhand,savings
+ACC-000227,106104142261,Bharat Savings Bank,P-000257,Howrah Branch,West Bengal,current
+ACC-000228,895883619496,National Trust Bank,,Kozhikode Branch,Kerala,current
+ACC-000229,735077527536,Bank X,,Mysuru Branch,Karnataka,savings
+ACC-000230,752334108269,Metro Cooperative Bank,,Bhagalpur Branch,Bihar,savings
+ACC-000231,598556527026,Union Commercial Bank,P-000066,Guwahati Branch,Assam,current
+ACC-000232,354421979030,Bharat Savings Bank,,Udaipur Branch,Rajasthan,savings
+ACC-000233,302324300111,National Trust Bank,,South Delhi Branch,Delhi,savings
+ACC-000234,014241190425,Union Commercial Bank,,Dhanbad Branch,Jharkhand,savings
+ACC-000235,802664034171,Bank X,P-000067,Bhagalpur Branch,Bihar,savings
+ACC-000236,796203931734,Bharat Savings Bank,,Jodhpur Branch,Rajasthan,savings
+ACC-000237,379323442203,Metro Cooperative Bank,P-000265,Jodhpur Branch,Rajasthan,current
+ACC-000238,409514058322,National Trust Bank,,Amritsar Branch,Punjab,savings
+ACC-000239,784111966714,Bharat Savings Bank,P-000267,Patna Branch,Bihar,savings
+ACC-000240,658759017142,Bank X,P-000068,Jalandhar Branch,Punjab,savings
+ACC-000241,812610042811,Union Commercial Bank,,Mysuru Branch,Karnataka,current
+ACC-000242,513781146732,Bharat Savings Bank,,Cuttack Branch,Odisha,savings
+ACC-000243,853048729552,Union Commercial Bank,,Surat Branch,Gujarat,savings
+ACC-000244,039504900535,Union Commercial Bank,P-000069,Madurai Branch,Tamil Nadu,savings
+ACC-000245,693022448566,Union Commercial Bank,P-000271,Jaipur Branch,Rajasthan,savings
+ACC-000246,808757735531,Bank X,,Bhopal Branch,Madhya Pradesh,savings
+ACC-000247,037647649755,Union Commercial Bank,,Mangaluru Branch,Karnataka,savings
+ACC-000248,603335851907,Bharat Savings Bank,,Belagavi Branch,Karnataka,savings
+ACC-000249,128485139035,Metro Cooperative Bank,P-000070,South Delhi Branch,Delhi,savings
+ACC-000250,278802968220,Bharat Savings Bank,,Gurugram Branch,Haryana,current
+ACC-000251,728322706294,Bharat Savings Bank,,Dibrugarh Branch,Assam,savings
+ACC-000252,384382392391,Metro Cooperative Bank,,Gwalior Branch,Madhya Pradesh,savings
+ACC-000253,711862572385,Metro Cooperative Bank,,Noida Branch,Uttar Pradesh,current
+ACC-000254,659644237123,Bharat Savings Bank,P-000071,Howrah Branch,West Bengal,savings
+ACC-000255,783798282315,Metro Cooperative Bank,,Ranchi Branch,Jharkhand,savings
+ACC-000256,798007586694,National Trust Bank,P-000280,Jalandhar Branch,Punjab,savings
+ACC-000257,599352886241,National Trust Bank,P-000281,Patna Branch,Bihar,savings
+ACC-000258,774580588571,Union Commercial Bank,P-000072,Indore Branch,Madhya Pradesh,savings
+ACC-000259,580454726013,National Trust Bank,,Patna Branch,Bihar,savings
+ACC-000260,128812630766,Bank X,P-000283,Siliguri Branch,West Bengal,current
+ACC-000261,100521721239,Union Commercial Bank,P-000284,Mysuru Branch,Karnataka,savings
+ACC-000262,022225078907,Bharat Savings Bank,,Kozhikode Branch,Kerala,savings
+ACC-000263,095682088272,Metro Cooperative Bank,P-000073,Mysuru Branch,Karnataka,savings
+ACC-000264,639665799256,National Trust Bank,,Dibrugarh Branch,Assam,current
+ACC-000265,849529874170,National Trust Bank,,Indore Branch,Madhya Pradesh,savings
+ACC-000266,498601921641,Bharat Savings Bank,P-000074,Jodhpur Branch,Rajasthan,savings
+ACC-000267,743144538886,Bharat Savings Bank,P-000288,Bhagalpur Branch,Bihar,current
+ACC-000268,240982563480,Metro Cooperative Bank,,Jamtara Branch,Jharkhand,savings
+ACC-000269,145922128452,National Trust Bank,P-000290,Ernakulam Branch,Kerala,savings
+ACC-000270,689731675063,Metro Cooperative Bank,P-000291,West Delhi Branch,Delhi,current
+ACC-000271,428185622777,Union Commercial Bank,P-000075,Nainital Branch,Uttarakhand,savings
+ACC-000272,561279456982,Union Commercial Bank,,New Delhi Branch,Delhi,savings
+ACC-000273,382539344391,Metro Cooperative Bank,,Patna Branch,Bihar,savings
+ACC-000274,413904061459,Bank X,P-000294,Udaipur Branch,Rajasthan,savings
+ACC-000275,131498566019,Metro Cooperative Bank,P-000295,Ahmedabad Branch,Gujarat,current
+ACC-000276,826500069862,Union Commercial Bank,P-000076,Udaipur Branch,Rajasthan,savings
+ACC-000277,222191248991,Bharat Savings Bank,,Haldwani Branch,Uttarakhand,savings
+ACC-000278,353179665703,Bank X,,Rangareddy Branch,Telangana,current
+ACC-000279,092314151516,Union Commercial Bank,P-000077,Gurugram Branch,Haryana,savings
+ACC-000280,862907120480,Union Commercial Bank,P-000298,Bhubaneswar Branch,Odisha,savings
+ACC-000281,647137036136,Bank X,P-000299,Udaipur Branch,Rajasthan,savings
+ACC-000282,666121108341,Metro Cooperative Bank,,Gwalior Branch,Madhya Pradesh,savings
+ACC-000283,179741972217,Metro Cooperative Bank,P-000078,Kolkata Branch,West Bengal,savings
+ACC-000284,530394525642,Metro Cooperative Bank,,Kanpur Branch,Uttar Pradesh,savings
+ACC-000285,116130205149,Union Commercial Bank,P-000302,Warangal Branch,Telangana,savings
+ACC-000286,979834837525,Union Commercial Bank,P-000079,Guwahati Branch,Assam,savings
+ACC-000287,208441758738,Bharat Savings Bank,,Cuttack Branch,Odisha,savings
+ACC-000288,375475153364,Union Commercial Bank,,Dhanbad Branch,Jharkhand,savings
+ACC-000289,557127153470,National Trust Bank,P-000305,Dibrugarh Branch,Assam,current
+ACC-000290,254035020663,National Trust Bank,,Rangareddy Branch,Telangana,savings
+ACC-000291,478694066260,Union Commercial Bank,P-000080,Bhubaneswar Branch,Odisha,savings
+ACC-000292,999341333799,Union Commercial Bank,,Ahmedabad Branch,Gujarat,savings
+ACC-000293,374650315636,National Trust Bank,,Thiruvananthapuram Branch,Kerala,savings
+ACC-000294,770067399297,Bharat Savings Bank,P-000309,Faridabad Branch,Haryana,savings
+ACC-000295,471473011125,Bank X,P-000081,Faridabad Branch,Haryana,savings
+ACC-000296,188715483365,Union Commercial Bank,,Bhagalpur Branch,Bihar,savings
+ACC-000297,852515260536,Bank X,,Patna Branch,Bihar,current
+ACC-000298,725006356078,Metro Cooperative Bank,,Jaipur Branch,Rajasthan,savings
+ACC-000299,224829285488,National Trust Bank,P-000082,Warangal Branch,Telangana,savings
+ACC-000300,759257782011,Bharat Savings Bank,,Ahmedabad Branch,Gujarat,savings
+ACC-000301,937178323559,Bank X,,South Delhi Branch,Delhi,savings
+ACC-000302,444137948004,National Trust Bank,P-000315,Ghaziabad Branch,Uttar Pradesh,savings
+ACC-000303,876733448324,Metro Cooperative Bank,,Hyderabad Branch,Telangana,savings
+ACC-000304,578587095632,Union Commercial Bank,P-000083,Belagavi Branch,Karnataka,savings
+ACC-000305,833359144517,Union Commercial Bank,P-000317,Cuttack Branch,Odisha,savings
+ACC-000306,889922416766,National Trust Bank,,Gurugram Branch,Haryana,savings
+ACC-000307,212932798378,Metro Cooperative Bank,P-000319,Bhubaneswar Branch,Odisha,savings
+ACC-000308,493925517124,National Trust Bank,P-000320,Madurai Branch,Tamil Nadu,savings
+ACC-000309,109033314414,Metro Cooperative Bank,P-000084,Guwahati Branch,Assam,savings
+ACC-000310,015177033505,Metro Cooperative Bank,,Cuttack Branch,Odisha,savings
+ACC-000311,698742663083,Metro Cooperative Bank,,Guwahati Branch,Assam,current
+ACC-000312,472372463260,Union Commercial Bank,P-000323,Bhubaneswar Branch,Odisha,savings
+ACC-000313,893512014044,Bharat Savings Bank,P-000085,South Delhi Branch,Delhi,savings
+ACC-000314,296861187477,Metro Cooperative Bank,,Mumbai Branch,Maharashtra,savings
+ACC-000315,841907432769,Union Commercial Bank,,Amritsar Branch,Punjab,savings
+ACC-000316,061097497111,Metro Cooperative Bank,P-000326,Jodhpur Branch,Rajasthan,savings
+ACC-000317,283118398124,Metro Cooperative Bank,,Belagavi Branch,Karnataka,savings
+ACC-000318,091864901161,Bharat Savings Bank,P-000086,Nainital Branch,Uttarakhand,savings
+ACC-000319,479548481187,Union Commercial Bank,,South Delhi Branch,Delhi,savings
+ACC-000320,849936749328,National Trust Bank,,Bhagalpur Branch,Bihar,savings
+ACC-000321,214127860366,Metro Cooperative Bank,,Surat Branch,Gujarat,savings
+ACC-000322,362858701318,National Trust Bank,,Amritsar Branch,Punjab,current
+ACC-000323,775495282212,Bharat Savings Bank,P-000087,Bhagalpur Branch,Bihar,savings
+ACC-000324,441436063670,Metro Cooperative Bank,,Nainital Branch,Uttarakhand,savings
+ACC-000325,176981374305,Bharat Savings Bank,,Jaipur Branch,Rajasthan,current
+ACC-000326,628745623195,Bharat Savings Bank,P-000334,Jamtara Branch,Jharkhand,current
+ACC-000327,950858105444,Metro Cooperative Bank,P-000088,Dibrugarh Branch,Assam,savings
+ACC-000328,232375357702,Bank X,,South Delhi Branch,Delhi,savings
+ACC-000329,632096354766,Bank X,,Rourkela Branch,Odisha,current
+ACC-000330,001067751969,Union Commercial Bank,,Ahmedabad Branch,Gujarat,current

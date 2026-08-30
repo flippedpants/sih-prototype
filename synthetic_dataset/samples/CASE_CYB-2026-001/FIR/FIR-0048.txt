@@ -1,0 +1,8 @@
+FIR No: FIR-0048
+Police Station: Hyderabad Cyber Cell Police Station
+Date Filed: 2026-08-09
+Legal Sections: BNS Section 318 (cheating); IT Act Section 66D (cheating by personation using computer resource)
+UTR Number: 4294066664582546715904
+Suspected Email: NOT PROVIDED
+
+On 01-08-2026, the complainant Samarth Mander, resident of H.No. 495, Saha Marg, Bharatpur 663062, received a call from mobile number +917562974498 in which the caller falsely represented himself as a bank official and induced the complainant to share confidential banking details. Acting on this deception, an amount of Rs. 11,989 was fraudulently transferred out of the complainant's account. The complainant was directed to transfer funds to an account held with Metro Cooperative Bank. The complainant realized the fraud only after noticing unauthorized debit alerts on 09-08-2026 and immediately reported the matter to the Hyderabad Cyber Cell Police Station.

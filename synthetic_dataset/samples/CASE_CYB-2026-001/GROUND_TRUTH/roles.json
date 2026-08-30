@@ -1,0 +1,2668 @@
+{
+  "P-000001": {
+    "hidden_role": "ORGANIZER",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000002": {
+    "hidden_role": "MANAGER",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000003": {
+    "hidden_role": "MANAGER",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000004": {
+    "hidden_role": "AGENT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000005": {
+    "hidden_role": "AGENT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000006": {
+    "hidden_role": "AGENT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000007": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000008": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000009": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000010": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000011": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000012": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000013": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000014": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000015": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000016": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000017": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000018": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000019": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000020": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000021": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000022": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000023": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000024": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000025": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000026": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000027": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000028": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000029": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000030": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000031": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000032": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000033": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000034": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000035": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000036": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000037": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000038": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000039": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000040": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000041": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000042": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000043": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000044": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000045": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000046": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000047": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000048": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000049": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000050": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000051": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000052": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000053": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000054": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000055": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000056": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000057": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000058": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000059": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000060": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000061": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000062": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000063": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000064": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000065": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000066": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000067": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000068": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000069": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000070": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000071": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000072": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000073": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000074": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000075": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000076": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000077": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000078": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000079": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000080": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000081": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000082": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000083": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000084": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000085": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000086": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000087": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000088": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000089": {
+    "hidden_role": "AGGREGATOR",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000090": {
+    "hidden_role": "CASHOUT_OPERATOR",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000091": {
+    "hidden_role": "RECRUITER",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000092": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000093": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000094": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000095": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000096": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000097": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000098": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000099": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000100": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000101": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000102": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000103": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000104": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000105": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000106": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000107": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000108": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000109": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000110": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000111": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000112": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000113": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000114": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000115": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000116": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000117": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000118": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000119": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000120": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000121": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000122": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000123": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000124": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000125": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000126": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000127": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000128": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000129": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000130": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000131": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000132": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000133": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000134": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000135": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000136": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000137": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000138": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000139": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000140": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000141": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000142": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000143": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000144": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000145": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000146": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000147": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000148": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000149": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000150": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000151": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000152": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000153": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000154": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000155": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000156": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000157": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000158": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000159": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000160": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000161": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000162": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000163": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000164": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000165": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000166": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000167": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000168": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000169": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000170": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000171": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000172": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000173": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000174": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000175": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000176": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000177": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000178": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000179": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000180": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000181": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000182": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000183": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000184": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000185": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000186": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000187": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000188": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000189": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000190": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000191": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000192": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000193": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000194": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000195": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000196": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000197": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000198": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000199": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000200": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000201": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000202": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000203": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000204": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000205": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000206": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000207": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000208": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000209": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000210": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000211": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000212": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000213": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000214": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000215": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000216": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000217": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000218": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000219": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000220": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000221": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000222": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000223": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000224": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000225": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000226": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000227": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000228": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000229": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000230": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000231": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000232": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000233": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000234": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000235": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000236": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000237": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000238": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000239": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000240": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000241": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000242": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000243": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000244": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000245": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000246": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000247": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000248": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000249": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000250": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000251": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000252": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000253": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000254": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000255": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000256": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000257": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000258": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000259": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000260": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000261": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000262": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000263": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000264": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000265": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000266": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000267": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000268": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000269": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000270": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000271": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000272": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000273": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000274": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000275": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000276": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000277": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000278": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000279": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000280": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000281": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000282": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000283": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000284": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000285": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000286": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000287": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000288": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000289": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000290": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000291": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000292": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000293": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000294": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000295": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000296": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000297": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000298": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000299": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000300": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000301": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000302": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000303": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000304": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000305": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000306": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000307": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000308": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000309": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000310": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000311": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000312": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000313": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000314": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000315": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000316": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000317": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000318": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000319": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000320": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000321": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000322": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000323": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000324": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000325": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000326": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000327": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000328": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000329": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000330": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000331": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000332": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000333": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000334": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000335": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000336": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000337": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000338": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000339": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000340": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000341": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000342": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000343": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000344": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000345": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000346": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000347": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000348": {
+    "hidden_role": "INNOCENT_CONTACT",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000349": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000350": {
+    "hidden_role": "VICTIM",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000351": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000352": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000353": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000354": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000355": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000356": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000357": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000358": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "P-000359": {
+    "hidden_role": "MULE",
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000004": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000005": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000006": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000008": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000009": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000011": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000012": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000014": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000015": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000017": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000018": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000019": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000020": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000022": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000023": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000024": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000026": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000027": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000028": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000030": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000031": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000033": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000034": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000036": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000037": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000039": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000040": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000042": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000043": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000044": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000046": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000047": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000049": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000050": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000051": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000053": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000054": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000055": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000057": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000058": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000059": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000061": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000062": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000063": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000065": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000066": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000067": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000069": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000070": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000072": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000073": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000074": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000075": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000077": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000078": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000079": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000081": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000082": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000083": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000085": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000086": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000087": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000089": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000090": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000091": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000093": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000094": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000095": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000097": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000098": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000099": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000101": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000102": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000103": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000105": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000106": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000107": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000108": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000110": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000111": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000112": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000114": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000115": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000116": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000118": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000119": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000120": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000121": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000123": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000124": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000125": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000126": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000128": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000129": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000131": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000132": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000134": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000135": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000136": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000137": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000139": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000140": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000142": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000143": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000145": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000146": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000147": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000148": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000150": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000151": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000152": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000153": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000155": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000156": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000157": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000159": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000160": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000161": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000163": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000164": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000165": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000166": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000168": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000169": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000170": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000171": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000173": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000174": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000175": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000177": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000178": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000180": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000181": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000182": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000184": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000185": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000186": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000187": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000189": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000190": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000192": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000193": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000194": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000195": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000197": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000198": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000199": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000200": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000202": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000203": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000205": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000206": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000208": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000209": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000211": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000212": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000214": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000215": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000216": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000218": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000219": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000221": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000222": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000224": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000225": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000227": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000228": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000229": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000230": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000232": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000233": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000234": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000236": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000237": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000238": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000239": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000241": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000242": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000243": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000245": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000246": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000247": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000248": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000250": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000251": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000252": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000253": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000255": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000256": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000257": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000259": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000260": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000261": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000262": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000264": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000265": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000267": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000268": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000269": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000270": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000272": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000273": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000274": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000275": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000277": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000278": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000280": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000281": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000282": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000284": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000285": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000287": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000288": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000289": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000290": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000292": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000293": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000294": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000296": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000297": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000298": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000300": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000301": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000302": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000303": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000305": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000306": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000307": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000308": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000310": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000311": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000312": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000314": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000315": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000316": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000317": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000319": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000320": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000321": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000322": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000324": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000325": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000326": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000328": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000329": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  },
+  "ACC-000330": {
+    "hidden_role": "MULE",
+    "hidden_mule_status": true,
+    "ring_id": "RING_CYB-2026-001"
+  }
+}

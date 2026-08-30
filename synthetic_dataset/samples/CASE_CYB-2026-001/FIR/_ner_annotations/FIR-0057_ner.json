@@ -1,0 +1,20 @@
+[
+  {
+    "start": 16,
+    "end": 25,
+    "label": "PERSON",
+    "entity_id": "P-000063"
+  },
+  {
+    "start": 91,
+    "end": 104,
+    "label": "PHONE",
+    "entity_id": "PH-000005"
+  },
+  {
+    "start": 347,
+    "end": 353,
+    "label": "AMOUNT",
+    "entity_id": null
+  }
+]

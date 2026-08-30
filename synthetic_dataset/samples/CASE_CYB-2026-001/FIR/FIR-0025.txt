@@ -1,0 +1,8 @@
+FIR No: FIR-0025
+Police Station: Hyderabad Cyber Cell Police Station
+Date Filed: 2026-08-11
+Legal Sections: BNS Section 318 (cheating); IT Act Section 66D (cheating by personation using computer resource); BNS Section 61 (criminal conspiracy)
+UTR Number: 8862690001505366230251
+Suspected Email: NOT PROVIDED
+
+On 05-08-2026, the complainant Zehaan Sengupta, resident of 319, Dhar Zila, Karimnagar 984153, received a call from mobile number +918300412785 in which the caller falsely represented himself as a bank official and induced the complainant to share confidential banking details. Acting on this deception, an amount of Rs. 82,742 was fraudulently transferred out of the complainant's account. The complainant was directed to transfer funds to an account held with Metro Cooperative Bank. The complainant realized the fraud only after noticing unauthorized debit alerts on 11-08-2026 and immediately reported the matter to the Hyderabad Cyber Cell Police Station.

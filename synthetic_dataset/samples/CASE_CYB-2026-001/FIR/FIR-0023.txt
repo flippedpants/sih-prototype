@@ -1,0 +1,8 @@
+FIR No: FIR-0023
+Police Station: Hyderabad Cyber Cell Police Station
+Date Filed: 2026-08-08
+Legal Sections: BNS Section 318 (cheating); IT Act Section 66D (cheating by personation using computer resource)
+UTR Number: 3870994973364669963841
+Suspected Email: NOT PROVIDED
+
+On 07-08-2026, the complainant Sai Bose, resident of H.No. 931, Din, Rohtak-992070, received a call from mobile number +918300412785 in which the caller falsely represented himself as a bank official and induced the complainant to share confidential banking details. Acting on this deception, an amount of Rs. 99,820 was fraudulently transferred out of the complainant's account. The complainant was directed to transfer funds to an account held with Union Commercial Bank. The complainant realized the fraud only after noticing unauthorized debit alerts on 08-08-2026 and immediately reported the matter to the Hyderabad Cyber Cell Police Station.
