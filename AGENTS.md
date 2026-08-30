@@ -2,35 +2,38 @@
 
 ## Project Structure & Module Organization
 
-- `app/` contains the FastAPI backend. Keep HTTP wiring in `main.py`, request/response models in `models.py`, and Neo4j persistence and Cypher/GDS retrieval in `neo4j_store.py`.
-- `tests/` contains pytest API and integration coverage. Shared fixtures belong in `tests/fixtures.py`; shared client setup belongs in `tests/conftest.py`.
-- `docker-compose.yml` starts Neo4j, the API, and the static CSV upload frontend in `app/ingestion-frontend/`; `Dockerfile` builds the API container.
-- Planning and domain context live in the repository Markdown files. Do not put runtime data, credentials, or generated artifacts under source control.
+- `app/main.py` contains FastAPI routes; `app/models.py` holds public API models; `app/neo4j_store.py` owns Neo4j persistence and parameterized Cypher.
+- `app/source_ingestion/` is the schema-driven CSV/Excel pipeline: mapping loader, validation, normalized objects, and parser. Add a source by creating `app/source_mappings/<source_type>.json`, not a bespoke parser.
+- `app/ingestion-frontend/` is the static upload UI proxied to the API by Nginx.
+- `tests/` contains pytest coverage. Place source-ingestion tests in `tests/test_source_ingestion_engine.py`; reuse fixtures in `tests/fixtures.py`.
 
 ## Build, Test, and Development Commands
 
 ```bash
+cp .env.example .env
+docker compose up --build
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt pytest
-docker compose up -d neo4j
 .venv/bin/python -m pytest -q
-docker compose up --build
+docker compose build ingestion-frontend
 ```
 
-The tests are Neo4j integration tests and require the local Neo4j service. `docker compose up --build` starts the database, API (`8000`), and upload frontend (`8080`).
+Compose starts Neo4j, the API on `8000`, and the upload UI on `8080`. The complete suite needs Neo4j; parser tests can run without it. Copy `.env.example` and set a non-default password before sharing or deploying the stack.
 
 ## Coding Style & Naming Conventions
 
-Use Python 3.12, four-space indentation, type hints for public functions, and concise docstrings for module boundaries. Use `snake_case` for functions, variables, and files; use `PascalCase` for Pydantic models and store classes. Keep Cypher parameterized: never interpolate frontend, LLM, dataset, or filter values directly into a query. New domain-specific fields must be represented through dataset metadata and generic attributes, not fixed entity labels or schema migrations.
+Use Python 3.12, four-space indentation, type hints on public functions, and concise module docstrings. Use `snake_case` for modules, functions, and fields; use `PascalCase` for Pydantic models and store classes. Keep Cypher parameterized—never interpolate user, frontend, LLM, dataset, or filter input.
+
+Source mappings must use the controlled entity vocabulary (`PERSON`, `PHONE`, `ACCOUNT`, `VEHICLE`, `ORG`, `LOCATION`) and approved relationship types. Validate mapping changes through the generic engine; do not add source-specific branching. Preserve type-prefixed entity identities and provenance.
 
 ## Testing Guidelines
 
-Use pytest and name test files `test_*.py` and test functions `test_<behavior>`. Add a failing test before changing API behavior. Cover schema validation, ingest idempotency, Neo4j retrieval, and unsafe-query rejection. Run the complete suite before committing.
+Name tests `test_*.py` and behaviors `test_<outcome>`. Add a failing test before changing API behavior. Cover clean input, structural column failures, per-row validation errors, and mixed mappings. Run focused tests with `pytest -q tests/test_source_ingestion_engine.py`, then the full suite when Neo4j is available.
 
 ## Commit & Pull Request Guidelines
 
-Use concise Conventional-Commit-style subjects, such as `feat: add ...`, `test: cover ...`, `refactor: ...`, or `chore: ...`. Keep commits focused. Pull requests should explain the graph/API impact, list validation commands, link any issue, and include sample request/response payloads for API changes.
+Use concise Conventional Commit subjects: `feat: ...`, `test: ...`, `refactor: ...`, or `docs: ...`. Keep commits focused. PRs should state graph/API impact, mapping changes, validation commands, linked issues, and screenshots for frontend changes.
 
-## Security & Configuration
+## Security
 
-Keep `NEO4J_PASSWORD` in environment configuration, never in committed files. The NL layer may submit only the validated query-intent contract; raw Cypher is not an API input.
+Do not commit `.env`, source files, credentials, or generated graph data. The future NL layer may submit only validated query intents; raw Cypher is not an API input.
