@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import Topbar from './components/Topbar.jsx'
 import ClusterSidebar from './components/ClusterSidebar.jsx'
 import NetworkGraph from './components/NetworkGraph.jsx'
@@ -114,6 +114,27 @@ function App() {
     }
   }, [selectedEntityId])
 
+  // Top 5 PERSON nodes by degree *within the selected cluster's own graph* —
+  // computed from the already-fetched cluster_graph elements, never global degree.
+  const keyPlayers = useMemo(() => {
+    if (selectedClusterId === 'all' || !graph) return []
+    const degreeById = new Map()
+    const nameById = new Map()
+    for (const element of graph.elements) {
+      const data = element.data
+      if (data.source !== undefined && data.target !== undefined) {
+        degreeById.set(data.source, (degreeById.get(data.source) || 0) + 1)
+        degreeById.set(data.target, (degreeById.get(data.target) || 0) + 1)
+      } else {
+        nameById.set(data.id, data.label)
+      }
+    }
+    return [...degreeById.entries()]
+      .map(([id, degree]) => ({ id, name: nameById.get(id) || id, degree }))
+      .sort((a, b) => b.degree - a.degree)
+      .slice(0, 5)
+  }, [graph, selectedClusterId])
+
   const handleSelectCluster = useCallback((clusterId) => {
     setSelectedClusterId(clusterId)
     setSelectedEntityId(null)
@@ -133,6 +154,8 @@ function App() {
           clusters={clusters}
           clustersLoading={clustersLoading}
           clustersError={clustersError}
+          keyPlayers={keyPlayers}
+          onSelectEntity={handleSelectEntity}
         />
         <main className="graph-panel">
           <div className="graph-panel-header">

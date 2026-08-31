@@ -3,7 +3,15 @@ import './ClusterSidebar.css'
 
 const CASE_NAME = 'Cyber Fraud Investigation — Case 042'
 
-function ClusterSidebar({ selectedClusterId, onSelectCluster, clusters, clustersLoading, clustersError }) {
+function ClusterSidebar({
+  selectedClusterId,
+  onSelectCluster,
+  clusters,
+  clustersLoading,
+  clustersError,
+  keyPlayers,
+  onSelectEntity,
+}) {
   const isAllSelected = selectedClusterId === 'all'
   const selectedCluster = isAllSelected
     ? null
@@ -42,6 +50,27 @@ function ClusterSidebar({ selectedClusterId, onSelectCluster, clusters, clusters
               <span className="cluster-stats-key">Links</span>
               <span className="cluster-stats-value">{selectedCluster.links}</span>
             </div>
+
+            {keyPlayers && keyPlayers.length > 0 && (
+              <div className="key-players">
+                <span className="key-players-label">Key players</span>
+                <ol className="key-players-list">
+                  {keyPlayers.map((player, index) => (
+                    <li key={player.id}>
+                      <button
+                        type="button"
+                        className="key-player-item"
+                        onClick={() => onSelectEntity(player.id)}
+                      >
+                        <span className="key-player-rank">{index + 1}</span>
+                        <span className="key-player-name">{player.name}</span>
+                        <span className="key-player-degree">{player.degree}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
           </div>
         )}
       </div>
