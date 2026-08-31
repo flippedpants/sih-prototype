@@ -7,6 +7,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import uuid
+from collections import deque
 from copy import deepcopy
 from typing import Any
 
@@ -97,7 +99,7 @@ class Neo4jGraphStore:
                 "display_name": entity.canonical_name,
                 "identifiers_json": json.dumps({"natural_key": entity.id.split(":", 1)[1]}, sort_keys=True),
                 "attributes_json": json.dumps(entity.attributes, sort_keys=True),
-                "filter_values": [f"display_name\u001f{json.dumps(entity.canonical_name)}"] if entity.canonical_name else [],
+                "filter_values": _batch_filter_values(entity),
                 "aliases": entity.aliases,
                 "source_docs": entity.source_docs,
             }
@@ -187,7 +189,7 @@ class Neo4jGraphStore:
             rows = session.run("MATCH (e:Entity {dataset_id: $dataset_id}) WHERE e.id IN $ids RETURN e.id AS id, e.entity_type AS type", dataset_id=dataset_id, ids=entity_ids)
             return {row["id"]: row["type"] for row in rows}
 
-    def query(self, intent: Any) -> list[Any]:
+    def query(self, intent: Any) -> Any:
         if intent.intent == "find_entity":
             return self._find_entities(intent)
         if intent.intent == "get_evidence":
@@ -215,13 +217,31 @@ class Neo4jGraphStore:
                 return [dict(row) for row in session.run(query, dataset_id=intent.dataset_id, limit=intent.limit)]
         if intent.intent == "list_communities":
             return self._communities(intent.dataset_id, intent.limit)
+        if intent.intent == "full_graph":
+            return self._person_graph_for_ids(intent.dataset_id, None)
+        if intent.intent == "cluster_graph":
+            if not intent.cluster_id:
+                raise ValueError("cluster_id is required for cluster_graph")
+            return self.cluster_graph(intent.dataset_id, intent.cluster_id)
+        if intent.intent == "list_clusters":
+            return self.list_clusters(intent.dataset_id, intent.limit)
+        if intent.intent == "entity_details":
+            if not intent.entity_id:
+                raise ValueError("entity_id is required for entity_details")
+            return self.entity_details(intent.dataset_id, intent.entity_id)
+        if intent.intent == "search_entities":
+            if not intent.query:
+                raise ValueError("query is required for search_entities")
+            return self.search_entities(intent.dataset_id, intent.query, intent.entity_type, intent.limit)
+        if intent.intent == "statistics":
+            return self.statistics(intent.dataset_id)
         raise ValueError("unsupported query intent")
 
     def _find_entities(self, intent: Any) -> list[dict[str, Any]]:
         clauses, parameters = [], {"dataset_id": intent.dataset_id, "entity_type": intent.entity_type, "limit": intent.limit}
         for index, filter_item in enumerate(intent.filters):
             key = f"filter_{index}"
-            prefix = f"{filter_item.field}\u001f"
+            prefix = f"{filter_item.field}"
             if filter_item.operator == "eq":
                 clauses.append(f"${key} IN entity.filter_values")
                 parameters[key] = prefix + json.dumps(filter_item.value, sort_keys=True)
@@ -239,7 +259,50 @@ class Neo4jGraphStore:
     def _communities(self, dataset_id: str, limit: int) -> list[list[str]]:
         name = f"community_{dataset_id.replace('-', '_')}"
         node_query = "MATCH (entity:Entity {dataset_id: $dataset_id}) RETURN id(entity) AS id"
-        relation_query = "MATCH (source:Entity {dataset_id: $dataset_id})-[:SOURCE]->(:Relation)-[:TARGET]->(target:Entity {dataset_id: $dataset_id}) RETURN id(source) AS source, id(target) AS target"
+        # Emitted in both directions so the Louvain projection is undirected: a node that is only
+        # ever a relation TARGET must still contribute to community membership. This only affects
+        # the in-memory GDS graph built for clustering — the underlying :SOURCE/:TARGET relationships
+        # in the database stay directed and untouched.
+        relation_query = (
+            "MATCH (source:Entity {dataset_id: $dataset_id})-[:SOURCE]->(:Relation)-[:TARGET]->(target:Entity {dataset_id: $dataset_id}) "
+            "RETURN id(source) AS source, id(target) AS target "
+            "UNION "
+            "MATCH (source:Entity {dataset_id: $dataset_id})-[:SOURCE]->(:Relation)-[:TARGET]->(target:Entity {dataset_id: $dataset_id}) "
+            "RETURN id(target) AS source, id(source) AS target"
+        )
+        return self._run_louvain(name, dataset_id, node_query, relation_query, limit)
+
+    def _person_communities(self, dataset_id: str, limit: int) -> list[list[str]]:
+        """Louvain over the PERSON-only projection: direct CALLED pairs plus account-derived
+        FINANCIAL_LINK pairs (see _person_graph_for_ids), each undirected for clustering purposes."""
+        name = f"community_person_{dataset_id.replace('-', '_')}"
+        node_query = "MATCH (entity:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'}) RETURN id(entity) AS id"
+        relation_query = (
+            "MATCH (source:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'CALLED'})-[:TARGET]->(target:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'}) "
+            "RETURN id(source) AS source, id(target) AS target "
+            "UNION "
+            "MATCH (source:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'CALLED'})-[:TARGET]->(target:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'}) "
+            "RETURN id(target) AS source, id(source) AS target "
+            "UNION "
+            "MATCH (source:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(sa:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (sa)-[:SOURCE]->(:Relation {relation_type: 'TRANSFERRED_TO'})-[:TARGET]->(ta:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (target:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(ta) "
+            "WHERE source <> target "
+            "RETURN id(source) AS source, id(target) AS target "
+            "UNION "
+            "MATCH (source:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(sa:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (sa)-[:SOURCE]->(:Relation {relation_type: 'TRANSFERRED_TO'})-[:TARGET]->(ta:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (target:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(ta) "
+            "WHERE source <> target "
+            "RETURN id(target) AS source, id(source) AS target"
+        )
+        return self._run_louvain(name, dataset_id, node_query, relation_query, limit)
+
+    def _run_louvain(self, name_prefix: str, dataset_id: str, node_query: str, relation_query: str, limit: int) -> list[list[str]]:
+        # Unique per call: concurrent requests (e.g. two browser tabs, or React
+        # StrictMode's double effect-invocation in dev) must not collide on GDS's
+        # global in-memory graph name registry.
+        name = f"{name_prefix}_{uuid.uuid4().hex}"
         with self.driver.session() as session:
             session.run("CALL gds.graph.project.cypher($name, $nodes, $relations, {parameters: {dataset_id: $dataset_id}})", name=name, nodes=node_query, relations=relation_query, dataset_id=dataset_id).consume()
             try:
@@ -251,10 +314,290 @@ class Neo4jGraphStore:
             finally:
                 session.run("CALL gds.graph.drop($name, false)", name=name).consume()
 
+    # -- Cytoscape-ready graph responses -------------------------------------------------
+
+    def cluster_graph(self, dataset_id: str, cluster_id: str) -> dict[str, Any]:
+        communities = self._person_communities(dataset_id, limit=1_000_000)
+        index = _cluster_index(cluster_id)
+        if index is None or index < 0 or index >= len(communities):
+            raise KeyError("cluster not found")
+        members = communities[index]
+        graph = self._person_graph_for_ids(dataset_id, members)
+        graph["cluster_id"] = cluster_id
+        graph["entity_count"] = len(members)
+        graph["link_count"] = graph["edge_count"]
+        return graph
+
+    def list_clusters(self, dataset_id: str, limit: int) -> list[dict[str, Any]]:
+        communities = self._person_communities(dataset_id, limit=1_000_000)
+        clusters = []
+        for index, members in enumerate(communities[:limit]):
+            graph = self._person_graph_for_ids(dataset_id, members)
+            clusters.append({"cluster_id": str(index), "entity_count": len(members), "link_count": graph["edge_count"]})
+        return clusters
+
+    def _person_graph_for_ids(self, dataset_id: str, entity_ids: list[str] | None) -> dict[str, Any]:
+        """PERSON-only Cytoscape graph: direct CALLED person-to-person edges, plus derived
+        FINANCIAL_LINK edges for person pairs whose owned accounts transacted with each other.
+        PHONE/ACCOUNT entities never appear as nodes here — they remain reachable via entity_details."""
+        with self.driver.session() as session:
+            if entity_ids is None:
+                node_rows = session.run("MATCH (e:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'}) RETURN e", dataset_id=dataset_id)
+            else:
+                node_rows = session.run("MATCH (e:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'}) WHERE e.id IN $ids RETURN e", dataset_id=dataset_id, ids=entity_ids)
+            nodes = [_cytoscape_node(row["e"]) for row in node_rows]
+            node_id_set = {node["data"]["id"] for node in nodes}
+
+            called_rows = list(session.run(
+                "MATCH (s:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(r:Relation {relation_type: 'CALLED'})-[:TARGET]->(t:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'}) "
+                "OPTIONAL MATCH (r)<-[:SUPPORTS]-(ev:Evidence) "
+                "RETURN r.id AS id, s.id AS source, t.id AS target, r.weight AS weight, collect(DISTINCT ev.id) AS evidence_ids",
+                dataset_id=dataset_id,
+            ))
+            financial_rows = list(session.run(
+                "MATCH (ps:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(sa:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+                "MATCH (sa)-[:SOURCE]->(r:Relation {relation_type: 'TRANSFERRED_TO'})-[:TARGET]->(ta:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+                "MATCH (pt:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(ta) "
+                "WHERE ps <> pt "
+                "OPTIONAL MATCH (r)<-[:SUPPORTS]-(ev:Evidence) "
+                "RETURN r.id AS id, ps.id AS source, pt.id AS target, r.weight AS weight, sa.id AS source_account, ta.id AS target_account, collect(DISTINCT ev.id) AS evidence_ids",
+                dataset_id=dataset_id,
+            ))
+
+        edges_by_pair: dict[frozenset, dict[str, Any]] = {}
+
+        def add_relation(source: str, target: str, relation: dict[str, Any]) -> None:
+            if entity_ids is not None and (source not in node_id_set or target not in node_id_set):
+                return
+            key = frozenset((source, target))
+            edge = edges_by_pair.setdefault(key, {"source": source, "target": target, "relations": []})
+            edge["relations"].append(relation)
+
+        for row in called_rows:
+            add_relation(row["source"], row["target"], {
+                "relation_type": "CALLED",
+                "relation_id": row["id"],
+                "weight": row["weight"],
+                "evidence_ids": [value for value in row["evidence_ids"] if value],
+            })
+        for row in financial_rows:
+            add_relation(row["source"], row["target"], {
+                "relation_type": "FINANCIAL_LINK",
+                "relation_id": row["id"],
+                "weight": row["weight"],
+                "evidence_ids": [value for value in row["evidence_ids"] if value],
+                "source_account": row["source_account"],
+                "target_account": row["target_account"],
+            })
+
+        edges = [
+            {
+                "data": {
+                    "id": f"{edge['source']}~{edge['target']}",
+                    "source": edge["source"],
+                    "target": edge["target"],
+                    "relation_types": sorted({relation["relation_type"] for relation in edge["relations"]}),
+                    "relations": edge["relations"],
+                }
+            }
+            for edge in edges_by_pair.values()
+        ]
+        return {"nodes": nodes, "edges": edges, "node_count": len(nodes), "edge_count": len(edges)}
+
+    def entity_details(self, dataset_id: str, entity_id: str) -> dict[str, Any]:
+        entity = self.entity(dataset_id, entity_id)
+        relationships = self._relationships_for_entity(dataset_id, entity_id)
+        relationships += self._financial_links_for_entity(dataset_id, entity_id)
+        entity["relationships"] = relationships
+        return entity
+
+    def _relationships_for_entity(self, dataset_id: str, entity_id: str) -> list[dict[str, Any]]:
+        query = """
+        MATCH (e:Entity {key: $key})-[:SOURCE]->(r:Relation)-[:TARGET]->(target:Entity {dataset_id: $dataset_id})
+        OPTIONAL MATCH (r)<-[:SUPPORTS]-(ev:Evidence)
+        WITH r, target, 'outgoing' AS direction, collect(DISTINCT ev.id) AS evidence_ids, collect(DISTINCT ev.occurred_at) AS occurred_ats
+        RETURN r.relation_type AS relation_type, r.weight AS weight, target, evidence_ids, occurred_ats, direction
+        UNION
+        MATCH (target:Entity {dataset_id: $dataset_id})-[:SOURCE]->(r:Relation)-[:TARGET]->(e:Entity {key: $key})
+        OPTIONAL MATCH (r)<-[:SUPPORTS]-(ev:Evidence)
+        WITH r, target, 'incoming' AS direction, collect(DISTINCT ev.id) AS evidence_ids, collect(DISTINCT ev.occurred_at) AS occurred_ats
+        RETURN r.relation_type AS relation_type, r.weight AS weight, target, evidence_ids, occurred_ats, direction
+        """
+        with self.driver.session() as session:
+            rows = session.run(query, key=_key(dataset_id, entity_id), dataset_id=dataset_id)
+            results = []
+            for row in rows:
+                target = dict(row["target"])
+                occurred_ats = [value for value in row["occurred_ats"] if value]
+                evidence_ids = [value for value in row["evidence_ids"] if value]
+                results.append({
+                    "target": {
+                        "id": target.get("id"),
+                        "entity_type": target.get("entity_type"),
+                        "display_name": target.get("display_name"),
+                    },
+                    "relation_type": row["relation_type"],
+                    "weight": row["weight"],
+                    "timestamp": occurred_ats[0] if occurred_ats else None,
+                    "evidence_ids": evidence_ids,
+                    "direction": row["direction"],
+                })
+            return results
+
+    def _financial_links_for_entity(self, dataset_id: str, entity_id: str) -> list[dict[str, Any]]:
+        """Derived PERSON-to-PERSON FINANCIAL_LINK connections via
+        OWNS -> ACCOUNT -> TRANSFERRED_TO -> ACCOUNT -> OWNS (the same chain
+        _person_graph_for_ids uses for the graph/cluster view). Multiple
+        underlying transactions with the same connected person are merged
+        into a single connection — each transaction is preserved verbatim
+        under "transactions" rather than being dropped.
+        """
+        query = (
+            "MATCH (ps:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(sa:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (sa)-[:SOURCE]->(r:Relation {relation_type: 'TRANSFERRED_TO'})-[:TARGET]->(ta:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (pt:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(ta) "
+            "WHERE ps <> pt AND (ps.id = $entity_id OR pt.id = $entity_id) "
+            "OPTIONAL MATCH (r)<-[:SUPPORTS]-(ev:Evidence) "
+            "RETURN ps.id AS source_person, ps.display_name AS source_name, "
+            "pt.id AS target_person, pt.display_name AS target_name, "
+            "r.id AS relation_id, r.weight AS weight, sa.id AS source_account, ta.id AS target_account, "
+            "collect(DISTINCT ev.id) AS evidence_ids, collect(DISTINCT ev.occurred_at) AS occurred_ats"
+        )
+        with self.driver.session() as session:
+            rows = list(session.run(query, dataset_id=dataset_id, entity_id=entity_id))
+
+        grouped: dict[str, dict[str, Any]] = {}
+        for row in rows:
+            is_source = row["source_person"] == entity_id
+            other_id = row["target_person"] if is_source else row["source_person"]
+            other_name = row["target_name"] if is_source else row["source_name"]
+            occurred_ats = [value for value in row["occurred_ats"] if value]
+            evidence_ids = [value for value in row["evidence_ids"] if value]
+            transaction_timestamp = occurred_ats[0] if occurred_ats else None
+
+            entry = grouped.setdefault(other_id, {
+                "target": {"id": other_id, "entity_type": "PERSON", "display_name": other_name},
+                "relation_type": "FINANCIAL_LINK",
+                "weight": 0.0,
+                "timestamp": None,
+                "evidence_ids": [],
+                "direction": "derived",
+                "transactions": [],
+            })
+            entry["weight"] += row["weight"] or 0.0
+            entry["evidence_ids"].extend(evidence_ids)
+            entry["transactions"].append({
+                "relation_id": row["relation_id"],
+                "weight": row["weight"],
+                "source_account": row["source_account"],
+                "target_account": row["target_account"],
+                "timestamp": transaction_timestamp,
+                "evidence_ids": evidence_ids,
+            })
+            if transaction_timestamp and (entry["timestamp"] is None or transaction_timestamp > entry["timestamp"]):
+                entry["timestamp"] = transaction_timestamp
+
+        for entry in grouped.values():
+            entry["evidence_ids"] = list(dict.fromkeys(entry["evidence_ids"]))
+
+        return list(grouped.values())
+
+    def search_entities(self, dataset_id: str, query: str, entity_type: str | None, limit: int) -> list[dict[str, Any]]:
+        cypher = (
+            "MATCH (e:Entity {dataset_id: $dataset_id}) "
+            "WHERE ($entity_type IS NULL OR e.entity_type = $entity_type) AND ("
+            "toLower(e.id) CONTAINS toLower($q) "
+            "OR toLower(coalesce(e.display_name, '')) CONTAINS toLower($q) "
+            "OR toLower(e.attributes_json) CONTAINS toLower($q)"
+            ") RETURN e ORDER BY e.id LIMIT $limit"
+        )
+        with self.driver.session() as session:
+            rows = session.run(cypher, dataset_id=dataset_id, entity_type=entity_type, q=query, limit=limit)
+            return [_cytoscape_node(row["e"])["data"] for row in rows]
+
+    def statistics(self, dataset_id: str) -> dict[str, Any]:
+        graph = self._person_graph_for_ids(dataset_id, None)
+        total_entities = graph["node_count"]
+        total_relationships = graph["edge_count"]
+        total_clusters = len(self._person_communities(dataset_id, limit=1_000_000))
+        avg_degree = round((2 * total_relationships / total_entities), 3) if total_entities else 0.0
+        avg_degree_separation = _average_path_length(graph)
+        return {
+            "total_entities": total_entities,
+            "total_relationships": total_relationships,
+            "total_clusters": total_clusters,
+            "avg_degree": avg_degree,
+            "avg_degree_separation": avg_degree_separation,
+        }
+
+
+def _cytoscape_node(node: Any) -> dict[str, Any]:
+    value = dict(node)
+    attributes = json.loads(value.get("attributes_json") or "{}")
+    identifiers = json.loads(value.get("identifiers_json") or "{}")
+    return {
+        "data": {
+            "id": value.get("id"),
+            "label": value.get("display_name") or value.get("id"),
+            "entity_type": value.get("entity_type"),
+            "display_name": value.get("display_name"),
+            "attributes": attributes,
+            "identifiers": identifiers,
+        }
+    }
+
+
+def _cluster_index(cluster_id: str) -> int | None:
+    try:
+        return int(cluster_id)
+    except (TypeError, ValueError):
+        return None
+
+
+def _average_path_length(graph: dict[str, Any]) -> float:
+    """Exact average shortest-path length (in hops) over every reachable pair.
+
+    The PERSON-only graph is small (hundreds of nodes/edges), so a BFS from every
+    node is cheap and gives an exact figure instead of the sampled approximation
+    a large graph would need.
+    """
+    adjacency: dict[str, set[str]] = {node["data"]["id"]: set() for node in graph["nodes"]}
+    for edge in graph["edges"]:
+        source, target = edge["data"]["source"], edge["data"]["target"]
+        adjacency[source].add(target)
+        adjacency[target].add(source)
+
+    total_distance = 0
+    pair_count = 0
+    for start in adjacency:
+        distances = {start: 0}
+        queue = deque([start])
+        while queue:
+            node = queue.popleft()
+            for neighbor in adjacency[node]:
+                if neighbor not in distances:
+                    distances[neighbor] = distances[node] + 1
+                    queue.append(neighbor)
+        for node, distance in distances.items():
+            if node != start:
+                total_distance += distance
+                pair_count += 1
+
+    if pair_count == 0:
+        return 0.0
+    return round(total_distance / pair_count, 3)
+
 
 def _filter_values(entity: EntityInput) -> list[str]:
-    values = entity.attributes | entity.identifiers | ({"display_name": entity.display_name} if entity.display_name is not None else {})
-    return [f"{field}\u001f{json.dumps(value, sort_keys=True)}" for field, value in values.items()]
+    values = {"id": entity.id} | entity.attributes | entity.identifiers | ({"display_name": entity.display_name} if entity.display_name is not None else {})
+    return [f"{field}{json.dumps(value, sort_keys=True)}" for field, value in values.items()]
+
+
+def _batch_filter_values(entity: SourceEntity) -> list[str]:
+    values = [f"id{json.dumps(entity.id)}"]
+    if entity.canonical_name:
+        values.append(f"display_name{json.dumps(entity.canonical_name)}")
+    return values
 
 
 def _key(dataset_id: str, identifier: str) -> str:

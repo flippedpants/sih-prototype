@@ -159,13 +159,18 @@ class IntentFilter(BaseModel):
 
 class QueryIntent(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    intent: Literal["find_entity", "neighbors", "connection_path", "rank_influencers", "list_communities", "get_evidence"]
+    intent: Literal[
+        "find_entity", "neighbors", "connection_path", "rank_influencers", "list_communities", "get_evidence",
+        "full_graph", "cluster_graph", "list_clusters", "entity_details", "search_entities", "statistics",
+    ]
     dataset_id: str = Field(min_length=1)
     entity_id: str | None = None
     source_id: str | None = None
     target_id: str | None = None
     entity_type: str | None = None
     relation_type: str | None = None
+    cluster_id: str | None = None
+    query: str | None = None
     filters: list[IntentFilter] = Field(default_factory=list)
     limit: int = Field(default=25, ge=1, le=100)
 

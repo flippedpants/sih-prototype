@@ -1,0 +1,39 @@
+.stats-bar {
+  flex-shrink: 0;
+  display: flex;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-strong);
+}
+
+.stats-bar-item {
+  flex: 1;
+  padding: 10px 24px;
+  border-right: 1px solid var(--border);
+}
+
+.stats-bar-item:last-child {
+  border-right: none;
+}
+
+.stats-bar-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.stats-bar-value {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stats-bar-value-error {
+  font-size: 13px;
+  font-weight: 500;
+  color: #c4746f;
+}
