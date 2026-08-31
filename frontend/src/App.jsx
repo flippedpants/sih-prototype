@@ -144,6 +144,13 @@ function App() {
     setSelectedEntityId(entityId)
   }, [])
 
+  // Search can find a person outside the currently viewed cluster, so jump
+  // back to the full network so the result is guaranteed to be visible.
+  const handleSelectSearchResult = useCallback((entityId) => {
+    setSelectedClusterId('all')
+    setSelectedEntityId(entityId)
+  }, [])
+
   return (
     <div className="app-shell">
       <Topbar />
@@ -183,6 +190,7 @@ function App() {
           entityLoading={entityLoading}
           entityError={entityError}
           onSelectEntity={handleSelectEntity}
+          onSelectSearchResult={handleSelectSearchResult}
         />
       </div>
       <StatsBar stats={stats} loading={statsLoading} error={statsError} />

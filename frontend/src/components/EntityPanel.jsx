@@ -109,12 +109,12 @@ function PersonDetails({ entity, onSelectEntity }) {
   )
 }
 
-function EntityPanel({ entity, entityLoading, entityError, onSelectEntity }) {
+function EntityPanel({ entity, entityLoading, entityError, onSelectEntity, onSelectSearchResult }) {
   return (
     <aside className="entity-panel">
       <div className="panel-block">
         <span className="panel-label">Entity search</span>
-        <EntitySearch onSelectEntity={onSelectEntity} />
+        <EntitySearch onSelectEntity={onSelectSearchResult} />
       </div>
 
       <div className="panel-block entity-details-block">
