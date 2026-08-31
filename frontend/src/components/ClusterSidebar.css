@@ -1,0 +1,73 @@
+.cluster-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border-strong);
+  overflow-y: auto;
+}
+
+.sidebar-case-block {
+  background: var(--bg-elevated);
+}
+
+.sidebar-case-name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.cluster-stats-card {
+  margin-top: 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 14px 16px 4px;
+}
+
+.cluster-stats-name {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cluster-stats-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-top: 1px solid var(--border);
+}
+
+.cluster-stats-row:first-of-type {
+  border-top: none;
+}
+
+.cluster-stats-key {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.cluster-stats-value {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cluster-stats-empty {
+  margin: 16px 2px 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}

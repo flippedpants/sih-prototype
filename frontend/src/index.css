@@ -1,0 +1,76 @@
+:root {
+  --bg-app: #08090a;
+  --bg-panel: #0d0f11;
+  --bg-elevated: #131619;
+  --bg-hover: #191d20;
+  --bg-sunken: #050606;
+
+  --border: #23282b;
+  --border-strong: #34393d;
+  --border-hover: #5c6469;
+
+  --text-primary: #edf0ee;
+  --text-secondary: #9da6a1;
+  --text-muted: #5f6965;
+
+  --accent: #2fa860;
+  --accent-strong: #3fc474;
+  --accent-subtle: rgba(47, 168, 96, 0.12);
+  --accent-border: rgba(47, 168, 96, 0.4);
+
+  --sans: 'Segoe UI', system-ui, Roboto, sans-serif;
+  --mono: ui-monospace, 'SFMono-Regular', Consolas, monospace;
+
+  font: 14px/1.5 var(--sans);
+  color-scheme: dark;
+  color: var(--text-secondary);
+  background: var(--bg-app);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Shared panel-section vocabulary reused across sidebars */
+
+.panel-block {
+  padding: 20px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-block:last-child {
+  border-bottom: none;
+}
+
+.panel-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
