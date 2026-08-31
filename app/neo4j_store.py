@@ -406,7 +406,9 @@ class Neo4jGraphStore:
 
     def entity_details(self, dataset_id: str, entity_id: str) -> dict[str, Any]:
         entity = self.entity(dataset_id, entity_id)
-        entity["relationships"] = self._relationships_for_entity(dataset_id, entity_id)
+        relationships = self._relationships_for_entity(dataset_id, entity_id)
+        relationships += self._financial_links_for_entity(dataset_id, entity_id)
+        entity["relationships"] = relationships
         return entity
 
     def _relationships_for_entity(self, dataset_id: str, entity_id: str) -> list[dict[str, Any]]:
@@ -441,6 +443,64 @@ class Neo4jGraphStore:
                     "direction": row["direction"],
                 })
             return results
+
+    def _financial_links_for_entity(self, dataset_id: str, entity_id: str) -> list[dict[str, Any]]:
+        """Derived PERSON-to-PERSON FINANCIAL_LINK connections via
+        OWNS -> ACCOUNT -> TRANSFERRED_TO -> ACCOUNT -> OWNS (the same chain
+        _person_graph_for_ids uses for the graph/cluster view). Multiple
+        underlying transactions with the same connected person are merged
+        into a single connection — each transaction is preserved verbatim
+        under "transactions" rather than being dropped.
+        """
+        query = (
+            "MATCH (ps:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(sa:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (sa)-[:SOURCE]->(r:Relation {relation_type: 'TRANSFERRED_TO'})-[:TARGET]->(ta:Entity {entity_type: 'ACCOUNT', dataset_id: $dataset_id}) "
+            "MATCH (pt:Entity {dataset_id: $dataset_id, entity_type: 'PERSON'})-[:SOURCE]->(:Relation {relation_type: 'OWNS'})-[:TARGET]->(ta) "
+            "WHERE ps <> pt AND (ps.id = $entity_id OR pt.id = $entity_id) "
+            "OPTIONAL MATCH (r)<-[:SUPPORTS]-(ev:Evidence) "
+            "RETURN ps.id AS source_person, ps.display_name AS source_name, "
+            "pt.id AS target_person, pt.display_name AS target_name, "
+            "r.id AS relation_id, r.weight AS weight, sa.id AS source_account, ta.id AS target_account, "
+            "collect(DISTINCT ev.id) AS evidence_ids, collect(DISTINCT ev.occurred_at) AS occurred_ats"
+        )
+        with self.driver.session() as session:
+            rows = list(session.run(query, dataset_id=dataset_id, entity_id=entity_id))
+
+        grouped: dict[str, dict[str, Any]] = {}
+        for row in rows:
+            is_source = row["source_person"] == entity_id
+            other_id = row["target_person"] if is_source else row["source_person"]
+            other_name = row["target_name"] if is_source else row["source_name"]
+            occurred_ats = [value for value in row["occurred_ats"] if value]
+            evidence_ids = [value for value in row["evidence_ids"] if value]
+            transaction_timestamp = occurred_ats[0] if occurred_ats else None
+
+            entry = grouped.setdefault(other_id, {
+                "target": {"id": other_id, "entity_type": "PERSON", "display_name": other_name},
+                "relation_type": "FINANCIAL_LINK",
+                "weight": 0.0,
+                "timestamp": None,
+                "evidence_ids": [],
+                "direction": "derived",
+                "transactions": [],
+            })
+            entry["weight"] += row["weight"] or 0.0
+            entry["evidence_ids"].extend(evidence_ids)
+            entry["transactions"].append({
+                "relation_id": row["relation_id"],
+                "weight": row["weight"],
+                "source_account": row["source_account"],
+                "target_account": row["target_account"],
+                "timestamp": transaction_timestamp,
+                "evidence_ids": evidence_ids,
+            })
+            if transaction_timestamp and (entry["timestamp"] is None or transaction_timestamp > entry["timestamp"]):
+                entry["timestamp"] = transaction_timestamp
+
+        for entry in grouped.values():
+            entry["evidence_ids"] = list(dict.fromkeys(entry["evidence_ids"]))
+
+        return list(grouped.values())
 
     def search_entities(self, dataset_id: str, query: str, entity_type: str | None, limit: int) -> list[dict[str, Any]]:
         cypher = (
