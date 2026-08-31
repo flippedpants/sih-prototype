@@ -1,0 +1,55 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.graph-panel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-app);
+}
+
+.graph-panel-header {
+  flex-shrink: 0;
+  padding: 16px 20px 0;
+}
+
+.graph-panel-header .panel-label {
+  margin-bottom: 0;
+}
+
+.graph-panel-body {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  margin: 16px 20px 20px;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.graph-panel-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.graph-panel-error {
+  color: #c4746f;
+}
