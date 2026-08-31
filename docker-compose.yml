@@ -40,5 +40,20 @@ services:
       api:
         condition: service_started
 
+  demo-run:
+    build: .
+    profiles: ["demo"]
+    command: python -m demo_run.run
+    environment:
+      NEO4J_URI: ${NEO4J_URI}
+      NEO4J_USER: neo4j
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD}
+    volumes:
+      - ./demo_run:/app/demo_run:ro
+      - ./synthetic_dataset/samples:/app/synthetic_dataset/samples:ro
+    depends_on:
+      neo4j:
+        condition: service_healthy
+
 volumes:
   neo4j_data:

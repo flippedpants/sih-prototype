@@ -11,4 +11,5 @@ venv/
 # generated synthetic datasets (regenerate with synthetic_dataset/generator)
 synthetic_dataset/output/
 synthetic_dataset/validation_dataset/
-
+demo_run/
+tests/test_demo_run.py

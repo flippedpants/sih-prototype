@@ -126,7 +126,7 @@ class Neo4jGraphStore:
             entity.filter_values = row.filter_values, entity.aliases = row.aliases,
             entity.source_docs = row.source_docs
         ON MATCH SET entity.display_name = coalesce(entity.display_name, row.display_name),
-            entity.attributes_json = row.attributes_json,
+            entity.attributes_json = CASE WHEN row.attributes_json = '{}' THEN entity.attributes_json ELSE row.attributes_json END,
             entity.aliases = reduce(values = coalesce(entity.aliases, []), item IN row.aliases |
                 CASE WHEN item IN values THEN values ELSE values + item END),
             entity.source_docs = reduce(values = coalesce(entity.source_docs, []), item IN row.source_docs |
