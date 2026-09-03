@@ -1,39 +1,32 @@
 # Repository Guidelines
 
-## Project Structure & Module Organization
+## Project Structure
 
-- `app/main.py` contains FastAPI routes; `app/models.py` holds public API models; `app/neo4j_store.py` owns Neo4j persistence and parameterized Cypher.
-- `app/source_ingestion/` is the schema-driven CSV/Excel pipeline: mapping loader, validation, normalized objects, and parser. Add a source by creating `app/source_mappings/<source_type>.json`, not a bespoke parser.
-- `app/ingestion-frontend/` is the static upload UI proxied to the API by Nginx.
-- `tests/` contains pytest coverage. Place source-ingestion tests in `tests/test_source_ingestion_engine.py`; reuse fixtures in `tests/fixtures.py`.
+- `app/main.py` defines FastAPI routes; `app/models.py` contains public API contracts; `app/neo4j_store.py` owns production Neo4j persistence and parameterized Cypher.
+- `app/source_ingestion/` is the production CSV/Excel pipeline. It loads mappings, resolves explicit column aliases, validates rows, and produces normalized entities and relationships.
+- Add a production source with `app/source_mappings/<source_type>.json`; do not add a parser branch for a particular file type.
+- `app/ingestion-frontend/` is the Nginx-served upload UI. Tests are under `tests/`.
+- `demo_run/` is intentionally separate. It imports the bundled synthetic case with direct Neo4j edges for visualization; it does not change the production graph model.
 
-## Build, Test, and Development Commands
+## Run and Test
 
 ```bash
 cp .env.example .env
 docker compose up --build
+docker compose --profile demo run --rm demo-run
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt pytest
 .venv/bin/python -m pytest -q
-docker compose build ingestion-frontend
 ```
 
-Compose starts Neo4j, the API on `8000`, and the upload UI on `8080`. The complete suite needs Neo4j; parser tests can run without it. Copy `.env.example` and set a non-default password before sharing or deploying the stack.
+Compose exposes Neo4j Browser on `7474`, the API on `8000`, and the upload UI on `8080`. The demo must run through Docker because `.env` uses the Compose hostname `bolt://neo4j:7687`. Focus parser tests with `pytest -q tests/test_source_ingestion_engine.py`; run demo tests with `pytest -q tests/test_demo_run.py`.
 
-## Coding Style & Naming Conventions
+## Design and Style
 
-Use Python 3.12, four-space indentation, type hints on public functions, and concise module docstrings. Use `snake_case` for modules, functions, and fields; use `PascalCase` for Pydantic models and store classes. Keep Cypher parameterized—never interpolate user, frontend, LLM, dataset, or filter input.
+Use Python 3.12, four-space indentation, type hints on public functions, `snake_case` names, and `PascalCase` models/classes. Never interpolate user, frontend, LLM, dataset, or filter values into Cypher.
 
-Source mappings must use the controlled entity vocabulary (`PERSON`, `PHONE`, `ACCOUNT`, `VEHICLE`, `ORG`, `LOCATION`) and approved relationship types. Validate mapping changes through the generic engine; do not add source-specific branching. Preserve type-prefixed entity identities and provenance.
+Production mappings use the controlled entity vocabulary: `PERSON`, `PHONE`, `ACCOUNT`, `VEHICLE`, `ORG`, `LOCATION`. They must use explicit column aliases, preserve type-prefixed identities and provenance, and reject unknown meaning rather than guessing. The production store retains first-class `:Relation` nodes; only the demo creates direct `:CALLED`, `:TRANSACTED`, and `:MENTIONED_IN_FIR` edges.
 
-## Testing Guidelines
+## Tests, Commits, and Security
 
-Name tests `test_*.py` and behaviors `test_<outcome>`. Add a failing test before changing API behavior. Cover clean input, structural column failures, per-row validation errors, and mixed mappings. Run focused tests with `pytest -q tests/test_source_ingestion_engine.py`, then the full suite when Neo4j is available.
-
-## Commit & Pull Request Guidelines
-
-Use concise Conventional Commit subjects: `feat: ...`, `test: ...`, `refactor: ...`, or `docs: ...`. Keep commits focused. PRs should state graph/API impact, mapping changes, validation commands, linked issues, and screenshots for frontend changes.
-
-## Security
-
-Do not commit `.env`, source files, credentials, or generated graph data. The future NL layer may submit only validated query intents; raw Cypher is not an API input.
+Add a failing test before changing API behavior. Cover clean input, structural failures, row errors, alias resolution, and mixed mappings. Use focused Conventional Commit subjects such as `feat: ...` or `test: ...`. PRs should describe graph/API impact and validation commands. Never commit `.env`, credentials, source datasets, or generated graph data; raw Cypher is not an NL/API input.
