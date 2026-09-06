@@ -1,8 +1,0 @@
-FIR No: FIR-0051
-Police Station: Hyderabad Cyber Cell Police Station
-Date Filed: 2026-08-01
-Legal Sections: BNS Section 318 (cheating); BNS Section 61 (criminal conspiracy); IT Act Section 66C (identity theft)
-UTR Number: 8776774840289846148428
-Suspected Email: NOT PROVIDED
-
-The complainant Tanmayi Hayre states that on 24-07-2026, an unknown person using mobile number +917562974498 contacted the complainant claiming to be from the customer support division of a telecom/banking service and requested an OTP for 'verification purposes'. The complainant, believing the call to be genuine, shared the OTP, following which Rs. 226,110 was debited from the complainant's account without authorization. The amount was traced to have been credited to an account with Bharat Savings Bank. The matter is reported to Hyderabad Cyber Cell Police Station for investigation.

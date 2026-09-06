@@ -1,8 +1,0 @@
-FIR No: FIR-0079
-Police Station: Hyderabad Cyber Cell Police Station
-Date Filed: 2026-08-04
-Legal Sections: BNS Section 318 (cheating); IT Act Section 66D (cheating by personation using computer resource); BNS Section 61 (criminal conspiracy); IT Act Section 66C (identity theft)
-UTR Number: 6403444367797522250665
-Suspected Email: p-000006@mailservice.com
-
-The complainant Abhimanyu Apte states that on 26-07-2026, an unknown person using mobile number +917301340451 contacted the complainant claiming to be from the customer support division of a telecom/banking service and requested an OTP for 'verification purposes'. The complainant, believing the call to be genuine, shared the OTP, following which Rs. 19,183 was debited from the complainant's account without authorization. The amount was traced to have been credited to an account with Metro Cooperative Bank. The matter is reported to Hyderabad Cyber Cell Police Station for investigation.

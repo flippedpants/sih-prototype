@@ -1,8 +1,0 @@
-FIR No: FIR-0045
-Police Station: Hyderabad Cyber Cell Police Station
-Date Filed: 2026-07-30
-Legal Sections: BNS Section 318 (cheating)
-UTR Number: 8945549879157987671319
-Suspected Email: p-000005@mailservice.com
-
-On 22-07-2026, the complainant Charan Agrawal, resident of 50, Kaul Road, Dhanbad-993158, received a call from mobile number +917562974498 in which the caller falsely represented himself as a bank official and induced the complainant to share confidential banking details. Acting on this deception, an amount of Rs. 32,817 was fraudulently transferred out of the complainant's account. The complainant was directed to transfer funds to an account held with Bank X. The complainant realized the fraud only after noticing unauthorized debit alerts on 30-07-2026 and immediately reported the matter to the Hyderabad Cyber Cell Police Station.

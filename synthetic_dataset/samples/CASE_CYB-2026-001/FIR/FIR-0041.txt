@@ -1,8 +1,0 @@
-FIR No: FIR-0041
-Police Station: Hyderabad Cyber Cell Police Station
-Date Filed: 2026-08-13
-Legal Sections: BNS Section 318 (cheating); IT Act Section 66C (identity theft)
-UTR Number: 4937566547206261938180
-Suspected Email: NOT PROVIDED
-
-The complainant Bachittar Bajwa states that on 07-08-2026, an unknown person using mobile number +917562974498 contacted the complainant claiming to be from the customer support division of a telecom/banking service and requested an OTP for 'verification purposes'. The complainant, believing the call to be genuine, shared the OTP, following which Rs. 19,005 was debited from the complainant's account without authorization. The amount was traced to have been credited to an account with Union Commercial Bank. The matter is reported to Hyderabad Cyber Cell Police Station for investigation.

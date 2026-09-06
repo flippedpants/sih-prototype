@@ -1,8 +1,0 @@
-FIR No: FIR-0009
-Police Station: Hyderabad Cyber Cell Police Station
-Date Filed: 2026-08-06
-Legal Sections: BNS Section 318 (cheating); IT Act Section 66D (cheating by personation using computer resource); IT Act Section 66C (identity theft)
-UTR Number: 4304772436501753593775
-Suspected Email: p-000004@mailservice.com
-
-On 31-07-2026, the complainant Aahana Doctor, resident of 91, Bhatia Circle, Kadapa-180334, received a call from mobile number +918300412785 in which the caller falsely represented himself as a bank official and induced the complainant to share confidential banking details. Acting on this deception, an amount of Rs. 54,512 was fraudulently transferred out of the complainant's account. The complainant was directed to transfer funds to an account held with Union Commercial Bank. The complainant realized the fraud only after noticing unauthorized debit alerts on 06-08-2026 and immediately reported the matter to the Hyderabad Cyber Cell Police Station.

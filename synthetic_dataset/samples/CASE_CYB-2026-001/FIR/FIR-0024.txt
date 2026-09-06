@@ -1,8 +1,0 @@
-FIR No: FIR-0024
-Police Station: Hyderabad Cyber Cell Police Station
-Date Filed: 2026-08-06
-Legal Sections: BNS Section 318 (cheating); IT Act Section 66D (cheating by personation using computer resource); BNS Section 61 (criminal conspiracy)
-UTR Number: 6159443107764427931939
-Suspected Email: p-000004@mailservice.com
-
-The complainant Lipika Chaudhary states that on 30-07-2026, an unknown person using mobile number +918300412785 contacted the complainant claiming to be from the customer support division of a telecom/banking service and requested an OTP for 'verification purposes'. The complainant, believing the call to be genuine, shared the OTP, following which Rs. 35,456 was debited from the complainant's account without authorization. The amount was traced to have been credited to an account with National Trust Bank. The matter is reported to Hyderabad Cyber Cell Police Station for investigation.

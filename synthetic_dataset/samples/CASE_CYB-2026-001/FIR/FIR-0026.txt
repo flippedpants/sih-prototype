@@ -1,8 +1,0 @@
-FIR No: FIR-0026
-Police Station: Hyderabad Cyber Cell Police Station
-Date Filed: 2026-08-11
-Legal Sections: BNS Section 318 (cheating); BNS Section 61 (criminal conspiracy)
-UTR Number: 5541883081028420353874
-Suspected Email: p-000004@mailservice.com
-
-The complainant Xavier Ramesh states that on 02-08-2026, an unknown person using mobile number +918300412785 contacted the complainant claiming to be from the customer support division of a telecom/banking service and requested an OTP for 'verification purposes'. The complainant, believing the call to be genuine, shared the OTP, following which Rs. 107,034 was debited from the complainant's account without authorization. The amount was traced to have been credited to an account with Union Commercial Bank. The matter is reported to Hyderabad Cyber Cell Police Station for investigation.
