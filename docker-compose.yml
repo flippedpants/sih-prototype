@@ -1,16 +1,15 @@
-services:
-  api:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      NEO4J_URI: ${NEO4J_URI}
-      NEO4J_USER: neo4j
-      NEO4J_PASSWORD: ${NEO4J_PASSWORD}
-    depends_on:
-      neo4j:
-        condition: service_healthy
+x-analysis-service: &analysis-service
+  build: .
+  image: sih-prototype-zone1:local
+  environment:
+    NEO4J_URI: ${NEO4J_URI}
+    NEO4J_USER: ${NEO4J_USER:-neo4j}
+    NEO4J_PASSWORD: ${NEO4J_PASSWORD}
+  depends_on:
+    neo4j:
+      condition: service_healthy
 
+services:
   neo4j:
     image: neo4j:5-community
     ports:
@@ -22,38 +21,45 @@ services:
     volumes:
       - neo4j_data:/data
     healthcheck:
-      test:
-        [
-          "CMD-SHELL",
-          "wget -qO- http://localhost:7474 >/dev/null || exit 1"
-        ]
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 >/dev/null || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 15
 
-  ingestion-frontend:
-    build:
-      context: ./app/ingestion-frontend
-    ports:
-      - "8080:80"
-    depends_on:
-      api:
-        condition: service_started
+  placeholder-data:
+    <<: *analysis-service
+    profiles: ["placeholder"]
+    command: python -m app.generate_placeholder_data
 
-  demo-run:
-    build: .
-    profiles: ["demo"]
-    command: python -m demo_run.run
-    environment:
-      NEO4J_URI: ${NEO4J_URI}
-      NEO4J_USER: neo4j
-      NEO4J_PASSWORD: ${NEO4J_PASSWORD}
-    volumes:
-      - ./demo_run:/app/demo_run:ro
-      - ./synthetic_dataset/samples:/app/synthetic_dataset/samples:ro
-    depends_on:
-      neo4j:
-        condition: service_healthy
+  validate-scoping:
+    <<: *analysis-service
+    profiles: ["analysis"]
+    command: python -m app.validate_case_scoping
+
+  project-graphs:
+    <<: *analysis-service
+    profiles: ["analysis"]
+    command: python -m app.project_graphs
+
+  core-algorithms:
+    <<: *analysis-service
+    profiles: ["analysis"]
+    command: python -m app.run_core_algorithms
+
+  structural-roles:
+    <<: *analysis-service
+    profiles: ["analysis"]
+    command: python -m app.classify_structural_roles
+
+  criticality:
+    <<: *analysis-service
+    profiles: ["analysis"]
+    command: python -m app.compute_criticality
+
+  financial-patterns:
+    <<: *analysis-service
+    profiles: ["analysis"]
+    command: python -m app.detect_financial_patterns
 
 volumes:
   neo4j_data:

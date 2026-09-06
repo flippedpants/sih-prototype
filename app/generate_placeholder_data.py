@@ -96,7 +96,11 @@ def generate_placeholder_data(
     node_name = schema.cypher_identifier(schema.PROP_NODE_NAME)
     case_id_prop = schema.cypher_identifier(schema.PROP_CASE_ID)
     rel_id = schema.cypher_identifier(schema.PROP_RELATIONSHIP_ID)
-    weight = schema.cypher_identifier(schema.REL_WEIGHT_PROPERTY or "weight")
+    weight_assignment = (
+        f", relationship.{schema.cypher_identifier(schema.REL_WEIGHT_PROPERTY)} = row.weight"
+        if schema.REL_WEIGHT_PROPERTY
+        else ""
+    )
     amount = schema.cypher_identifier(schema.TXN_PROP_AMOUNT)
     timestamp = schema.cypher_identifier(schema.TXN_PROP_TIMESTAMP)
     nodes = [
@@ -109,6 +113,15 @@ def generate_placeholder_data(
         for row in _preferential_edges(case_id, size, rng)
     ]
     with driver.session() as session:
+        for label in (*schema.ENTITY_NODE_LABELS, schema.NODE_LABEL_CASE):
+            safe_label = schema.cypher_identifier(label)
+            constraint_name = schema.cypher_identifier(
+                f"zone1_{label.lower()}_{schema.PROP_NODE_ID}"
+            )
+            session.run(
+                f"CREATE CONSTRAINT {constraint_name} IF NOT EXISTS "
+                f"FOR (node:{safe_label}) REQUIRE node.{node_id} IS UNIQUE"
+            ).consume()
         for case_id in case_sizes:
             session.run(
                 f"MATCH (entity) WHERE {schema.entity_label_predicate('entity')} AND entity.{case_id_prop} = $case_id DETACH DELETE entity",
@@ -140,9 +153,9 @@ def generate_placeholder_data(
                 MATCH (target:{entity_label} {{{node_id}: row.target}})
                 MERGE (source)-[relationship:{rel_type} {{{rel_id}: row.id}}]->(target)
                 SET relationship.{case_id_prop} = row.case_id,
-                    relationship.{weight} = row.weight,
                     relationship.{amount} = row.amount,
                     relationship.{timestamp} = row.timestamp
+                    {weight_assignment}
                 """,
                 rows=rows,
             ).consume()
@@ -157,3 +170,6 @@ def main() -> None:
         summary = generate_placeholder_data(driver, seed=args.seed)
     print("Placeholder data generated:", summary)
 
+
+if __name__ == "__main__":
+    main()
