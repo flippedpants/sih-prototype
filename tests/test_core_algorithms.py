@@ -28,3 +28,8 @@ def test_core_algorithms_write_contract_properties(fake_driver, monkeypatch):
     )
     assert summary.case_id == "CASE-A"
 
+def test_similarity_relationships_are_removed_before_recomputation(fake_driver, monkeypatch):
+    monkeypatch.setattr("app.run_core_algorithms.project_case_graph", lambda *_a, **_k: None)
+    run_core_algorithms(fake_driver, "CASE-A")
+    assert any("DELETE similar" in query for query, _ in fake_driver.calls)
+
