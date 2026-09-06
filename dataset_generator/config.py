@@ -8,8 +8,6 @@ Every range/value here is either:
     as ground truth
 """
 
-import random
-
 # ---------------------------------------------------------------------------
 # Ring size tiers
 # SOURCED: Jamtara (~350 mule accounts) and Nuh (~1,000 mule accounts) are
@@ -71,5 +69,9 @@ OCCUPATIONS = ["student", "homemaker", "gig_worker", "salaried", "unemployed", "
 
 BANK_TIERS = ["public_sector", "private", "cooperative", "payment_bank"]
 
+# Default seed for reproducible runs. Actual seeding happens once, in
+# assemble.py's main(), via `--seed` (this is just the documented default) -
+# nothing in this module seeds `random` itself, since doing so as an
+# import-time side effect would silently override whatever seed a caller
+# asked for.
 RANDOM_SEED = 42
-random.seed(RANDOM_SEED)
