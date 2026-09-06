@@ -48,20 +48,28 @@ def sample_mule_type(case_rng):
 
 def _sample_frequency(case_rng):
     # ASSUMPTION: schema's computed_weight formula uses "frequency" (repeat
-    # transfers represented by that edge). A literal single hop has
-    # frequency=1, which zeroes log(frequency) for every edge. We model each
-    # edge as 1-4 batched transfers - itself a documented mule behavior
-    # (several small transfers rather than one lump sum) - so the formula
-    # stays meaningful instead of degenerating to zero everywhere.
+    # transfers represented by that edge). We model each edge as 1-4 batched
+    # transfers - itself a documented mule behavior (several small transfers
+    # rather than one lump sum) - but frequency=1 (a literal single hop, the
+    # norm for a one-off mule transfer) is still squarely within this range,
+    # so it does not by itself prevent the zero-weight case; see the
+    # log(frequency + 1) fix in compute_weight below.
     return case_rng.randint(1, 4)
 
 
 def compute_weight(amount, timestamp, case_rng, frequency=None):
-    """log(frequency) * exp(-lambda * days_since) * log(amount), per schema Sec. 3.1."""
+    """log(frequency + 1) * exp(-lambda * days_since) * log(amount), per schema
+    Sec. 3.1 - frequency term is log(frequency + 1), not log(frequency): a
+    literal single-hop transaction (frequency=1, the norm for exactly the
+    one-off mule transfers this project needs to detect) would otherwise
+    zero out via log(1) = 0 regardless of amount or recency. amount is never
+    <= 1 in this generator (verified against generated output; smallest
+    observed amount is in the tens of rupees), so log(amount) has no
+    equivalent degenerate case."""
     if frequency is None:
         frequency = _sample_frequency(case_rng)
     days_since = max((REFERENCE_DATE - timestamp).days, 0)
-    return math.log(frequency) * math.exp(-WEIGHT_LAMBDA * days_since) * math.log(amount)
+    return math.log(frequency + 1) * math.exp(-WEIGHT_LAMBDA * days_since) * math.log(amount)
 
 
 def make_transaction_edge(source_id, target_id, amount, timestamp, channel, case_rng):
