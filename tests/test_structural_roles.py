@@ -6,7 +6,7 @@ from .conftest import FakeDriver
 def test_roles_use_per_case_percentiles_and_are_written_in_one_batch():
     scores = [
         {"node_id": "hub", "betweenness": 100.0, "degree": 100.0},
-        {"node_id": "broker", "betweenness": 90.0, "degree": 1.0},
+        {"node_id": "broker", "betweenness": 100.0, "degree": 1.0},
         {"node_id": "peripheral", "betweenness": 0.0, "degree": 0.0},
         {"node_id": "member", "betweenness": 10.0, "degree": 20.0},
         {"node_id": "member-2", "betweenness": 20.0, "degree": 30.0},
