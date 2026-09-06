@@ -1,0 +1,402 @@
+[
+  {
+    "case_id": "C-0001",
+    "scam_subtype": "digital_arrest",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-05-01T00:00:00",
+    "last_updated": "2026-05-01T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 1705578.06
+  },
+  {
+    "case_id": "C-0002",
+    "scam_subtype": "loan_app",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-01-14T00:00:00",
+    "last_updated": "2026-01-14T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 173097.25
+  },
+  {
+    "case_id": "C-0003",
+    "scam_subtype": "investment_app",
+    "motif": "fan_out_fan_in",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-08-02T00:00:00",
+    "last_updated": "2026-08-02T00:00:00",
+    "node_count": 106,
+    "total_amount_inr": 94656082.55
+  },
+  {
+    "case_id": "C-0004",
+    "scam_subtype": "investment_app",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-03-23T00:00:00",
+    "last_updated": "2026-03-23T00:00:00",
+    "node_count": 28,
+    "total_amount_inr": 2235667.26
+  },
+  {
+    "case_id": "C-0005",
+    "scam_subtype": "loan_app",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-08-18T00:00:00",
+    "last_updated": "2026-08-18T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 25281.23
+  },
+  {
+    "case_id": "C-0006",
+    "scam_subtype": "investment_app",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-03-29T00:00:00",
+    "last_updated": "2026-03-29T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 12247059.66
+  },
+  {
+    "case_id": "C-0007",
+    "scam_subtype": "task_based",
+    "motif": "fan_out_fan_in",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-03-20T00:00:00",
+    "last_updated": "2026-03-20T00:00:00",
+    "node_count": 82,
+    "total_amount_inr": 740819.93
+  },
+  {
+    "case_id": "C-0008",
+    "scam_subtype": "task_based",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-01-04T00:00:00",
+    "last_updated": "2026-01-04T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 29440.83
+  },
+  {
+    "case_id": "C-0009",
+    "scam_subtype": "task_based",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-02-10T00:00:00",
+    "last_updated": "2026-02-10T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 86124.28
+  },
+  {
+    "case_id": "C-0010",
+    "scam_subtype": "investment_app",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-01-27T00:00:00",
+    "last_updated": "2026-01-27T00:00:00",
+    "node_count": 44,
+    "total_amount_inr": 7397569.02
+  },
+  {
+    "case_id": "C-0011",
+    "scam_subtype": "loan_app",
+    "motif": "fan_out_fan_in",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-06-26T00:00:00",
+    "last_updated": "2026-06-26T00:00:00",
+    "node_count": 26,
+    "total_amount_inr": 106690.92
+  },
+  {
+    "case_id": "C-0012",
+    "scam_subtype": "loan_app",
+    "motif": "fan_out_fan_in",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2025-11-26T00:00:00",
+    "last_updated": "2025-11-26T00:00:00",
+    "node_count": 116,
+    "total_amount_inr": 1535589.42
+  },
+  {
+    "case_id": "C-0013",
+    "scam_subtype": "task_based",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2025-12-24T00:00:00",
+    "last_updated": "2025-12-24T00:00:00",
+    "node_count": 44,
+    "total_amount_inr": 90901.66
+  },
+  {
+    "case_id": "C-0014",
+    "scam_subtype": "digital_arrest",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-02-04T00:00:00",
+    "last_updated": "2026-02-04T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 391247.62
+  },
+  {
+    "case_id": "C-0015",
+    "scam_subtype": "loan_app",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-07-02T00:00:00",
+    "last_updated": "2026-07-02T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 218586.89
+  },
+  {
+    "case_id": "C-0016",
+    "scam_subtype": "digital_arrest",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-02-28T00:00:00",
+    "last_updated": "2026-02-28T00:00:00",
+    "node_count": 44,
+    "total_amount_inr": 2815261.16
+  },
+  {
+    "case_id": "C-0017",
+    "scam_subtype": "investment_app",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-02-23T00:00:00",
+    "last_updated": "2026-02-23T00:00:00",
+    "node_count": 44,
+    "total_amount_inr": 901325.31
+  },
+  {
+    "case_id": "C-0018",
+    "scam_subtype": "task_based",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2025-11-24T00:00:00",
+    "last_updated": "2025-11-24T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 147063.54
+  },
+  {
+    "case_id": "C-0019",
+    "scam_subtype": "investment_app",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-01-29T00:00:00",
+    "last_updated": "2026-01-29T00:00:00",
+    "node_count": 44,
+    "total_amount_inr": 2804607.39
+  },
+  {
+    "case_id": "C-0020",
+    "scam_subtype": "task_based",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-07-29T00:00:00",
+    "last_updated": "2026-07-29T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 118853.56
+  },
+  {
+    "case_id": "C-0021",
+    "scam_subtype": "digital_arrest",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-08-26T00:00:00",
+    "last_updated": "2026-08-26T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 3825003.19
+  },
+  {
+    "case_id": "C-0022",
+    "scam_subtype": "investment_app",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-02-20T00:00:00",
+    "last_updated": "2026-02-20T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 791562.0
+  },
+  {
+    "case_id": "C-0023",
+    "scam_subtype": "digital_arrest",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-01-30T00:00:00",
+    "last_updated": "2026-01-30T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 2574402.09
+  },
+  {
+    "case_id": "C-0024",
+    "scam_subtype": "digital_arrest",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-06-22T00:00:00",
+    "last_updated": "2026-06-22T00:00:00",
+    "node_count": 44,
+    "total_amount_inr": 404944.84
+  },
+  {
+    "case_id": "C-0025",
+    "scam_subtype": "loan_app",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-03-17T00:00:00",
+    "last_updated": "2026-03-17T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 299393.31
+  },
+  {
+    "case_id": "C-0026",
+    "scam_subtype": "investment_app",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-01-07T00:00:00",
+    "last_updated": "2026-01-07T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 8649091.62
+  },
+  {
+    "case_id": "C-0027",
+    "scam_subtype": "investment_app",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2025-12-17T00:00:00",
+    "last_updated": "2025-12-17T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 12935670.4
+  },
+  {
+    "case_id": "C-0028",
+    "scam_subtype": "digital_arrest",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-05-26T00:00:00",
+    "last_updated": "2026-05-26T00:00:00",
+    "node_count": 26,
+    "total_amount_inr": 146932.47
+  },
+  {
+    "case_id": "C-0029",
+    "scam_subtype": "digital_arrest",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-05-22T00:00:00",
+    "last_updated": "2026-05-22T00:00:00",
+    "node_count": 24,
+    "total_amount_inr": 3661147.64
+  },
+  {
+    "case_id": "C-0030",
+    "scam_subtype": "loan_app",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-01-29T00:00:00",
+    "last_updated": "2026-01-29T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 151702.51
+  },
+  {
+    "case_id": "C-0031",
+    "scam_subtype": "task_based",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-07-09T00:00:00",
+    "last_updated": "2026-07-09T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 55732.66
+  },
+  {
+    "case_id": "C-0032",
+    "scam_subtype": "loan_app",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-04-09T00:00:00",
+    "last_updated": "2026-04-09T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 262330.9
+  },
+  {
+    "case_id": "C-0033",
+    "scam_subtype": "investment_app",
+    "motif": "fan_out_fan_in",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-06-02T00:00:00",
+    "last_updated": "2026-06-02T00:00:00",
+    "node_count": 88,
+    "total_amount_inr": 56550983.0
+  },
+  {
+    "case_id": "C-0034",
+    "scam_subtype": "task_based",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-01-02T00:00:00",
+    "last_updated": "2026-01-02T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 179120.97
+  },
+  {
+    "case_id": "C-0035",
+    "scam_subtype": "task_based",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-05-22T00:00:00",
+    "last_updated": "2026-05-22T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 118509.64
+  },
+  {
+    "case_id": "C-0036",
+    "scam_subtype": "digital_arrest",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-04-26T00:00:00",
+    "last_updated": "2026-04-26T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 3342601.27
+  },
+  {
+    "case_id": "C-0037",
+    "scam_subtype": "task_based",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-07-13T00:00:00",
+    "last_updated": "2026-07-13T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 89124.24
+  },
+  {
+    "case_id": "C-0038",
+    "scam_subtype": "investment_app",
+    "motif": "recruited_crypto_exit",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-04-12T00:00:00",
+    "last_updated": "2026-04-12T00:00:00",
+    "node_count": 20,
+    "total_amount_inr": 11794272.31
+  },
+  {
+    "case_id": "C-0039",
+    "scam_subtype": "investment_app",
+    "motif": "dormant_then_burst",
+    "ring_size_tier": "large_nuh_scale",
+    "created_at": "2026-03-03T00:00:00",
+    "last_updated": "2026-03-03T00:00:00",
+    "node_count": 44,
+    "total_amount_inr": 9411324.82
+  },
+  {
+    "case_id": "C-0040",
+    "scam_subtype": "loan_app",
+    "motif": "fast_pass_through",
+    "ring_size_tier": "small_jamtara_scale",
+    "created_at": "2026-03-07T00:00:00",
+    "last_updated": "2026-03-07T00:00:00",
+    "node_count": 8,
+    "total_amount_inr": 268962.8
+  }
+]
