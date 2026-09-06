@@ -5,13 +5,14 @@ links into the rings, merges everything into one combined dataset, writes
 it to output/, runs sanity-check assertions, and prints a summary report.
 """
 
+import argparse
 import json
 import os
 import random
 import sys
 from collections import Counter
 
-from config import RING_SIZE_TIERS, SCAM_SUBTYPES
+from config import RANDOM_SEED, RING_SIZE_TIERS, SCAM_SUBTYPES
 from motifs import (
     generate_dormant_then_burst,
     generate_fan_out_fan_in,
@@ -19,6 +20,7 @@ from motifs import (
     generate_recruited_crypto_exit,
 )
 from noise import generate_noise
+from rng_streams import derive_seed
 
 MOTIF_GENERATORS = {
     "fast_pass_through": generate_fast_pass_through,
@@ -31,6 +33,9 @@ MOTIF_GENERATORS = {
 # override with `python assemble.py <N>`.
 DEFAULT_NUM_CASES = 40
 
+# Default seed for reproducible runs; override with `--seed`.
+DEFAULT_SEED = RANDOM_SEED
+
 # ASSUMPTION: noise graph sized relative to case count so it provides
 # realistic background density without dominating generation time.
 NOISE_NODES_PER_CASE = 3
@@ -39,10 +44,17 @@ NOISE_CROSS_LINKS_PER_CASE = 1
 OUTPUT_DIR = "output"
 
 
-def generate_dataset(num_cases: int):
+def generate_dataset(num_cases: int, case_selection_rng, entity_attribute_rng, noise_rng):
     """Generates num_cases motif-driven cases plus one noise graph, merged
     into combined node/edge lists. Returns (nodes, edges, case_metadata,
-    motif_counts, subtype_counts, tier_counts, case_node_counts_match)."""
+    motif_counts, subtype_counts, tier_counts, case_node_counts_match).
+
+    case_selection_rng picks each case's motif/scam_subtype/size_tier and is
+    also the case_rng threaded into that motif's own structural decisions;
+    entity_attribute_rng is threaded through to entities.py's factory calls;
+    noise_rng drives generate_noise() entirely. The three streams never mix,
+    so a change confined to one of them cannot shift what any of the others
+    produce."""
     all_nodes = []
     all_edges = []
     all_case_metadata = []
@@ -58,11 +70,12 @@ def generate_dataset(num_cases: int):
 
     for i in range(1, num_cases + 1):
         case_id = f"C-{i:04d}"
-        motif = random.choice(motif_names)
-        scam_subtype = random.choice(scam_subtypes)
-        size_tier = random.choice(size_tiers)
+        motif = case_selection_rng.choice(motif_names)
+        scam_subtype = case_selection_rng.choice(scam_subtypes)
+        size_tier = case_selection_rng.choice(size_tiers)
 
-        result = MOTIF_GENERATORS[motif](case_id, scam_subtype, size_tier)
+        result = MOTIF_GENERATORS[motif](case_id, scam_subtype, size_tier,
+                                          case_selection_rng, entity_attribute_rng)
 
         if len(result["nodes"]) != result["case_metadata"]["node_count"]:
             case_node_counts_match = False
@@ -79,6 +92,7 @@ def generate_dataset(num_cases: int):
     noise_result = generate_noise(
         num_nodes=num_cases * NOISE_NODES_PER_CASE,
         num_cross_links=num_cases * NOISE_CROSS_LINKS_PER_CASE,
+        noise_rng=noise_rng,
         ring_person_ids=ring_person_ids,
     )
     all_nodes.extend(noise_result["nodes"])
@@ -116,6 +130,9 @@ def run_sanity_checks(nodes, case_node_counts_match):
 
 
 def write_output(nodes, edges, case_metadata):
+    """Writes the combined nodes, edges, and case metadata to OUTPUT_DIR as
+    graph_nodes.json, graph_edges.json, and case_metadata.json, overwriting
+    any existing files there."""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(os.path.join(OUTPUT_DIR, "graph_nodes.json"), "w", encoding="utf-8") as f:
         json.dump(nodes, f, indent=2)
@@ -125,10 +142,13 @@ def write_output(nodes, edges, case_metadata):
         json.dump(case_metadata, f, indent=2)
 
 
-def print_summary(nodes, edges, case_metadata, motif_counts, subtype_counts, tier_counts):
+def print_summary(nodes, edges, case_metadata, motif_counts, subtype_counts, tier_counts, seed):
+    """Prints the dataset summary report, including the seed that produced it
+    so any run's output can be traced back to a reproducible command."""
     print("=" * 60)
     print("DATASET SUMMARY")
     print("=" * 60)
+    print(f"Seed: {seed}")
     print(f"Total nodes: {len(nodes)}")
     print(f"Total edges: {len(edges)}")
     print(f"Total cases: {len(case_metadata)}")
@@ -143,14 +163,42 @@ def print_summary(nodes, edges, case_metadata, motif_counts, subtype_counts, tie
         print(f"  {tier}: {count}")
 
 
+def parse_args():
+    """Parses CLI args: a positional case count (keeps the pre-existing
+    `python assemble.py <N>` usage working) plus `--seed` for reproducible
+    runs."""
+    parser = argparse.ArgumentParser(
+        description="Generate a synthetic mule-network fraud dataset (Phase C).")
+    parser.add_argument("num_cases", type=int, nargs="?", default=DEFAULT_NUM_CASES,
+                         help=f"Number of motif-driven cases to generate (default: {DEFAULT_NUM_CASES})")
+    parser.add_argument("--seed", type=int, default=DEFAULT_SEED,
+                         help=f"Random seed for reproducible generation (default: {DEFAULT_SEED})")
+    return parser.parse_args()
+
+
 def main():
-    num_cases = int(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_NUM_CASES
+    """CLI entry point: derives the three graph-generation rng streams from
+    `--seed`, generates the dataset, writes it to OUTPUT_DIR, prints the
+    summary report, and runs sanity checks (exiting with status 1 if any
+    check fails)."""
+    args = parse_args()
+
+    # Each concern gets its own independent random.Random(), derived from
+    # the one user-facing --seed. No global `random.seed()` call and no
+    # bare `random.*` calls exist anywhere downstream of this - every
+    # function takes an explicit rng parameter - so a change confined to
+    # one stream (e.g. entities.py's make_phone) can never shift what
+    # another stream (e.g. case_selection's motif picks) produces.
+    case_selection_rng = random.Random(derive_seed(args.seed, "case_selection"))
+    entity_attribute_rng = random.Random(derive_seed(args.seed, "entity_attribute"))
+    noise_rng = random.Random(derive_seed(args.seed, "noise"))
 
     (nodes, edges, case_metadata, motif_counts, subtype_counts, tier_counts,
-     case_node_counts_match) = generate_dataset(num_cases)
+     case_node_counts_match) = generate_dataset(
+        args.num_cases, case_selection_rng, entity_attribute_rng, noise_rng)
 
     write_output(nodes, edges, case_metadata)
-    print_summary(nodes, edges, case_metadata, motif_counts, subtype_counts, tier_counts)
+    print_summary(nodes, edges, case_metadata, motif_counts, subtype_counts, tier_counts, args.seed)
 
     print("\n" + "=" * 60)
     print("SANITY CHECKS")
