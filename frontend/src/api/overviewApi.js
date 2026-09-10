@@ -13,6 +13,21 @@ export async function fetchCaseOverview(caseId) {
   return response.json()
 }
 
+// GET /cases/{case_id}/summary — app/api/main.py:case_summary
+// Returns null when the backend reports 404 ("Case summary not found") —
+// this is the normal/expected state for any case without a generated
+// summary yet, not an error.
+export async function fetchCaseSummary(caseId) {
+  const response = await apiFetch(`/cases/${encodeURIComponent(caseId)}/summary`)
+
+  if (response.status === 404) return null
+  if (!response.ok) {
+    throw new Error(`Failed to load case summary (HTTP ${response.status})`)
+  }
+
+  return response.json()
+}
+
 // GET /cases/{case_id}/graph — app/api/main.py:case_graph
 // Note: unlike /overview, this endpoint returns 200 with empty nodes/edges
 // for a case that doesn't exist — it never 404s.

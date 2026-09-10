@@ -30,10 +30,10 @@ export async function updateCase(caseId, fields) {
   return response.json()
 }
 
-export async function archiveCase(caseId) {
-  const response = await apiFetch(`/cases/${encodeURIComponent(caseId)}/archive`, { method: 'POST' })
+export async function completeCase(caseId) {
+  const response = await apiFetch(`/cases/${encodeURIComponent(caseId)}/complete`, { method: 'POST' })
   if (!response.ok) {
-    throw new Error(`Failed to archive case (HTTP ${response.status})`)
+    throw new Error(`Failed to mark case completed (HTTP ${response.status})`)
   }
   return response.json()
 }
