@@ -12,7 +12,7 @@ export default defineConfig({
     // FastAPI routes are unprefixed (e.g. /cases), so strip /api before forwarding.
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: process.env.VITE_PROXY_TARGET || 'http://localhost:8000',
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },

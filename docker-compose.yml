@@ -33,6 +33,11 @@ services:
   api:
     <<: *analysis-service
     command: uvicorn app.api.main:app --host 0.0.0.0 --port 8000
+    depends_on:
+      neo4j:
+        condition: service_healthy
+      analysis-init:
+        condition: service_completed_successfully
     ports:
       - "8000:8000"
     volumes:
@@ -42,6 +47,26 @@ services:
       interval: 5s
       timeout: 3s
       retries: 12
+
+  analysis-init:
+    <<: *analysis-service
+    environment:
+      <<: *analysis-environment
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
+    volumes:
+      - ./dataset_generator/output/showcase:/app/dataset_generator/output:ro
+    command: python -m app.run_full_analysis
+
+  frontend:
+    build: ./frontend
+    environment:
+      VITE_PROXY_TARGET: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "5173:5173"
 
   smoke-test:
     <<: *analysis-service

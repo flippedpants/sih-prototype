@@ -23,48 +23,27 @@ To enable LLM-generated summaries, also set the API key. If it is omitted, the s
 OPENROUTER_API_KEY=your-openrouter-api-key
 ```
 
-2. Build and start Neo4j and the API.
+2. Build and start the complete application. This one command starts Neo4j,
+   ingests the showcase dataset, runs all analysis and summary precomputation,
+   then starts the API and frontend.
 
 ```bash
-docker compose up --build -d
+docker compose up --build --force-recreate
 ```
 
-3. Load a dataset and generate the analytical graph and derived results.
+3. Open the application services.
 
-```bash
-docker compose --profile dataset run --rm --volume ./dataset_generator/output/showcase:/app/dataset_generator/output:ro ingest-dataset
-docker compose --profile dataset run --rm project-person-graph
-docker compose --profile analysis run --rm validate-scoping
-docker compose --profile analysis run --rm project-graphs
-docker compose --profile analysis run --rm core-algorithms
-docker compose --profile analysis run --rm structural-roles
-docker compose --profile analysis run --rm criticality
-docker compose --profile analysis run --rm financial-patterns
-docker compose --profile analysis run --rm summary-generation
-```
-
-4. Open the application services.
-
+- Frontend: http://localhost:5173
 - API documentation: http://localhost:8000/docs
 - Neo4j Browser: http://localhost:7474
 
-5. Install and start the frontend in a separate terminal.
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open the frontend at http://localhost:5173.
-
-6. Run the authenticated smoke test.
+4. Run the authenticated smoke test.
 
 ```bash
 docker compose --profile smoke run --rm smoke-test
 ```
 
-7. Stop the application.
+5. Stop the application.
 
 ```bash
 docker compose down
