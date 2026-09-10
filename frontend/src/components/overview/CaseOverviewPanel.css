@@ -177,12 +177,24 @@
 }
 
 .ov-panel__players,
-.ov-panel__activity {
+.ov-panel__activity,
+.ov-panel__summary {
   padding: 14px 16px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.ov-panel__summary-text {
+  margin: 0;
+  padding: 10px;
+  background: #121824;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 19px;
+  color: #cbd5e1;
 }
 
 .ov-panel__section-row {

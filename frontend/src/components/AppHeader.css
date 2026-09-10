@@ -3,12 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 56px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 0 20px;
+  gap: 18px;
+  padding: 0 24px;
   background: #11161d;
   border-bottom: 1px solid #1f2833;
   z-index: 10;
@@ -17,7 +17,7 @@
 .app-header__left {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 26px;
   min-width: 0;
   flex: 1;
 }
@@ -25,7 +25,7 @@
 .app-header__brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   flex-shrink: 0;
 }
 
@@ -39,22 +39,22 @@
 }
 
 .app-header__logo {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 .app-header__brand-name {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.8px;
+  font-size: 18px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   color: #f2ca50;
 }
 
 .app-header__version {
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: #556272;
   padding-left: 2px;
   white-space: nowrap;
@@ -65,26 +65,26 @@
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 448px;
+  max-width: 500px;
 }
 
 .app-header__search-icon {
   position: absolute;
-  left: 8px;
-  width: 12px;
-  height: 12px;
+  left: 10px;
+  width: 14px;
+  height: 14px;
   pointer-events: none;
 }
 
 .app-header__search-input {
   width: 100%;
-  height: 32px;
-  padding: 0 12px 0 33px;
+  height: 36px;
+  padding: 0 14px 0 38px;
   background: #0b0e13;
   border: 1px solid #1f2833;
   outline: none;
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: #edf0ee;
 }
 
@@ -99,28 +99,28 @@
 .app-header__right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   flex-shrink: 0;
 }
 
 .app-header__status {
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 5px 9px;
+  gap: 5px;
+  padding: 6px 11px;
   background: #0b0e13;
   border: 1px solid rgba(78, 138, 131, 0.4);
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.275px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
   color: #95d2ca;
   white-space: nowrap;
 }
 
 .app-header__status-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #4e8a83;
   flex-shrink: 0;
@@ -128,14 +128,14 @@
 
 .app-header__divider {
   width: 1px;
-  height: 16px;
+  height: 18px;
   background: #1f2833;
 }
 
 .app-header__user {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   margin: 0;
   padding-left: 4px;
   background: transparent;
@@ -152,7 +152,7 @@
 
 .app-header__user-name {
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: #e2e7ed;
   white-space: nowrap;
 }
@@ -160,7 +160,7 @@
 .app-header__user-role {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #556272;
@@ -168,9 +168,9 @@
 }
 
 .app-header__avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 13px;
   background: #f2ca50;
   box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.4);
   display: flex;
@@ -180,8 +180,8 @@
 }
 
 .app-header__avatar img {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 }
 
 @media (max-width: 900px) {

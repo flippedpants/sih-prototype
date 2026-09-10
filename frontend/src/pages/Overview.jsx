@@ -4,7 +4,7 @@ import Sidebar from '../components/overview/Sidebar'
 import GraphViewport from '../components/overview/GraphViewport'
 import CaseOverviewPanel from '../components/overview/CaseOverviewPanel'
 import OverviewNetworkGraph from '../components/overview/OverviewNetworkGraph'
-import { fetchCaseOverview, fetchCaseGraph } from '../api/overviewApi'
+import { fetchCaseOverview, fetchCaseGraph, fetchCaseSummary } from '../api/overviewApi'
 import { scoreOf, computeDegrees } from '../components/overview/graphLayout'
 import './Overview.css'
 
@@ -15,6 +15,8 @@ function Overview({ caseId, onBack, onNavigate, cases, onSelectCase }) {
   const [loadState, setLoadState] = useState(caseId ? 'loading' : 'no-case')
   const [overview, setOverview] = useState(null)
   const [graph, setGraph] = useState(null)
+  const [summary, setSummary] = useState(null)
+  const [summaryLoadState, setSummaryLoadState] = useState('loading')
   const [errorMessage, setErrorMessage] = useState(null)
   const [retryToken, setRetryToken] = useState(0)
 
@@ -71,6 +73,38 @@ function Overview({ caseId, onBack, onNavigate, cases, onSelectCase }) {
     // bridgingOnly/cutoffEnabled intentionally re-trigger a fetch: they're
     // real API query params, unlike isolatesVisible which is client-only.
   }, [caseId, retryToken, bridgingOnly, cutoffEnabled])
+
+  // Fetched independently from the overview/graph load above — a missing
+  // summary (404) is the normal state for most cases right now, not an
+  // error, so it must never block or fail the rest of the page.
+  useEffect(() => {
+    if (!caseId) {
+      setSummary(null)
+      setSummaryLoadState('no-case')
+      return
+    }
+
+    let cancelled = false
+
+    async function loadSummary() {
+      setSummaryLoadState('loading')
+      try {
+        const result = await fetchCaseSummary(caseId)
+        if (cancelled) return
+        setSummary(result)
+        setSummaryLoadState(result ? 'ready' : 'not-found')
+      } catch {
+        if (cancelled) return
+        setSummary(null)
+        setSummaryLoadState('error')
+      }
+    }
+
+    loadSummary()
+    return () => {
+      cancelled = true
+    }
+  }, [caseId, retryToken])
 
   const topPlayers = useMemo(() => {
     const nodes = graph?.nodes ?? []
@@ -151,6 +185,8 @@ function Overview({ caseId, onBack, onNavigate, cases, onSelectCase }) {
           errorMessage={errorMessage}
           overview={overview}
           topPlayers={topPlayers}
+          summary={summary}
+          summaryLoadState={summaryLoadState}
           onRetry={handleRetry}
         />
       </div>
