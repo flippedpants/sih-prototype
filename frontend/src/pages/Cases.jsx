@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import AppHeader from '../components/AppHeader'
 import CreateCaseModal from '../components/CreateCaseModal'
 import EditCaseModal from '../components/EditCaseModal'
@@ -6,7 +6,7 @@ import CaseAccessModal from '../components/CaseAccessModal'
 import UserManagementModal from '../components/UserManagementModal'
 import { useAuth } from '../auth/AuthContext'
 import { casePermissions, visibleCaseCardActions, visibleCaseListActions } from '../auth/permissions'
-import { archiveCase, createCase, deleteCase, fetchCases, restoreCase } from '../api/casesApi'
+import { completeCase, createCase, deleteCase, fetchCases, restoreCase } from '../api/casesApi'
 import { HOME_PAGE } from '../nav/navigation'
 import gridViewIcon from '../assets/cases/grid-view.svg'
 import listViewIcon from '../assets/cases/list-view.svg'
@@ -21,6 +21,15 @@ import topology6 from '../assets/cases/topology-6.svg'
 import './Cases.css'
 
 const TOPOLOGIES = [topology1, topology2, topology3, topology4, topology5, topology6]
+
+// Lower rank sorts first (most urgent). Cases with no priority sort last.
+const PRIORITY_RANK = { I: 0, II: 1, III: 2, IV: 3 }
+const SORT_OPTIONS = [
+  { key: 'last_activity', label: 'Last Activity' },
+  { key: 'name', label: 'Name' },
+  { key: 'priority', label: 'Priority' },
+]
+const SORT_LABEL = Object.fromEntries(SORT_OPTIONS.map((o) => [o.key, `${o.label} ↓`]))
 
 const TABS = [
   { key: 'all', label: 'All Cases' },
@@ -47,13 +56,17 @@ function formatRelativeTime(iso) {
 }
 
 // Maps a GET /cases row (app/api/models.py:CaseSummary) onto the card's display shape.
+// Backend statuses are ACTIVE/IMPORTANT/COMPLETED; `archived`/`statusClass` keep the
+// completed-case styling hook (`case-card--archived`, `case-card__status--archived`)
+// while the badge text itself reads "COMPLETED".
 function mapCaseToCard(apiCase, index) {
-  const isArchived = (apiCase.status || '').toLowerCase() === 'archived'
+  const isCompleted = (apiCase.status || '').toLowerCase() === 'completed'
 
   return {
     id: apiCase.case_id,
-    archived: isArchived,
-    status: isArchived ? 'ARCHIVED' : 'ACTIVE',
+    archived: isCompleted,
+    statusClass: isCompleted ? 'archived' : 'active',
+    status: isCompleted ? 'COMPLETED' : 'ACTIVE',
     title: apiCase.name || apiCase.case_id,
     docket: `DOCKET // ${apiCase.case_id}${apiCase.priority ? ` · PRIORITY ${apiCase.priority}` : ''}`,
     description: apiCase.description || 'No description on file.',
@@ -73,7 +86,7 @@ function CaseCard({
   actions = [],
   onEdit,
   onManageAccess,
-  onArchive,
+  onComplete,
   onRestore,
   onDelete,
 }) {
@@ -92,7 +105,7 @@ function CaseCard({
     >
       <div className="case-card__body">
         <div className="case-card__badges">
-          <span className={`case-card__status case-card__status--${caseItem.status.toLowerCase()}`}>
+          <span className={`case-card__status case-card__status--${caseItem.statusClass}`}>
             {caseItem.status}
           </span>
           <button
@@ -181,11 +194,11 @@ function CaseCard({
                 className="case-card__edit"
                 onClick={(event) => {
                   event.stopPropagation()
-                  onArchive?.()
+                  onComplete?.()
                 }}
                 onKeyDown={(event) => event.stopPropagation()}
               >
-                Archive
+                Completed
               </button>
             )}
             {actions.includes('restoreCase') && (
@@ -235,6 +248,8 @@ function Cases({
   const permissions = casePermissions(role)
   const canCreateCase = visibleCaseListActions(role).includes('createCase')
   const [sort, setSort] = useState('last_activity')
+  const [sortOpen, setSortOpen] = useState(false)
+  const sortRef = useRef(null)
   const [activeTab, setActiveTab] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [fetchedCases, setFetchedCases] = useState([])
@@ -259,7 +274,9 @@ function Cases({
       setLoadState('loading')
       setErrorMessage(null)
       try {
-        const all = await fetchCases({ sort })
+        // The backend only understands last_activity/name — "priority" is a
+        // client-side-only sort applied to whatever it returns, below.
+        const all = await fetchCases({ sort: sort === 'name' ? 'name' : 'last_activity' })
         if (cancelled) return
         setFetchedCases(all)
         setLoadState('ready')
@@ -282,24 +299,50 @@ function Cases({
     return () => window.clearTimeout(timeoutId)
   }, [successMessage])
 
+  useEffect(() => {
+    if (!sortOpen) return undefined
+    const handleClickOutside = (event) => {
+      if (sortRef.current && !sortRef.current.contains(event.target)) setSortOpen(false)
+    }
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setSortOpen(false)
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [sortOpen])
+
   const allCases = useMemo(() => {
     const remoteIds = new Set(fetchedCases.map((c) => c.case_id))
     const local = createdCases.filter((c) => !remoteIds.has(c.case_id))
     const merged = [...local, ...fetchedCases].map((c) =>
       caseEdits[c.case_id] ? { ...c, ...caseEdits[c.case_id] } : c
     )
-    if (sort !== 'name') return merged
-    return [...merged].sort((a, b) =>
-      (a.name || a.case_id).localeCompare(b.name || b.case_id, undefined, { sensitivity: 'base' })
-    )
+    if (sort === 'name') {
+      return [...merged].sort((a, b) =>
+        (a.name || a.case_id).localeCompare(b.name || b.case_id, undefined, { sensitivity: 'base' })
+      )
+    }
+    if (sort === 'priority') {
+      return [...merged].sort((a, b) => {
+        const rankA = PRIORITY_RANK[a.priority] ?? Number.MAX_SAFE_INTEGER
+        const rankB = PRIORITY_RANK[b.priority] ?? Number.MAX_SAFE_INTEGER
+        if (rankA !== rankB) return rankA - rankB
+        return (a.name || a.case_id).localeCompare(b.name || b.case_id, undefined, { sensitivity: 'base' })
+      })
+    }
+    return merged
   }, [fetchedCases, createdCases, sort, caseEdits])
 
   const activeCases = useMemo(
-    () => allCases.filter((c) => (c.status || '').toLowerCase() !== 'archived'),
+    () => allCases.filter((c) => (c.status || '').toLowerCase() !== 'completed'),
     [allCases]
   )
   const archivedCases = useMemo(
-    () => allCases.filter((c) => (c.status || '').toLowerCase() === 'archived'),
+    () => allCases.filter((c) => (c.status || '').toLowerCase() === 'completed'),
     [allCases]
   )
   const importantCases = useMemo(
@@ -407,20 +450,37 @@ function Cases({
           </div>
           <div className="cases-filters__right">
             <span className="cases-filters__sort-label">SORT BY:</span>
-            <div
-              className="cases-sort"
-              role="button"
-              tabIndex={0}
-              onClick={() => setSort((s) => (s === 'last_activity' ? 'name' : 'last_activity'))}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault()
-                  setSort((s) => (s === 'last_activity' ? 'name' : 'last_activity'))
-                }
-              }}
-            >
-              <span>{sort === 'name' ? 'Name ↓' : 'Last Activity ↓'}</span>
-              <img src={sortArrowIcon} alt="" />
+            <div className="cases-sort-wrap" ref={sortRef}>
+              <button
+                type="button"
+                className="cases-sort"
+                aria-haspopup="listbox"
+                aria-expanded={sortOpen}
+                onClick={() => setSortOpen((v) => !v)}
+              >
+                <span>{SORT_LABEL[sort]}</span>
+                <img src={sortArrowIcon} alt="" />
+              </button>
+              {sortOpen && (
+                <ul className="cases-sort-menu" role="listbox">
+                  {SORT_OPTIONS.map((option) => (
+                    <li key={option.key} role="none">
+                      <button
+                        type="button"
+                        role="option"
+                        aria-selected={sort === option.key}
+                        className={`cases-sort-menu__item${sort === option.key ? ' cases-sort-menu__item--active' : ''}`}
+                        onClick={() => {
+                          setSort(option.key)
+                          setSortOpen(false)
+                        }}
+                      >
+                        {option.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         </div>
@@ -460,16 +520,16 @@ function Cases({
                   onOpen={() => onOpenCase?.(caseItem)}
                   onEdit={() => setEditCase(apiCase)}
                   onManageAccess={() => setAccessCase(apiCase)}
-                  onArchive={async () => {
+                  onComplete={async () => {
                     try {
-                      const result = await archiveCase(apiCase.case_id)
+                      const result = await completeCase(apiCase.case_id)
                       setFetchedCases((prev) =>
                         prev.map((item) => (item.case_id === apiCase.case_id ? { ...item, status: result.status } : item))
                       )
                       onCaseStatusChange?.(apiCase.case_id, result.status)
-                      setSuccessMessage('Case archived.')
+                      setSuccessMessage('Case marked completed.')
                     } catch (err) {
-                      setSuccessMessage(err.message || 'Failed to archive case.')
+                      setSuccessMessage(err.message || 'Failed to mark case completed.')
                     }
                   }}
                   onRestore={async () => {
@@ -485,7 +545,7 @@ function Cases({
                     }
                   }}
                   onDelete={async () => {
-                    if (!window.confirm('Delete this archived case permanently?')) return
+                    if (!window.confirm('Delete this completed case permanently?')) return
                     try {
                       await deleteCase(apiCase.case_id)
                       setFetchedCases((prev) => prev.filter((item) => item.case_id !== apiCase.case_id))

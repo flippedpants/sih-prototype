@@ -52,7 +52,7 @@ function formatList(values) {
   return values && values.length > 0 ? values.join(', ') : '—'
 }
 
-function NodeProfile({ detailLoadState, nodeDetail, onExitProfile, onRetry }) {
+function NodeProfile({ detailLoadState, nodeDetail, nodeNameById, onExitProfile, onRetry }) {
   return (
     <div className="kp-profile">
       <button type="button" className="kp-profile__back" onClick={onExitProfile}>
@@ -118,14 +118,17 @@ function NodeProfile({ detailLoadState, nodeDetail, onExitProfile, onRetry }) {
               </span>
             </span>
             <div className="kp-profile__ego-list">
-              {(nodeDetail.ego_network?.edges ?? []).map((edge, i) => (
-                <div key={`${edge.source}-${edge.target}-${i}`} className="kp-profile__ego-row">
-                  <span className="kp-profile__ego-target">
-                    {edge.source === nodeDetail.node_id ? edge.target : edge.source}
-                  </span>
-                  <span className="kp-profile__ego-type">{edge.type}</span>
-                </div>
-              ))}
+              {(nodeDetail.ego_network?.edges ?? []).map((edge, i) => {
+                const targetId = edge.source === nodeDetail.node_id ? edge.target : edge.source
+                return (
+                  <div key={`${edge.source}-${edge.target}-${i}`} className="kp-profile__ego-row">
+                    <span className="kp-profile__ego-target">
+                      {nodeNameById?.get(String(targetId)) || targetId}
+                    </span>
+                    <span className="kp-profile__ego-type">{edge.type}</span>
+                  </div>
+                )
+              })}
               {(nodeDetail.ego_network?.edges ?? []).length === 0 && (
                 <span className="kp-profile__ego-empty">NO DIRECT CONNECTIONS</span>
               )}
@@ -148,6 +151,7 @@ function PlayersPanel({
   onHoverPerson,
   onHoverEnd,
   nodeDetail,
+  nodeNameById,
   detailLoadState,
   onRetry,
   profileMode,
@@ -214,6 +218,7 @@ function PlayersPanel({
         <NodeProfile
           detailLoadState={detailLoadState}
           nodeDetail={nodeDetail}
+          nodeNameById={nodeNameById}
           onExitProfile={onExitProfile}
           onRetry={onRetry}
         />

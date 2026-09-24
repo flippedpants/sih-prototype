@@ -84,6 +84,18 @@ function KeyPlayers({ caseId, onBack, onNavigate, cases, onSelectCase, navState 
     // real API query params, unlike isolatesVisible which is client-only.
   }, [caseId, retryToken, sortMetric, bridgingOnly, cutoffEnabled])
 
+  // The ego network in the detail view only gets neighbor node_ids back from
+  // the API (app/api/repository.py:get_node_detail never joins neighbor
+  // names) — resolve them client-side against the full case graph this page
+  // already has loaded, since ego-network neighbors are always case-scoped.
+  const nodeNameById = useMemo(() => {
+    const map = new Map()
+    for (const node of graph?.nodes ?? []) {
+      if (node.name) map.set(String(node.node_id), node.name)
+    }
+    return map
+  }, [graph])
+
   const isolateCount = useMemo(() => {
     const nodes = graph?.nodes ?? []
     const edges = graph?.edges ?? []
@@ -235,6 +247,7 @@ function KeyPlayers({ caseId, onBack, onNavigate, cases, onSelectCase, navState 
           onHoverPerson={handleHoverPerson}
           onHoverEnd={handleHoverEnd}
           nodeDetail={nodeDetail}
+          nodeNameById={nodeNameById}
           detailLoadState={detailLoadState}
           onRetry={handleRetry}
           profileMode={profileMode}

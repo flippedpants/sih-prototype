@@ -9,35 +9,23 @@ function formatNumber(value) {
   return value.toLocaleString()
 }
 
-function formatModularity(value) {
-  if (value === null || value === undefined) return 'N/A'
-  return value.toFixed(3)
-}
-
 function buildStats(overview) {
   return [
     {
       label: 'TOTAL ENTITIES',
       value: formatNumber(overview.total_entities),
-      sub: `${formatNumber(overview.direct_1hop_count)} DIRECT 1-HOP`,
-      subColor: '#38bdf8',
     },
     {
       label: 'TOTAL RELATIONSHIPS',
       value: formatNumber(overview.total_relationships),
-      sub: 'TX & OWNERSHIP',
-      subColor: '#94a3b8',
     },
     {
       label: 'COMMUNITIES',
       value: formatNumber(overview.community_count),
-      sub: `MODULARITY: ${formatModularity(overview.modularity)}`,
-      subColor: '#c084fc',
     },
     {
       label: 'STRUCTURAL ALERTS',
       value: formatNumber(overview.structural_alert_count),
-      sub: 'HIGH CENTRALITY',
       alert: (overview.structural_alert_count ?? 0) > 0,
     },
   ]
@@ -60,7 +48,16 @@ function buildPlayers(topPlayers) {
   })
 }
 
-function CaseOverviewPanel({ caseId, loadState, errorMessage, overview, topPlayers, onRetry }) {
+function CaseOverviewPanel({
+  caseId,
+  loadState,
+  errorMessage,
+  overview,
+  topPlayers,
+  summary,
+  summaryLoadState,
+  onRetry,
+}) {
   const isLoading = loadState === 'loading'
   const isError = loadState === 'error'
   const isNotFound = loadState === 'not-found'
@@ -114,11 +111,26 @@ function CaseOverviewPanel({ caseId, loadState, errorMessage, overview, topPlaye
                 <div key={stat.label} className={`ov-stat-card${stat.alert ? ' ov-stat-card--alert' : ''}`}>
                   <span className="ov-stat-card__label">{stat.label}</span>
                   <span className="ov-stat-card__value">{stat.value}</span>
-                  <span className="ov-stat-card__sub" style={{ color: stat.alert ? undefined : stat.subColor }}>
-                    {stat.sub}
-                  </span>
                 </div>
               ))}
+            </div>
+
+            <div className="ov-panel__summary">
+              <div className="ov-panel__section-row">
+                <span className="ov-panel__section-title">CASE SUMMARY</span>
+              </div>
+              {summaryLoadState === 'loading' && (
+                <div className="ov-panel__state ov-panel__state--inline">GENERATING SUMMARY…</div>
+              )}
+              {summaryLoadState === 'error' && (
+                <div className="ov-panel__state ov-panel__state--inline">UNABLE TO LOAD CASE SUMMARY</div>
+              )}
+              {summaryLoadState === 'not-found' && (
+                <div className="ov-panel__state ov-panel__state--inline">NO SUMMARY GENERATED YET</div>
+              )}
+              {summaryLoadState === 'ready' && summary && (
+                <p className="ov-panel__summary-text">{summary.summary_text}</p>
+              )}
             </div>
 
             <div className="ov-panel__players">
