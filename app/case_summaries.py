@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 import json
 import os
+import time
 from contextlib import nullcontext
 from typing import Any
 
@@ -278,16 +279,32 @@ Hard limits, non-negotiable regardless of any other instruction:
   operational recommendations.
 - If a field is missing or empty, omit it — do not guess or fill gaps.
 
-Within those limits, write with analytical confidence. Aim for 150-250
-words, plain paragraphs, no headers."""
+Within those limits, write with analytical confidence and stay concise: lead
+with the single most important finding and skip minor detail. Keep the summary to 80-120 words, in one or two short plain paragraphs, no headers."""
 
 COMMUNITY_SUMMARY_SYSTEM_PROMPT = CASE_SUMMARY_SYSTEM_PROMPT.replace(
-    "Keep the summary to 150-250 words, in plain paragraphs, no headers.",
+    "Keep the summary to 80-120 words, in one or two short plain paragraphs, no headers.",
     "Keep the summary to 40-60 words, in one plain paragraph, with no header.",
 )
 
-OPENROUTER_MODEL = "nex-agi/nex-n2.5-mini:free"
-OPENROUTER_TIMEOUT_SECONDS = 10.0
+# Free OpenRouter models come and go and are often rate-limited, so several are
+# tried in order. Override with OPENROUTER_MODELS="model-a,model-b".
+DEFAULT_OPENROUTER_MODELS = (
+    "google/gemma-4-31b-it:free",
+    "google/gemma-4-26b-a4b-it:free",
+    "qwen/qwen3.8-27b:free",
+    "poolside/laguna-s-2.1:free",
+)
+OPENROUTER_MODELS = tuple(
+    model.strip()
+    for model in os.getenv("OPENROUTER_MODELS", "").split(",")
+    if model.strip()
+) or DEFAULT_OPENROUTER_MODELS
+OPENROUTER_TIMEOUT_SECONDS = 30.0
+TEMPLATE_TOP_PLAYERS = 3
+TEMPLATE_TOP_COMMUNITIES = 3
+OPENROUTER_PASSES = 2
+OPENROUTER_RETRY_DELAY_SECONDS = 5.0
 
 
 @dataclass(frozen=True)
@@ -316,42 +333,31 @@ def case_summary_template(context: dict[str, Any]) -> str:
         f"{context.get('edge_count', 0)} edges across {context.get('community_count', 0)} "
         "precomputed communities."
     ]
-    players = context.get("top_key_players", [])
+    players = context.get("top_key_players", [])[:TEMPLATE_TOP_PLAYERS]
     if players:
-        descriptions = []
-        for player in players:
-            description = f"{_display_node(player)} is recorded as {player.get('role', 'member')}"
-            metrics = []
-            if player.get("betweenness_score") is not None:
-                metrics.append(f"betweenness {player['betweenness_score']}")
-            if player.get("degree_centrality") is not None:
-                metrics.append(f"degree centrality {player['degree_centrality']}")
-            if metrics:
-                description += " with " + " and ".join(metrics)
-            descriptions.append(description)
-        paragraphs.append("The highest stored betweenness entries are " + "; ".join(descriptions) + ".")
-    communities = context.get("communities", [])
+        descriptions = [
+            f"{_display_node(player)} ({player.get('role', 'member')})" for player in players
+        ]
+        paragraphs.append("Highest betweenness: " + ", ".join(descriptions) + ".")
+    communities = context.get("communities", [])[:TEMPLATE_TOP_COMMUNITIES]
     if communities:
         descriptions = []
         for community in communities:
-            detail = (
-                f"community {community['community_id']} has {community['size']} nodes "
-                f"with {_role_counts_text(community.get('role_composition', {}))}"
-            )
+            detail = f"community {community['community_id']} ({community['size']} nodes"
             central = community.get("most_central_node")
             if central:
-                detail += f", and {_display_node(central)} has its highest stored betweenness"
-            descriptions.append(detail)
-        paragraphs.append("The persisted community results show " + "; ".join(descriptions) + ".")
+                detail += f", most central {_display_node(central)}"
+            descriptions.append(detail + ")")
+        paragraphs.append("Largest communities: " + "; ".join(descriptions) + ".")
     fragmentation = context.get("fragmentation_summary")
     if fragmentation:
         details = []
         if fragmentation.get("removed_node_count") is not None:
-            details.append(f"{fragmentation['removed_node_count']} precomputed removals")
+            details.append(f"removing {fragmentation['removed_node_count']} top-ranked nodes")
         if fragmentation.get("resulting_component_count") is not None:
-            details.append(f"a resulting component count of {fragmentation['resulting_component_count']}")
+            details.append(f"leaves {fragmentation['resulting_component_count']} components")
         if details:
-            paragraphs.append("The structural criticality findings contain " + " and ".join(details) + ".")
+            paragraphs.append("Structural criticality: " + " ".join(details) + ".")
     findings = context.get("notable_structural_findings", [])
     if findings:
         descriptions = [
@@ -397,25 +403,33 @@ def _extract_response_text(payload: Any) -> str:
 def _request_summary(context: dict[str, Any], system_prompt: str, max_output_tokens: int) -> str:
     api_key = os.environ["OPENROUTER_API_KEY"]
     base_url = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1").rstrip("/")
-    response = httpx.post(
-        f"{base_url}/chat/completions",
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        json={
-            "model": OPENROUTER_MODEL,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {
-                    "role": "user",
-                    "content": "Summarize the following case data:\n"
-                    + json.dumps(context, sort_keys=True, separators=(",", ":")),
-                },
-            ],
-            "max_tokens": max_output_tokens,
-        },
-        timeout=OPENROUTER_TIMEOUT_SECONDS,
+    user_content = "Summarize the following case data:\n" + json.dumps(
+        context, sort_keys=True, separators=(",", ":")
     )
-    response.raise_for_status()
-    return _extract_response_text(response.json())
+    last_error: Exception | None = None
+    for attempt in range(OPENROUTER_PASSES):
+        if attempt:
+            time.sleep(OPENROUTER_RETRY_DELAY_SECONDS)
+        for model in OPENROUTER_MODELS:
+            try:
+                response = httpx.post(
+                    f"{base_url}/chat/completions",
+                    headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+                    json={
+                        "model": model,
+                        "messages": [
+                            {"role": "system", "content": system_prompt},
+                            {"role": "user", "content": user_content},
+                        ],
+                        "max_tokens": max_output_tokens,
+                    },
+                    timeout=OPENROUTER_TIMEOUT_SECONDS,
+                )
+                response.raise_for_status()
+                return _extract_response_text(response.json())
+            except Exception as error:
+                last_error = error
+    raise last_error if last_error else RuntimeError("no OpenRouter models configured")
 
 
 def generate_case_summary(context: dict[str, Any]) -> GeneratedSummary:

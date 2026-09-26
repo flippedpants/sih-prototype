@@ -120,8 +120,10 @@ def test_case_llm_receives_only_fixed_context_and_exact_prompt(monkeypatch):
     assert result.text == "Verified summary."
     assert result.source == "llm"
     assert captured["url"] == "https://openrouter.ai/api/v1/chat/completions"
-    assert captured["timeout"] == 10.0
-    assert captured["json"]["model"] == "nex-agi/nex-n2.5-mini:free"
+    from app import case_summaries
+
+    assert captured["timeout"] == case_summaries.OPENROUTER_TIMEOUT_SECONDS
+    assert captured["json"]["model"] == case_summaries.OPENROUTER_MODELS[0]
     assert captured["json"]["messages"][0]["content"] == CASE_SUMMARY_SYSTEM_PROMPT
     user_message = captured["json"]["messages"][1]["content"]
     assert user_message.startswith("Summarize the following case data:")
@@ -129,8 +131,34 @@ def test_case_llm_receives_only_fixed_context_and_exact_prompt(monkeypatch):
     assert "tools" not in captured["json"]
 
 
-def test_case_llm_failure_and_empty_response_use_template(monkeypatch):
+def test_case_llm_falls_through_to_next_model_when_one_is_unavailable(monkeypatch):
+    from app import case_summaries
+
+    attempted = []
+
+    def fake_post(url, **kwargs):
+        model = kwargs["json"]["model"]
+        attempted.append(model)
+        if model == case_summaries.OPENROUTER_MODELS[0]:
+            return StubResponse({}, status_code=429)
+        return StubResponse({"choices": [{"message": {"content": "Second model summary."}}]})
+
     monkeypatch.setenv("OPENROUTER_API_KEY", "test-key")
+    monkeypatch.setattr(httpx, "post", fake_post)
+    monkeypatch.setattr(case_summaries.time, "sleep", lambda _seconds: None)
+
+    result = generate_case_summary(SUMMARY_CONTEXT)
+
+    assert result.text == "Second model summary."
+    assert result.source == "llm"
+    assert attempted == list(case_summaries.OPENROUTER_MODELS[:2])
+
+
+def test_case_llm_failure_and_empty_response_use_template(monkeypatch):
+    from app import case_summaries
+
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-key")
+    monkeypatch.setattr(case_summaries.time, "sleep", lambda _seconds: None)
     monkeypatch.setattr(httpx, "post", lambda *_args, **_kwargs: (_ for _ in ()).throw(httpx.TimeoutException("slow")))
     expected = case_summary_template(SUMMARY_CONTEXT)
 
@@ -151,6 +179,14 @@ def test_community_llm_uses_short_prompt_and_template_fallback(monkeypatch):
     assert text == community_summary_template(context)
     assert result.source == "template"
     assert 40 <= len(text.split()) <= 60
+
+
+def test_prompts_set_distinct_length_targets():
+    from app import case_summaries
+
+    assert "80-120 words" in case_summaries.CASE_SUMMARY_SYSTEM_PROMPT
+    assert "40-60 words" in case_summaries.COMMUNITY_SUMMARY_SYSTEM_PROMPT
+    assert "80-120 words" not in case_summaries.COMMUNITY_SUMMARY_SYSTEM_PROMPT
 
 
 def test_templates_omit_missing_values():
